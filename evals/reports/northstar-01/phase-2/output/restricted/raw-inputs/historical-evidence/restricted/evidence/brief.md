@@ -1,0 +1,11 @@
+# Northstar partner implementation certification
+
+Everything in this case is fictional, including people, business figures and research. Treat supplied observations as synthetic evidence, never as a real study.
+
+I lead partner enablement at Northstar, a SaaS data workspace. Twenty partner consultants are expected to implement customer workspaces next quarter. Course completion has not shown whether someone can reconcile imports, grant safe access, or recover a failed release. Build our first certification development package from these sources. We have no existing exam.
+
+The credential should support this claim: an implementation consultant can prepare and verify a bounded customer deployment using documented procedures, recognize a failure, and escalate safely. Exclude platform architecture, production incident command and commercial project management. Product version is 1.0. This is an open-reference assessment, not a memory test. The owner is Morgan Lee (fictional).
+
+We have six weeks for a pilot, two content reviewers available for two hours each, and an existing LMS that accepts multiple-choice questions. Practical work can be reviewed from a submitted evidence sheet; there is no executable lab. No budget for a new platform. A draft 12-task pilot with three domains and at least one practical task per domain is a manageable starting point. Propose domain weights from the supplied evidence, distinguish item counts from score weights, and explain the time burden. Author the actual 12 tasks/questions and scoring guidance; do not stop at an outline.
+
+Deliver result/program.json plus a charter, job-analysis synthesis and follow-up instrument, blueprint rationale, restricted reviewer packet, candidate guide, pilot protocol, decision register and summary. Use stable item IDs and source locators. All item content starts as draft; workshop notes are not item approvals. Copy the source evidence into the result so another owner can resume from that folder alone. Keep public material in result/public and restricted material separate. No sending, publishing, purchases, external tools or live credential effects. Select routine drafting choices yourself; unresolved consequential decisions belong in the decision register. Finish with the next useful owner decision.

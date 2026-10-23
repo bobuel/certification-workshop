@@ -1,0 +1,289 @@
+{
+  "classification": "restricted",
+  "schema": "certification-workshop-neutral-form-v1",
+  "program_id": "harbor-admin",
+  "mode": "demo",
+  "form": {
+    "id": "PILOT1",
+    "revision": 1,
+    "blueprint_revision": 1,
+    "status": "draft",
+    "item_refs": [
+      {
+        "item_id": "D01",
+        "revision": 1,
+        "item_fingerprint": "b7e25514559381294994cbbdd5ce9fc73633ff8500b66f9cdb3ec9e6777680ba"
+      },
+      {
+        "item_id": "D02",
+        "revision": 1,
+        "item_fingerprint": "d4f1e75e11d886abdad818c0a0c63b7a677354ab0c49fc651648c8a35052ec5e"
+      },
+      {
+        "item_id": "D03",
+        "revision": 1,
+        "item_fingerprint": "1671d7eb33e247a574fc043a20f83bbc945e96e7999d53f6fbd50278ef8ba8b5"
+      },
+      {
+        "item_id": "D04",
+        "revision": 1,
+        "item_fingerprint": "d853e0379b3adff09d993445fe2a398d78772b275b95523eb7df2668fdd60bf4"
+      },
+      {
+        "item_id": "R01",
+        "revision": 1,
+        "item_fingerprint": "1e0d4dfc88eed03b00019dbf117003bb8a699f43f19476a92eb01e8402046963"
+      },
+      {
+        "item_id": "R02",
+        "revision": 1,
+        "item_fingerprint": "a014a0ff9a27f87f9dc67465f95239c04a9a314cde5eb7c3af6c08531099d5d5"
+      },
+      {
+        "item_id": "S01",
+        "revision": 1,
+        "item_fingerprint": "80ee04741db3408ca58642956085458b696020d2d4c957aa8308fab43fcecfa5"
+      },
+      {
+        "item_id": "S02",
+        "revision": 1,
+        "item_fingerprint": "0eebe925f7786cf36cdd603061486a9d1f4ec43ba788f440a3cdb0f0cbf0eb50"
+      }
+    ]
+  },
+  "form_fingerprint": "5c0c2b46d8c12aa7ca8a81962aef533b032e6f0302fc8f7d139670279f72eaf1",
+  "items": [
+    {
+      "id": "D01",
+      "revision": 1,
+      "domain_id": "D",
+      "competency_ids": [
+        "C1"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "A Harbor import reports 980 accepted and 20 rejected rows from a 1,000-row source. What should the administrator do before publishing?",
+      "options": {
+        "A": "Publish because most rows succeeded.",
+        "B": "Inspect the rejection report and reconcile all source rows.",
+        "C": "Delete the rejection report.",
+        "D": "Retry until the accepted count increases."
+      },
+      "answer_key": "B",
+      "rationale": "Rule 2 requires reconciling accepted plus rejected counts and reviewing rejections; a majority accepted is insufficient.",
+      "max_score": 1,
+      "source_refs": [
+        {
+          "source_id": "DATA",
+          "version": "1.0",
+          "locator": "Rule 2"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "D02",
+      "revision": 1,
+      "domain_id": "D",
+      "competency_ids": [
+        "C1"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "A CSV has a first row containing field names. Which Harbor import setting preserves that row as column names?",
+      "options": {
+        "A": "header=false",
+        "B": "header=true",
+        "C": "overwrite=true",
+        "D": "skip_errors=true"
+      },
+      "answer_key": "B",
+      "rationale": "Rule 1 defines header=true. The other settings do not select header interpretation.",
+      "max_score": 1,
+      "source_refs": [
+        {
+          "source_id": "DATA",
+          "version": "1.0",
+          "locator": "Rule 1"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "D03",
+      "revision": 1,
+      "domain_id": "D",
+      "competency_ids": [
+        "C1"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "An import contains an empty required customer_id. Under Harbor v1, what happens to that row?",
+      "options": {
+        "A": "It receives a generated customer ID.",
+        "B": "It replaces the previous row.",
+        "C": "It is rejected with a reason in the rejection report.",
+        "D": "It is accepted as a null key."
+      },
+      "answer_key": "C",
+      "rationale": "Rule 3 requires rejection of a missing required identifier; Harbor does not generate one.",
+      "max_score": 1,
+      "source_refs": [
+        {
+          "source_id": "DATA",
+          "version": "1.0",
+          "locator": "Rule 3"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "D04",
+      "revision": 1,
+      "domain_id": "D",
+      "competency_ids": [
+        "C1"
+      ],
+      "type": "practical",
+      "status": "approved",
+      "prompt": "Prepare a publication decision for the supplied import report.",
+      "setup": "Synthetic source: 1,000 rows; accepted: 980; rejected: 20 with missing customer_id. No live system.",
+      "deliverable": "A short reconciliation and publication recommendation.",
+      "rubric": [
+        {
+          "criterion": "Reconcile counts",
+          "points": 2,
+          "anchor": "2: explicitly accounts for all 1,000 rows; 1: identifies accepted/rejected counts without reconciliation; 0: ignores the gap."
+        },
+        {
+          "criterion": "Resolve rejection decision",
+          "points": 2,
+          "anchor": "2: holds publication and requests source correction/review of missing IDs; 1: notes errors but no publication decision; 0: publishes without review."
+        }
+      ],
+      "rationale": "The rubric observes the relevant documented action and verification behavior.",
+      "max_score": 4,
+      "source_refs": [
+        {
+          "source_id": "DATA",
+          "version": "1.0",
+          "locator": "Rules 1-4"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "R01",
+      "revision": 1,
+      "domain_id": "R",
+      "competency_ids": [
+        "C3"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "A recovery operator wants to modify an existing Harbor snapshot before restoring it. What does the documented snapshot behavior permit?",
+      "options": {
+        "A": "Edit snapshot rows in place.",
+        "B": "Overwrite the snapshot with a live dataset.",
+        "C": "Modify its contents after approval.",
+        "D": "Restore its immutable contents to a new namespace."
+      },
+      "answer_key": "D",
+      "rationale": "Rule 1 defines snapshots as immutable, and rule 2 defines restoration to a new namespace.",
+      "max_score": 1,
+      "source_refs": [
+        {
+          "source_id": "REC",
+          "version": "1.0",
+          "locator": "Rules 1-2"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "R02",
+      "revision": 1,
+      "domain_id": "R",
+      "competency_ids": [
+        "C3"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "A restored dataset has been created in a new namespace. What must happen before clients are cut over?",
+      "options": {
+        "A": "Reconcile counts and verify access using the recovery checklist.",
+        "B": "Delete the original immediately.",
+        "C": "Skip verification because the restore completed.",
+        "D": "Grant all users administrator access."
+      },
+      "answer_key": "A",
+      "rationale": "Rule 3 requires reconciliation and access verification before cutover; restore completion is insufficient.",
+      "max_score": 1,
+      "source_refs": [
+        {
+          "source_id": "REC",
+          "version": "1.0",
+          "locator": "Rule 3"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "S01",
+      "revision": 1,
+      "domain_id": "S",
+      "competency_ids": [
+        "C2"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "A service account needs to read dataset orders and must not edit it. Which grant meets the documented requirement?",
+      "options": {
+        "A": "Workspace administrator",
+        "B": "Dataset orders reader",
+        "C": "Dataset orders writer",
+        "D": "Workspace owner"
+      },
+      "answer_key": "B",
+      "rationale": "Rule 1 specifies a dataset-specific reader role. The other roles grant excess authority.",
+      "max_score": 1,
+      "source_refs": [
+        {
+          "source_id": "SEC",
+          "version": "1.0",
+          "locator": "Rule 1"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "S02",
+      "revision": 1,
+      "domain_id": "S",
+      "competency_ids": [
+        "C2"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "A service-account token was disclosed. Which action immediately invalidates that token under Harbor v1?",
+      "options": {
+        "A": "Rename the service account.",
+        "B": "Change its description.",
+        "C": "Revoke the token and create a replacement through the credential workflow.",
+        "D": "Create a second token without revoking the first."
+      },
+      "answer_key": "C",
+      "rationale": "Rule 2 requires revocation; account metadata changes and creating another token do not revoke it.",
+      "max_score": 1,
+      "source_refs": [
+        {
+          "source_id": "SEC",
+          "version": "1.0",
+          "locator": "Rule 2"
+        }
+      ],
+      "enemy_groups": []
+    }
+  ],
+  "note": "Neutral authoring handoff including keys/rubrics. Not a candidate-facing exam or verified provider import."
+}

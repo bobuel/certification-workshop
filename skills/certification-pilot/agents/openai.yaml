@@ -1,0 +1,4 @@
+interface:
+  display_name: "Certification Pilot"
+  short_description: "Certification workflow: Pilot"
+  default_prompt: "Use $certification-pilot to help with my certification program."

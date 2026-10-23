@@ -1,0 +1,129 @@
+{
+  "classification": "restricted",
+  "program_id": "northstar",
+  "items": [
+    {
+      "id": "Q1",
+      "revision": 1,
+      "domain_id": "D1",
+      "competency_ids": [
+        "C1"
+      ],
+      "type": "single_choice",
+      "status": "draft",
+      "prompt": "A 1,000-row import reports 970 accepted, 20 empty-key rejections and 10 duplicate-key rejections. No exclusion is agreed. What should the consultant do next?",
+      "options": {
+        "A": "Publish because all source rows are accounted for.",
+        "B": "Resolve rejected-row disposition and verify mappings and values before publication.",
+        "C": "Retry the unchanged file to repair the rejected keys.",
+        "D": "Generate replacement customer IDs and publish the import."
+      },
+      "answer_key": "B",
+      "rationale": "B follows I1\u2013I3. A confuses reconciliation totals with publication authority; C cannot repair invalid input; D contradicts the rule that replacement IDs are not generated.",
+      "source_refs": [
+        {
+          "source_id": "ING",
+          "version": "1.0",
+          "locator": "I1\u2013I4"
+        }
+      ],
+      "max_score": 1,
+      "response_time_proposal_minutes": 4
+    },
+    {
+      "id": "Q2",
+      "revision": 1,
+      "domain_id": "D2",
+      "competency_ids": [
+        "C2"
+      ],
+      "type": "single_choice",
+      "status": "draft",
+      "prompt": "An integration only reads orders. It currently has workspace reader, and the consultant has tested reads as administrator. Which grant and verification plan meets the documented requirement?",
+      "options": {
+        "A": "Keep workspace reader; verify read and denied write as administrator.",
+        "B": "Use orders reader; verify only a successful read as the service identity.",
+        "C": "Use orders reader; verify read, denied write and denied unrelated-data access as the service identity.",
+        "D": "Use workspace writer; verify read, write and unrelated-data access as the service identity."
+      },
+      "answer_key": "C",
+      "rationale": "C applies least privilege and A2 verification. A retains broad access and uses the wrong identity; B omits negative checks; D grants and demonstrates excess permissions.",
+      "source_refs": [
+        {
+          "source_id": "ACC",
+          "version": "1.0",
+          "locator": "A1\u2013A2"
+        }
+      ],
+      "max_score": 1,
+      "response_time_proposal_minutes": 4
+    },
+    {
+      "id": "P1",
+      "revision": 1,
+      "domain_id": "D3",
+      "competency_ids": [
+        "C3"
+      ],
+      "type": "practical",
+      "status": "draft",
+      "prompt": "Write a recovery evidence sheet and cutover recommendation for this case. Distinguish observed facts, checks still needed, blockers and authority.",
+      "setup": "Paper exercise only; no executable lab or production actions. Snapshot manifest: 1,000 rows; snapshot age: 24 hours. A restore in a new namespace reports 995 rows. A service identity can read an unrelated customer dataset. No recovery objective is documented, and no customer cutover authorization exists. Representative values have not yet been checked. Use supplied Northstar 1.0 references.",
+      "deliverable": "Submit a written evidence sheet identifying discrepancies, required checks, safe next actions, escalation recipient, cutover decision and rollback/authorization records. Do not claim unperformed checks succeeded.",
+      "rubric": [
+        {
+          "criterion": "Safe restore",
+          "points": 2,
+          "anchor": "2: Names a new namespace and preserves the active dataset; rejects overwriting active data. 1: Identifies the concern but omits one required action or evidence detail. 0: Omits the concern or proposes a contradictory unsafe action. An explicit unsafe contradiction overrides otherwise correct statements for this criterion; no negative scores or inferred actions."
+        },
+        {
+          "criterion": "Recovery objective",
+          "points": 2,
+          "anchor": "2: Requests the customer-approved recovery objective and escalates its absence rather than inventing a loss window. 1: Identifies the concern but omits one required action or evidence detail. 0: Omits the concern or proposes a contradictory unsafe action. An explicit unsafe contradiction overrides otherwise correct statements for this criterion; no negative scores or inferred actions."
+        },
+        {
+          "criterion": "Count integrity",
+          "points": 2,
+          "anchor": "2: Identifies the 5-row mismatch, compares with the manifest and blocks cutover pending investigation. 1: Identifies the concern but omits one required action or evidence detail. 0: Omits the concern or proposes a contradictory unsafe action. An explicit unsafe contradiction overrides otherwise correct statements for this criterion; no negative scores or inferred actions."
+        },
+        {
+          "criterion": "Representative values",
+          "points": 2,
+          "anchor": "2: Specifies inspection of representative restored values with retained evidence. 1: Identifies the concern but omits one required action or evidence detail. 0: Omits the concern or proposes a contradictory unsafe action. An explicit unsafe contradiction overrides otherwise correct statements for this criterion; no negative scores or inferred actions."
+        },
+        {
+          "criterion": "Service access",
+          "points": 2,
+          "anchor": "2: Requires intended service-identity permission checks and resolution of unrelated-dataset access before cutover. 1: Identifies the concern but omits one required action or evidence detail. 0: Omits the concern or proposes a contradictory unsafe action. An explicit unsafe contradiction overrides otherwise correct statements for this criterion; no negative scores or inferred actions."
+        },
+        {
+          "criterion": "Authorized cutover",
+          "points": 2,
+          "anchor": "2: Retains the old namespace, documents a rollback route and obtains customer authorization recording actor and version before redirecting clients. 1: Identifies the concern but omits one required action or evidence detail. 0: Omits the concern or proposes a contradictory unsafe action. An explicit unsafe contradiction overrides otherwise correct statements for this criterion; no negative scores or inferred actions."
+        }
+      ],
+      "max_score": 12,
+      "rationale": "R1\u2013R3 require safe namespace separation, an agreed recovery objective, integrity and access verification, and authorized cutover. Current facts block cutover. Escalate the missing objective and authorization to the customer; investigate discrepancies with the responsible data/access owner. Restore completion alone is insufficient.",
+      "source_refs": [
+        {
+          "source_id": "REC",
+          "version": "1.0",
+          "locator": "R1\u2013R3"
+        }
+      ],
+      "response_time_proposal_minutes": 20
+    }
+  ],
+  "item_fingerprints": {
+    "Q1": "7870c67d8d15cd69058da7174eed796ecc6de6b4d7e7d0d0ae202354c286b019",
+    "Q2": "68703290cfb6738f7988c3399f103772f3837c2fbd7230b2204423a61c00ef96",
+    "P1": "57d8e1959153ae02936bacf4da433d811a21005661c506082fb6eead718f5afb"
+  },
+  "review_questions": [
+    "Does it assess the mapped work at the intended level?",
+    "Is the key/rubric supported and unambiguous?",
+    "Are irrelevant language, accessibility or bias barriers present?",
+    "Accept, revise or reject this exact revision, with evidence."
+  ],
+  "note": "Prepared packet; no reviewer was contacted and no human review occurred."
+}

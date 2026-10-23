@@ -1,0 +1,86 @@
+{
+  "profile": "<workspace>\\work\\certification-codex-profile-01",
+  "global_config_unchanged": true,
+  "steps": [
+    {
+      "args": [
+        "--version"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "output": "codex-cli 0.163.0-alpha.10.2"
+    },
+    {
+      "args": [
+        "plugin",
+        "marketplace",
+        "add",
+        "<workspace>\\outputs\\certification-workshop",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "output": {
+        "marketplaceName": "certification-workshop",
+        "installedRoot": "<workspace>\\outputs\\certification-workshop",
+        "alreadyAdded": false
+      }
+    },
+    {
+      "args": [
+        "plugin",
+        "add",
+        "certification-workshop@certification-workshop",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "output": {
+        "pluginId": "certification-workshop@certification-workshop",
+        "name": "certification-workshop",
+        "marketplaceName": "certification-workshop",
+        "version": "0.1.2",
+        "installedPath": "<workspace>\\work\\certification-codex-profile-01\\plugins\\cache\\certification-workshop\\certification-workshop\\0.1.2",
+        "authPolicy": "ON_INSTALL"
+      }
+    },
+    {
+      "args": [
+        "plugin",
+        "list",
+        "--marketplace",
+        "certification-workshop",
+        "--json"
+      ],
+      "exit_code": 0,
+      "stderr": "",
+      "output": {
+        "installed": [
+          {
+            "pluginId": "certification-workshop@certification-workshop",
+            "name": "certification-workshop",
+            "marketplaceName": "certification-workshop",
+            "version": "0.1.2",
+            "installed": true,
+            "enabled": true,
+            "source": {
+              "source": "local",
+              "path": "<workspace>\\outputs\\certification-workshop"
+            },
+            "marketplaceSource": {
+              "sourceType": "local",
+              "source": "\\\\?\\<workspace>\\outputs\\certification-workshop"
+            },
+            "installPolicy": "AVAILABLE",
+            "authPolicy": "ON_INSTALL"
+          }
+        ],
+        "available": []
+      }
+    }
+  ],
+  "scope": "Disposable local Codex CLI plugin registration/install/list only; no model invocation.",
+  "installed_skills_match_source": true,
+  "cached_helper_created_program": true,
+  "raw_receipt_sha256": "656267134902cd5a2c7f809b9325901954e231d53b0f4ced64224213361ded22"
+}

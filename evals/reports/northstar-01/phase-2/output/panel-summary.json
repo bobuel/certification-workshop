@@ -1,0 +1,24 @@
+{
+  "classification": "restricted",
+  "form_id": "PILOT1",
+  "form_fingerprint": "e38eba56df2e198120e47de15b1aee23cee0e14b3dd6d5082e8659bd6eb330a4",
+  "judges": 3,
+  "mean_expected_total": 19.8,
+  "min_expected_total": 18.150000000000002,
+  "max_expected_total": 21.450000000000003,
+  "item_mean_expected_scores": {
+    "NS_A01": 0.6,
+    "NS_A02": 0.6,
+    "NS_A03": 0.6,
+    "NS_A04": 4.8,
+    "NS_I01": 0.6,
+    "NS_I02": 0.6,
+    "NS_I03": 0.6,
+    "NS_I04": 0.6,
+    "NS_I05": 4.8,
+    "NS_R01": 0.6,
+    "NS_R02": 0.6,
+    "NS_R03": 4.8
+  },
+  "note": "Arithmetic summary of supplied expected-score judgments, not an approved cut score. Do not invent judges, choose a rounding rule, or issue credentials from this value."
+}

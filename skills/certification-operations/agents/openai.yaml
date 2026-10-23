@@ -1,0 +1,4 @@
+interface:
+  display_name: "Certification Operations"
+  short_description: "Certification workflow: Operations"
+  default_prompt: "Use $certification-operations to help with my certification program."

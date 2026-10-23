@@ -1,0 +1,718 @@
+{
+  "schema_version": 1,
+  "program": {
+    "id": "harbor-admin",
+    "title": "Harbor Data Platform Administrator",
+    "mode": "demo",
+    "revision": 1,
+    "owner": "Synthetic program owner",
+    "audience": "Implementation administrators",
+    "claim": "Perform defined ingestion, access and recovery tasks in the fictional Harbor environment.",
+    "purpose": "Demonstrate the complete certification development workflow.",
+    "status": "draft"
+  },
+  "blueprint": {
+    "id": "BP1",
+    "revision": 1,
+    "status": "approved",
+    "weight_basis": "items",
+    "form_length": 8,
+    "domains": [
+      {
+        "id": "D",
+        "title": "Data ingestion",
+        "weight": 50,
+        "competency_ids": [
+          "C1"
+        ]
+      },
+      {
+        "id": "S",
+        "title": "Access control",
+        "weight": 25,
+        "competency_ids": [
+          "C2"
+        ]
+      },
+      {
+        "id": "R",
+        "title": "Recovery",
+        "weight": 25,
+        "competency_ids": [
+          "C3"
+        ]
+      }
+    ],
+    "required_methods": {
+      "practical": 1
+    }
+  },
+  "sources": [
+    {
+      "id": "DATA",
+      "version": "1.0",
+      "title": "Harbor Ingestion Guide",
+      "location": "sources/data.md",
+      "evidence_kind": "synthetic",
+      "current": true
+    },
+    {
+      "id": "SEC",
+      "version": "1.0",
+      "title": "Harbor Access Guide",
+      "location": "sources/sec.md",
+      "evidence_kind": "synthetic",
+      "current": true
+    },
+    {
+      "id": "REC",
+      "version": "1.0",
+      "title": "Harbor Recovery Guide",
+      "location": "sources/rec.md",
+      "evidence_kind": "synthetic",
+      "current": true
+    }
+  ],
+  "tasks": [
+    {
+      "id": "T1",
+      "statement": "Import a UTF-8 dataset and verify row counts and rejected-row evidence before making it available.",
+      "source_refs": [
+        {
+          "source_id": "DATA",
+          "version": "1.0",
+          "locator": "Rules 1-4"
+        }
+      ],
+      "study_status": "synthetic-workshop-example"
+    },
+    {
+      "id": "T2",
+      "statement": "Grant a service account dataset-specific read access and remove leaked credentials.",
+      "source_refs": [
+        {
+          "source_id": "SEC",
+          "version": "1.0",
+          "locator": "Rules 1-4"
+        }
+      ],
+      "study_status": "synthetic-workshop-example"
+    },
+    {
+      "id": "T3",
+      "statement": "Recover a dataset from an immutable snapshot into a new namespace and reconcile it before cutover.",
+      "source_refs": [
+        {
+          "source_id": "REC",
+          "version": "1.0",
+          "locator": "Rules 1-4"
+        }
+      ],
+      "study_status": "synthetic-workshop-example"
+    }
+  ],
+  "competencies": [
+    {
+      "id": "C1",
+      "statement": "Import a UTF-8 dataset and verify row counts and rejected-row evidence before making it available.",
+      "task_ids": [
+        "T1"
+      ]
+    },
+    {
+      "id": "C2",
+      "statement": "Grant a service account dataset-specific read access and remove leaked credentials.",
+      "task_ids": [
+        "T2"
+      ]
+    },
+    {
+      "id": "C3",
+      "statement": "Recover a dataset from an immutable snapshot into a new namespace and reconcile it before cutover.",
+      "task_ids": [
+        "T3"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "D01",
+      "revision": 1,
+      "domain_id": "D",
+      "competency_ids": [
+        "C1"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "A Harbor import reports 980 accepted and 20 rejected rows from a 1,000-row source. What should the administrator do before publishing?",
+      "options": {
+        "A": "Publish because most rows succeeded.",
+        "B": "Inspect the rejection report and reconcile all source rows.",
+        "C": "Delete the rejection report.",
+        "D": "Retry until the accepted count increases."
+      },
+      "answer_key": "B",
+      "rationale": "Rule 2 requires reconciling accepted plus rejected counts and reviewing rejections; a majority accepted is insufficient.",
+      "max_score": 1,
+      "source_refs": [
+        {
+          "source_id": "DATA",
+          "version": "1.0",
+          "locator": "Rule 2"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "D02",
+      "revision": 1,
+      "domain_id": "D",
+      "competency_ids": [
+        "C1"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "A CSV has a first row containing field names. Which Harbor import setting preserves that row as column names?",
+      "options": {
+        "A": "header=false",
+        "B": "header=true",
+        "C": "overwrite=true",
+        "D": "skip_errors=true"
+      },
+      "answer_key": "B",
+      "rationale": "Rule 1 defines header=true. The other settings do not select header interpretation.",
+      "max_score": 1,
+      "source_refs": [
+        {
+          "source_id": "DATA",
+          "version": "1.0",
+          "locator": "Rule 1"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "D03",
+      "revision": 1,
+      "domain_id": "D",
+      "competency_ids": [
+        "C1"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "An import contains an empty required customer_id. Under Harbor v1, what happens to that row?",
+      "options": {
+        "A": "It receives a generated customer ID.",
+        "B": "It replaces the previous row.",
+        "C": "It is rejected with a reason in the rejection report.",
+        "D": "It is accepted as a null key."
+      },
+      "answer_key": "C",
+      "rationale": "Rule 3 requires rejection of a missing required identifier; Harbor does not generate one.",
+      "max_score": 1,
+      "source_refs": [
+        {
+          "source_id": "DATA",
+          "version": "1.0",
+          "locator": "Rule 3"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "D04",
+      "revision": 1,
+      "domain_id": "D",
+      "competency_ids": [
+        "C1"
+      ],
+      "type": "practical",
+      "status": "approved",
+      "prompt": "Prepare a publication decision for the supplied import report.",
+      "setup": "Synthetic source: 1,000 rows; accepted: 980; rejected: 20 with missing customer_id. No live system.",
+      "deliverable": "A short reconciliation and publication recommendation.",
+      "rubric": [
+        {
+          "criterion": "Reconcile counts",
+          "points": 2,
+          "anchor": "2: explicitly accounts for all 1,000 rows; 1: identifies accepted/rejected counts without reconciliation; 0: ignores the gap."
+        },
+        {
+          "criterion": "Resolve rejection decision",
+          "points": 2,
+          "anchor": "2: holds publication and requests source correction/review of missing IDs; 1: notes errors but no publication decision; 0: publishes without review."
+        }
+      ],
+      "rationale": "The rubric observes the relevant documented action and verification behavior.",
+      "max_score": 4,
+      "source_refs": [
+        {
+          "source_id": "DATA",
+          "version": "1.0",
+          "locator": "Rules 1-4"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "D05",
+      "revision": 1,
+      "domain_id": "D",
+      "competency_ids": [
+        "C1"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "An administrator wants to inspect the first ten accepted rows without altering the dataset. Which documented action fits?",
+      "options": {
+        "A": "preview --limit 10",
+        "B": "publish --force",
+        "C": "delete --limit 10",
+        "D": "retry --overwrite"
+      },
+      "answer_key": "A",
+      "rationale": "Rule 4 defines a read-only preview command. Publishing, deleting and retrying have other effects.",
+      "max_score": 1,
+      "source_refs": [
+        {
+          "source_id": "DATA",
+          "version": "1.0",
+          "locator": "Rule 4"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "D06",
+      "revision": 1,
+      "domain_id": "D",
+      "competency_ids": [
+        "C1"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "The accepted count plus rejected count does not equal the source row count. What is the appropriate publication decision?",
+      "options": {
+        "A": "Publish if the sample looks correct.",
+        "B": "Publish and remove the source.",
+        "C": "Assume duplicate rows account for the difference.",
+        "D": "Hold publication and investigate the reconciliation gap."
+      },
+      "answer_key": "D",
+      "rationale": "Rule 2 requires complete reconciliation before publication; no automatic duplicate explanation is supported.",
+      "max_score": 1,
+      "source_refs": [
+        {
+          "source_id": "DATA",
+          "version": "1.0",
+          "locator": "Rule 2"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "R01",
+      "revision": 1,
+      "domain_id": "R",
+      "competency_ids": [
+        "C3"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "A recovery operator wants to modify an existing Harbor snapshot before restoring it. What does the documented snapshot behavior permit?",
+      "options": {
+        "A": "Edit snapshot rows in place.",
+        "B": "Overwrite the snapshot with a live dataset.",
+        "C": "Modify its contents after approval.",
+        "D": "Restore its immutable contents to a new namespace."
+      },
+      "answer_key": "D",
+      "rationale": "Rule 1 defines snapshots as immutable, and rule 2 defines restoration to a new namespace.",
+      "max_score": 1,
+      "source_refs": [
+        {
+          "source_id": "REC",
+          "version": "1.0",
+          "locator": "Rules 1-2"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "R02",
+      "revision": 1,
+      "domain_id": "R",
+      "competency_ids": [
+        "C3"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "A restored dataset has been created in a new namespace. What must happen before clients are cut over?",
+      "options": {
+        "A": "Reconcile counts and verify access using the recovery checklist.",
+        "B": "Delete the original immediately.",
+        "C": "Skip verification because the restore completed.",
+        "D": "Grant all users administrator access."
+      },
+      "answer_key": "A",
+      "rationale": "Rule 3 requires reconciliation and access verification before cutover; restore completion is insufficient.",
+      "max_score": 1,
+      "source_refs": [
+        {
+          "source_id": "REC",
+          "version": "1.0",
+          "locator": "Rule 3"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "R03",
+      "revision": 1,
+      "domain_id": "R",
+      "competency_ids": [
+        "C3"
+      ],
+      "type": "practical",
+      "status": "approved",
+      "prompt": "Prepare a recovery and cutover checklist for an immutable snapshot.",
+      "setup": "Synthetic snapshot of 1,000 rows and an empty new namespace. No live system.",
+      "deliverable": "Ordered restore, verification and cutover steps.",
+      "rubric": [
+        {
+          "criterion": "Restore safely",
+          "points": 2,
+          "anchor": "2: restore into new namespace while preserving original; 1: new namespace with unclear preservation; 0: destructive overwrite."
+        },
+        {
+          "criterion": "Verify before cutover",
+          "points": 2,
+          "anchor": "2: reconcile counts and verify access before cutover; 1: only one check; 0: immediate cutover."
+        }
+      ],
+      "rationale": "The rubric observes the relevant documented action and verification behavior.",
+      "max_score": 4,
+      "source_refs": [
+        {
+          "source_id": "REC",
+          "version": "1.0",
+          "locator": "Rules 1-4"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "S01",
+      "revision": 1,
+      "domain_id": "S",
+      "competency_ids": [
+        "C2"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "A service account needs to read dataset orders and must not edit it. Which grant meets the documented requirement?",
+      "options": {
+        "A": "Workspace administrator",
+        "B": "Dataset orders reader",
+        "C": "Dataset orders writer",
+        "D": "Workspace owner"
+      },
+      "answer_key": "B",
+      "rationale": "Rule 1 specifies a dataset-specific reader role. The other roles grant excess authority.",
+      "max_score": 1,
+      "source_refs": [
+        {
+          "source_id": "SEC",
+          "version": "1.0",
+          "locator": "Rule 1"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "S02",
+      "revision": 1,
+      "domain_id": "S",
+      "competency_ids": [
+        "C2"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "A service-account token was disclosed. Which action immediately invalidates that token under Harbor v1?",
+      "options": {
+        "A": "Rename the service account.",
+        "B": "Change its description.",
+        "C": "Revoke the token and create a replacement through the credential workflow.",
+        "D": "Create a second token without revoking the first."
+      },
+      "answer_key": "C",
+      "rationale": "Rule 2 requires revocation; account metadata changes and creating another token do not revoke it.",
+      "max_score": 1,
+      "source_refs": [
+        {
+          "source_id": "SEC",
+          "version": "1.0",
+          "locator": "Rule 2"
+        }
+      ],
+      "enemy_groups": []
+    },
+    {
+      "id": "S03",
+      "revision": 1,
+      "domain_id": "S",
+      "competency_ids": [
+        "C2"
+      ],
+      "type": "practical",
+      "status": "approved",
+      "prompt": "Prepare a least-privilege service-account access plan for dataset orders.",
+      "setup": "Synthetic role matrix only. Account has no current grants; no credentials are required.",
+      "deliverable": "Grant choice and verification plan.",
+      "rubric": [
+        {
+          "criterion": "Select grant",
+          "points": 2,
+          "anchor": "2: dataset orders reader only; 1: reader plus unnecessary read grants; 0: grants write/admin."
+        },
+        {
+          "criterion": "Verify boundaries",
+          "points": 2,
+          "anchor": "2: plans successful read and denied write checks; 1: only a successful read check; 0: no verification."
+        }
+      ],
+      "rationale": "The rubric observes the relevant documented action and verification behavior.",
+      "max_score": 4,
+      "source_refs": [
+        {
+          "source_id": "SEC",
+          "version": "1.0",
+          "locator": "Rules 1-4"
+        }
+      ],
+      "enemy_groups": []
+    }
+  ],
+  "reviews": [
+    {
+      "id": "REV_D01",
+      "item_id": "D01",
+      "revision": 1,
+      "reviewer": "Synthetic content reviewer",
+      "role": "content",
+      "verdict": "accept",
+      "evidence_kind": "synthetic",
+      "evidence_ref": "review-register.md",
+      "item_fingerprint": "b7e25514559381294994cbbdd5ce9fc73633ff8500b66f9cdb3ec9e6777680ba"
+    },
+    {
+      "id": "REV_D02",
+      "item_id": "D02",
+      "revision": 1,
+      "reviewer": "Synthetic content reviewer",
+      "role": "content",
+      "verdict": "accept",
+      "evidence_kind": "synthetic",
+      "evidence_ref": "review-register.md",
+      "item_fingerprint": "d4f1e75e11d886abdad818c0a0c63b7a677354ab0c49fc651648c8a35052ec5e"
+    },
+    {
+      "id": "REV_D03",
+      "item_id": "D03",
+      "revision": 1,
+      "reviewer": "Synthetic content reviewer",
+      "role": "content",
+      "verdict": "accept",
+      "evidence_kind": "synthetic",
+      "evidence_ref": "review-register.md",
+      "item_fingerprint": "1671d7eb33e247a574fc043a20f83bbc945e96e7999d53f6fbd50278ef8ba8b5"
+    },
+    {
+      "id": "REV_D04",
+      "item_id": "D04",
+      "revision": 1,
+      "reviewer": "Synthetic content reviewer",
+      "role": "content",
+      "verdict": "accept",
+      "evidence_kind": "synthetic",
+      "evidence_ref": "review-register.md",
+      "item_fingerprint": "d853e0379b3adff09d993445fe2a398d78772b275b95523eb7df2668fdd60bf4"
+    },
+    {
+      "id": "REV_D05",
+      "item_id": "D05",
+      "revision": 1,
+      "reviewer": "Synthetic content reviewer",
+      "role": "content",
+      "verdict": "accept",
+      "evidence_kind": "synthetic",
+      "evidence_ref": "review-register.md",
+      "item_fingerprint": "efe51823fd0c97d0306791c01a92119ada35702af42cc19872cec668785b8743"
+    },
+    {
+      "id": "REV_D06",
+      "item_id": "D06",
+      "revision": 1,
+      "reviewer": "Synthetic content reviewer",
+      "role": "content",
+      "verdict": "accept",
+      "evidence_kind": "synthetic",
+      "evidence_ref": "review-register.md",
+      "item_fingerprint": "7b09f5c2a72ac7759b94832cc79ec140fde7054b8c82e2056a5e86c4c69e4c07"
+    },
+    {
+      "id": "REV_R01",
+      "item_id": "R01",
+      "revision": 1,
+      "reviewer": "Synthetic content reviewer",
+      "role": "content",
+      "verdict": "accept",
+      "evidence_kind": "synthetic",
+      "evidence_ref": "review-register.md",
+      "item_fingerprint": "1e0d4dfc88eed03b00019dbf117003bb8a699f43f19476a92eb01e8402046963"
+    },
+    {
+      "id": "REV_R02",
+      "item_id": "R02",
+      "revision": 1,
+      "reviewer": "Synthetic content reviewer",
+      "role": "content",
+      "verdict": "accept",
+      "evidence_kind": "synthetic",
+      "evidence_ref": "review-register.md",
+      "item_fingerprint": "a014a0ff9a27f87f9dc67465f95239c04a9a314cde5eb7c3af6c08531099d5d5"
+    },
+    {
+      "id": "REV_R03",
+      "item_id": "R03",
+      "revision": 1,
+      "reviewer": "Synthetic content reviewer",
+      "role": "content",
+      "verdict": "accept",
+      "evidence_kind": "synthetic",
+      "evidence_ref": "review-register.md",
+      "item_fingerprint": "8530f1ee12f93d53bffb453abafc5ae7aa010e39a599e2edf3e1a7b688c3f8ba"
+    },
+    {
+      "id": "REV_S01",
+      "item_id": "S01",
+      "revision": 1,
+      "reviewer": "Synthetic content reviewer",
+      "role": "content",
+      "verdict": "accept",
+      "evidence_kind": "synthetic",
+      "evidence_ref": "review-register.md",
+      "item_fingerprint": "80ee04741db3408ca58642956085458b696020d2d4c957aa8308fab43fcecfa5"
+    },
+    {
+      "id": "REV_S02",
+      "item_id": "S02",
+      "revision": 1,
+      "reviewer": "Synthetic content reviewer",
+      "role": "content",
+      "verdict": "accept",
+      "evidence_kind": "synthetic",
+      "evidence_ref": "review-register.md",
+      "item_fingerprint": "0eebe925f7786cf36cdd603061486a9d1f4ec43ba788f440a3cdb0f0cbf0eb50"
+    },
+    {
+      "id": "REV_S03",
+      "item_id": "S03",
+      "revision": 1,
+      "reviewer": "Synthetic content reviewer",
+      "role": "content",
+      "verdict": "accept",
+      "evidence_kind": "synthetic",
+      "evidence_ref": "review-register.md",
+      "item_fingerprint": "0219be38875f8476b15d99a28ab3f8d883cf4e3e33893a600341e9d5c1529291"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "DEC_AWARD1",
+      "target_type": "award",
+      "target_id": "AWARD1",
+      "revision": 1,
+      "decision": "approve",
+      "actor": "Synthetic owner",
+      "evidence_kind": "synthetic",
+      "target_fingerprint": "0dce2cabc6110210de97ad8fc723b990fc71299e7292381b7d2fcca969d5075d",
+      "evidence_ref": "synthetic-demo-only",
+      "rationale": "Rehearse award record reconciliation, not an actual award."
+    }
+  ],
+  "forms": [
+    {
+      "id": "PILOT1",
+      "revision": 1,
+      "blueprint_revision": 1,
+      "status": "draft",
+      "item_refs": [
+        {
+          "item_id": "D01",
+          "revision": 1,
+          "item_fingerprint": "b7e25514559381294994cbbdd5ce9fc73633ff8500b66f9cdb3ec9e6777680ba"
+        },
+        {
+          "item_id": "D02",
+          "revision": 1,
+          "item_fingerprint": "d4f1e75e11d886abdad818c0a0c63b7a677354ab0c49fc651648c8a35052ec5e"
+        },
+        {
+          "item_id": "D03",
+          "revision": 1,
+          "item_fingerprint": "1671d7eb33e247a574fc043a20f83bbc945e96e7999d53f6fbd50278ef8ba8b5"
+        },
+        {
+          "item_id": "D04",
+          "revision": 1,
+          "item_fingerprint": "d853e0379b3adff09d993445fe2a398d78772b275b95523eb7df2668fdd60bf4"
+        },
+        {
+          "item_id": "R01",
+          "revision": 1,
+          "item_fingerprint": "1e0d4dfc88eed03b00019dbf117003bb8a699f43f19476a92eb01e8402046963"
+        },
+        {
+          "item_id": "R02",
+          "revision": 1,
+          "item_fingerprint": "a014a0ff9a27f87f9dc67465f95239c04a9a314cde5eb7c3af6c08531099d5d5"
+        },
+        {
+          "item_id": "S01",
+          "revision": 1,
+          "item_fingerprint": "80ee04741db3408ca58642956085458b696020d2d4c957aa8308fab43fcecfa5"
+        },
+        {
+          "item_id": "S02",
+          "revision": 1,
+          "item_fingerprint": "0eebe925f7786cf36cdd603061486a9d1f4ec43ba788f440a3cdb0f0cbf0eb50"
+        }
+      ]
+    }
+  ],
+  "awards": [
+    {
+      "id": "AWARD1",
+      "candidate_id": "SYNTHETIC_01",
+      "credential_version": "demo-v1",
+      "decision_id": "DEC_AWARD1",
+      "status": "issued",
+      "receipt": "synthetic://receipt/1"
+    }
+  ],
+  "public": {
+    "overview": "Illustrative Harbor administrator certification. This is a synthetic demonstration, not an offered credential.",
+    "audience": "Implementation administrators working within the stated Harbor role scope.",
+    "eligibility": "Proposed for owner review; no actual enrollment.",
+    "format": "Demo: eight tasks/questions including a scored practical exercise.",
+    "permitted_resources": "Synthetic product reference supplied for this demonstration.",
+    "accommodations": "A real program must publish an accessible request and decision process.",
+    "retakes": "Owner decision pending for a real program.",
+    "appeals": "Owner decision pending for a real program.",
+    "renewal": "Owner decision pending for a real program.",
+    "support": "No live service; demonstration only."
+  },
+  "policies": {},
+  "notes": []
+}

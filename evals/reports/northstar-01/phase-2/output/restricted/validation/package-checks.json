@@ -1,0 +1,17 @@
+{
+  "checks": {
+    "twelve_items": true,
+    "all_draft_revision_1": true,
+    "domain_counts": true,
+    "practical_each_domain": true,
+    "scores_12_11_10": true,
+    "no_approval_results_or_effects": true,
+    "source_copy_exact": true,
+    "relative_source_paths_resolve": true,
+    "public_no_bank_prompt_key_or_rubric": true,
+    "required_artifacts_exist": true,
+    "packet_matches_bank": true
+  },
+  "all_passed": true,
+  "limits": "Structural, copy, mapping and draft/public content checks only; no human review, pilot or delivery verification."
+}

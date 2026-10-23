@@ -1,0 +1,4 @@
+interface:
+  display_name: "Certification Blueprint"
+  short_description: "Certification workflow: Blueprint"
+  default_prompt: "Use $certification-blueprint to help with my certification program."

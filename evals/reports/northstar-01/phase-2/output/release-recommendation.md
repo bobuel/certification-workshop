@@ -1,0 +1,37 @@
+# Northstar product 2.0 — release recommendation
+
+RESTRICTED. Fictional/synthetic rehearsal. Recommendation to Morgan Lee: **hold credential launch and any passing-score announcement tomorrow**. The useful deliverable tomorrow is the revised 2.0 review package and a decision on the next low-stakes pilot. No launch, credential issuance or publication is authorized. This is an analyst recommendation, not an owner decision.
+
+The existing LMS and written evidence sheets remain suitable for a bounded reasoning pilot. They do not directly observe execution of a deployment. No new platform, service or paid environment is needed for the proposed next work. Keep the claim limited until actual performance evidence supports it.
+
+## Historical evidence and analysis
+
+The immutable analysis record is `restricted/history/product-1.0-pilot/program.json`, PILOT1 revision 1, blueprint revision 1, all twelve items revision 1. Scored-form fingerprint: `e38eba56df2e198120e47de15b1aee23cee0e14b3dd6d5082e8659bd6eb330a4`. Its simulated content acceptance and administration are explained by the supplied simulation receipt; stale snapshot notes saying no review/form/pilot predate that receipt and are preserved rather than edited. None represents real reviewers, candidate administration or release approval.
+
+The raw 24-row matrix is preserved unchanged. SYN_24 (CSV line 25) has an unavailable NS_A01@1 score after an unfinished attempt. The owner's current instruction authorizes exclusion of the whole attempt for descriptive complete-case analysis. No blank was scored zero or imputed; all other 23 rows are included. See `restricted/data/exclusions.json` and `pilot-complete-cases.csv`. Complete-case selection can bias results; the synthetic cohort does not establish population performance.
+
+The helper's `pilot-analysis.json` reports mean 18.8261/33 (57.05%), sample SD 3.6012 and alpha −0.6893. Totals range 13–26; median 19. The supplementary restricted total-score file retains candidate-level totals. Selected-response score proportions range .7391–.8261; practical proportions are .5272 (access), .4674 (ingestion) and .5000 (recovery). These are recorded practical score proportions, not probabilities of a correct response.
+
+Nine of twelve corrected item-total associations are negative. The ingestion practical NS_I05@1 is most negative (−.5312); NS_A03@1 is −.2599 and NS_I02@1 −.2283. Positive associations are weak (.0434–.1290). The negative alpha is retained as calculated. Investigate scoring/key alignment, score-export provenance, practical anchor use and the patterned synthetic score generation before interpreting internal consistency. Review item content and dimensionality alongside the calculations; do not delete items mechanically or claim that a key is wrong from correlation alone. No response artifacts, independent rater scores, timing, accessibility feedback or real sampling evidence were supplied. No inter-rater reliability, DIF, IRT, equating, classification accuracy or fairness study was performed.
+
+## Passing standard
+
+The supplied minimally competent consultant can execute a bounded deployment with the reference guide, verify results and escalate unresolved differences without unsafe shortcuts. The three synthetic trained judges supplied one round of expected item scores for that definition on PILOT1. Each total sums the expected scores on the 33-point scale: SYN_J1 = 18.15 (55%); SYN_J2 = 19.80 (60%); SYN_J3 = 21.45 (65%). The mean is **19.80 (60%)**, with a 3.30-point range. Mean expected score is .60 for each selected-response item and 4.80 for each 8-point practical. `panel-summary.json` is the helper's arithmetic output.
+
+This is round-one expected-score work resembling an Angoff-style procedure, not evidence that an entire standard-setting procedure was approved or completed. Supplied training is synthetic; selection rationale, calibration responses, discussion and second-round judgments are unavailable. Judges used uniform proportions within their own rows; ask them to articulate item-specific expectations rather than interpreting arithmetic agreement as strong evidence.
+
+**Do not announce 80%.** It is 26.4/33, 6.6 points above the panel mean; no supplied rationale or authority supports it. Neither rounding 19.8 nor announcing 60% is authorized either. Rounding, compensation across domains, critical-error treatment and score consequences remain owner decisions. Historical judgments cannot set the standard for changed 2.0 items. After review and a revised pilot, use the same explicit performance definition, examine judgments and consequences, document disagreements, and obtain an exact-version owner-approved rule before pass/fail use. No candidate pass/fail labels are produced here.
+
+## Transition and decision sequence
+
+Preserve 1.0 as historical evidence; stop using it for a product-2.0 competence claim. Do not rescore historical attempts with 2.0 keys or merge forms. No credentials exist, so there are no holders to revoke, expire or require to recertify. Do not create a retroactive entitlement. Any future recognition of earlier learning needs a separate owner policy; an access-update exercise alone is not proven equivalent to a full 2.0 assessment.
+
+1. Morgan decides tomorrow whether to authorize review and a later low-stakes 2.0 pilot, confirms the limited claim, and assigns reviewer/rater/delivery capacity. The prior four reviewer-hours do not cover re-review, scoring, panel work and administration automatically.
+2. Content reviewers inspect exact revision-2 targets in `restricted/review-packet-v2.json` with the impact packet. Confirm the combined grant and all practical anchors; retain dissent and actual verdicts. Measurement/accessibility reviewers inspect clarity, weighting, bias and text-sheet usability. Unchanged synthetic acceptances are not live acceptance.
+3. The analyst and raters investigate the historical score anomalies without modifying raw data. Obtain actual response artifacts and independently scored calibration cases where available; otherwise record the gap and study it in the next authorized pilot.
+4. Delivery owner verifies the exact revised form in the existing LMS: question keys, 1/8-point scoring, sheet-to-attempt linkage, permitted resources, time, accessible navigation, interruptions, omission handling, restricted access and export readback. No provider import/readback has occurred.
+5. Morgan approves the exact pilot version only after review, capacity and delivery checks. Run and score it with authorized handling and rater checks; preserve its separate data and form identity. Revisit the passing-standard procedure on stable content, then obtain program/blueprint/form and policy approval before credential launch.
+
+The earliest responsible next state is an authorized development pilot after those dependencies, not a launch date inferred from tomorrow's deadline. Current program/blueprint revision 2 and proposed PILOT2 revision 1 are drafts. The authored coverage remains 5/4/3 with one practical per domain, but development-eligible coverage has gaps of four access items and one recovery practical. There is no approved 2.0 form.
+
+Draft partner-manager response (not sent): “The product-2.0 assessment is under review. We have not approved a passing score or launch date. The historical synthetic pilot and first-round panel inform further development; we will communicate the final rule only after revised-content review, evidence review and owner approval.”

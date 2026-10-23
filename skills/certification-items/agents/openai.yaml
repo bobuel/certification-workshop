@@ -1,0 +1,4 @@
+interface:
+  display_name: "Certification Items"
+  short_description: "Certification workflow: Items"
+  default_prompt: "Use $certification-items to help with my certification program."

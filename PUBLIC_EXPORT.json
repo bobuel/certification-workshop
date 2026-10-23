@@ -1,0 +1,2172 @@
+{
+  "schema_version": 1,
+  "meaning": "Publication derivative; historical receipts bind original_sha256.",
+  "files": [
+    {
+      "path": ".agents/plugins/marketplace.json",
+      "original_sha256": "fe91395c0b6f2c088e5e73247ceba523d732a831023d1db4aaf40b09e7469221",
+      "public_sha256": "fe91395c0b6f2c088e5e73247ceba523d732a831023d1db4aaf40b09e7469221",
+      "sanitized": false
+    },
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "original_sha256": "a610412a7f0e3ca0eae6eb98f395514e260b1fe1b3f5607692cd0b03ed331109",
+      "public_sha256": "a610412a7f0e3ca0eae6eb98f395514e260b1fe1b3f5607692cd0b03ed331109",
+      "sanitized": false
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "original_sha256": "b977741e2a80190a888a1f5c1a42b8132545f47da6d4321797b7677b58d8b4f2",
+      "public_sha256": "b977741e2a80190a888a1f5c1a42b8132545f47da6d4321797b7677b58d8b4f2",
+      "sanitized": false
+    },
+    {
+      "path": ".codex-plugin/plugin.json",
+      "original_sha256": "53cdea3504cbe149170b02444b8f6455ef7853d15d4f093605741470e4eb0cdc",
+      "public_sha256": "53cdea3504cbe149170b02444b8f6455ef7853d15d4f093605741470e4eb0cdc",
+      "sanitized": false
+    },
+    {
+      "path": ".gitattributes",
+      "original_sha256": "fe22e2ac06143014d02d93bbd648091cf60226bdf86553705ab21de2a61b5c0c",
+      "public_sha256": "fe22e2ac06143014d02d93bbd648091cf60226bdf86553705ab21de2a61b5c0c",
+      "sanitized": false
+    },
+    {
+      "path": ".github/workflows/check.yml",
+      "original_sha256": "c57d5b0ca5358e33550351de0f566ff86bc85adaa1be0df0294942f76aac0a76",
+      "public_sha256": "c57d5b0ca5358e33550351de0f566ff86bc85adaa1be0df0294942f76aac0a76",
+      "sanitized": false
+    },
+    {
+      "path": ".gitignore",
+      "original_sha256": "dd89b19d7ec8267bf63adf0cde2b804d4b69fab8bdacb0e8b9510081d572fcf4",
+      "public_sha256": "dd89b19d7ec8267bf63adf0cde2b804d4b69fab8bdacb0e8b9510081d572fcf4",
+      "sanitized": false
+    },
+    {
+      "path": "AGENTS.md",
+      "original_sha256": "16ac63ff7f40fc4c7582380621c374dd097015dcf42a171efd2ccb14c582ffbf",
+      "public_sha256": "16ac63ff7f40fc4c7582380621c374dd097015dcf42a171efd2ccb14c582ffbf",
+      "sanitized": false
+    },
+    {
+      "path": "assets/icon.svg",
+      "original_sha256": "a5f75b384935a02ee86077feda89f9efd3e7ce6943801bbde10fc2e5c1454ead",
+      "public_sha256": "a5f75b384935a02ee86077feda89f9efd3e7ce6943801bbde10fc2e5c1454ead",
+      "sanitized": false
+    },
+    {
+      "path": "CHANGELOG.md",
+      "original_sha256": "28129a1890249dec0378253ac8b4ddae1de61170ccb516c92a56eb3b5a2afd01",
+      "public_sha256": "28129a1890249dec0378253ac8b4ddae1de61170ccb516c92a56eb3b5a2afd01",
+      "sanitized": false
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "original_sha256": "05acae216ca3abee423a15beddee09747dfe4e84b8a053bb49c20027ed04fc40",
+      "public_sha256": "05acae216ca3abee423a15beddee09747dfe4e84b8a053bb49c20027ed04fc40",
+      "sanitized": false
+    },
+    {
+      "path": "docs/compatibility.md",
+      "original_sha256": "ff3b98b0f976ab799adb32c82c87469b4ef40f1c5953583cb930849cef731cf0",
+      "public_sha256": "ff3b98b0f976ab799adb32c82c87469b4ef40f1c5953583cb930849cef731cf0",
+      "sanitized": false
+    },
+    {
+      "path": "docs/evaluation-findings.md",
+      "original_sha256": "d2a1e85e8500c7aeeb4f05e6495b4eb29cf0ebc566917152154dccf0a43aec8c",
+      "public_sha256": "d2a1e85e8500c7aeeb4f05e6495b4eb29cf0ebc566917152154dccf0a43aec8c",
+      "sanitized": false
+    },
+    {
+      "path": "docs/eventer-parity.md",
+      "original_sha256": "d07175b6b4b3b013184079e8a15321c04e5ca79e1cd7e3de717b5112a7badc87",
+      "public_sha256": "d07175b6b4b3b013184079e8a15321c04e5ca79e1cd7e3de717b5112a7badc87",
+      "sanitized": false
+    },
+    {
+      "path": "docs/forward-test.md",
+      "original_sha256": "b4aa26837ab699b7fe87fae94b34ab30804c3351e55b2057341061689687bb91",
+      "public_sha256": "b4aa26837ab699b7fe87fae94b34ab30804c3351e55b2057341061689687bb91",
+      "sanitized": false
+    },
+    {
+      "path": "docs/installation.md",
+      "original_sha256": "19c316acaac13dc954a985dc41684e601eb3d964f2a5a5fa840b5530fff2b762",
+      "public_sha256": "19c316acaac13dc954a985dc41684e601eb3d964f2a5a5fa840b5530fff2b762",
+      "sanitized": false
+    },
+    {
+      "path": "docs/northstar-evaluation.md",
+      "original_sha256": "8f1acc8087b68b3069ae3e3de2dabb7c3e59d08bbbb1a1246e546b68e0d5c21d",
+      "public_sha256": "8f1acc8087b68b3069ae3e3de2dabb7c3e59d08bbbb1a1246e546b68e0d5c21d",
+      "sanitized": false
+    },
+    {
+      "path": "docs/product-spec.md",
+      "original_sha256": "775a8b4f67bf095738db2a5aa313bfeed4bafa63a14d2792446527996454abf2",
+      "public_sha256": "775a8b4f67bf095738db2a5aa313bfeed4bafa63a14d2792446527996454abf2",
+      "sanitized": false
+    },
+    {
+      "path": "docs/provenance.md",
+      "original_sha256": "8087d4fa75db6a4f628d68a68c05abba00e300a121e25f75a3f4ef8a210920fa",
+      "public_sha256": "8087d4fa75db6a4f628d68a68c05abba00e300a121e25f75a3f4ef8a210920fa",
+      "sanitized": false
+    },
+    {
+      "path": "docs/release-candidate.md",
+      "original_sha256": "4025d31e96a4eb8ff7b2eae7fea1552c433a0b4ca28713de413b8f992ffbcadd",
+      "public_sha256": "4025d31e96a4eb8ff7b2eae7fea1552c433a0b4ca28713de413b8f992ffbcadd",
+      "sanitized": false
+    },
+    {
+      "path": "docs/release-v1.md",
+      "original_sha256": "7809c56b2393d5cb45d2ad0312153e2e0756919c8ba2a1340814e9c537932607",
+      "public_sha256": "7809c56b2393d5cb45d2ad0312153e2e0756919c8ba2a1340814e9c537932607",
+      "sanitized": false
+    },
+    {
+      "path": "docs/verification.md",
+      "original_sha256": "0c19413d516e18346ebff5ac56c310b2f6151a364ce9fc6d7891f7d5b8e07b86",
+      "public_sha256": "0c19413d516e18346ebff5ac56c310b2f6151a364ce9fc6d7891f7d5b8e07b86",
+      "sanitized": false
+    },
+    {
+      "path": "evals/behavioral/import-update/inputs/access-v1.md",
+      "original_sha256": "44bebecb80449b7d258b3a966bd36cbe93f8b7a409d0e33b51633e06ae972042",
+      "public_sha256": "44bebecb80449b7d258b3a966bd36cbe93f8b7a409d0e33b51633e06ae972042",
+      "sanitized": false
+    },
+    {
+      "path": "evals/behavioral/import-update/inputs/access-v2.md",
+      "original_sha256": "5e6ba0303025d042479265bc13257e38c34ef7bbb77879ae081f76ff391add1a",
+      "public_sha256": "5e6ba0303025d042479265bc13257e38c34ef7bbb77879ae081f76ff391add1a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/behavioral/import-update/inputs/bank.json",
+      "original_sha256": "05ea977f80d933a237fc36f1a7fa9bb1a2917a67616167b92a1967c9b76c4864",
+      "public_sha256": "05ea977f80d933a237fc36f1a7fa9bb1a2917a67616167b92a1967c9b76c4864",
+      "sanitized": false
+    },
+    {
+      "path": "evals/behavioral/import-update/inputs/request.md",
+      "original_sha256": "1e8487fe2a0c3704df2d9a83967a599b2e05b1ad6ed21c04651d4f200e264379",
+      "public_sha256": "1e8487fe2a0c3704df2d9a83967a599b2e05b1ad6ed21c04651d4f200e264379",
+      "sanitized": false
+    },
+    {
+      "path": "evals/behavioral/import-update/README.md",
+      "original_sha256": "42b04f1f0a81a37d7eb82d8260d1ca65a924a6bb3b0a78773f4e1689567619b4",
+      "public_sha256": "42b04f1f0a81a37d7eb82d8260d1ca65a924a6bb3b0a78773f4e1689567619b4",
+      "sanitized": false
+    },
+    {
+      "path": "evals/fixture.py",
+      "original_sha256": "cae877dad4ed65054384e47d4814630b049190228e131aad6b184c1a99ab5f2f",
+      "public_sha256": "cae877dad4ed65054384e47d4814630b049190228e131aad6b184c1a99ab5f2f",
+      "sanitized": false
+    },
+    {
+      "path": "evals/program-case/access-v1.md",
+      "original_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "public_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "sanitized": false
+    },
+    {
+      "path": "evals/program-case/access-v2.md",
+      "original_sha256": "e51733ff8794a99bf71902276d1f5cc0efc3c757ebc032d76ac36d02bc014875",
+      "public_sha256": "e51733ff8794a99bf71902276d1f5cc0efc3c757ebc032d76ac36d02bc014875",
+      "sanitized": false
+    },
+    {
+      "path": "evals/program-case/brief.md",
+      "original_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "public_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/program-case/ingestion-v1.md",
+      "original_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "public_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "sanitized": false
+    },
+    {
+      "path": "evals/program-case/recovery-v1.md",
+      "original_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "public_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "sanitized": false
+    },
+    {
+      "path": "evals/program-case/workshop.md",
+      "original_sha256": "7d290edce7537325ff738e50189fb2e60b2707b58b5d2707f618d2bf077b1add",
+      "public_sha256": "7d290edce7537325ff738e50189fb2e60b2707b58b5d2707f618d2bf077b1add",
+      "sanitized": false
+    },
+    {
+      "path": "evals/program-case.md",
+      "original_sha256": "81ef1917b468d6b94384af653a5f1cd447ac9f471d1bd611bfbd8dd47fda26ed",
+      "public_sha256": "81ef1917b468d6b94384af653a5f1cd447ac9f471d1bd611bfbd8dd47fda26ed",
+      "sanitized": false
+    },
+    {
+      "path": "evals/program.py",
+      "original_sha256": "16a0b103a0e1e3a318ae2f22542298e16477a1f593104e0cafaa4fe36d1d06f5",
+      "public_sha256": "16a0b103a0e1e3a318ae2f22542298e16477a1f593104e0cafaa4fe36d1d06f5",
+      "sanitized": false
+    },
+    {
+      "path": "evals/README.md",
+      "original_sha256": "70b242914c4a15d7eb6a456159ac5403f3cab60877cd26402a028681b9749bfa",
+      "public_sha256": "70b242914c4a15d7eb6a456159ac5403f3cab60877cd26402a028681b9749bfa",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-codex-0.1.2.json",
+      "original_sha256": "29f1b50b2eba7d92a885d6f886ee48a5317c8b6957c4171b9f8c398ebabfc4bd",
+      "public_sha256": "29f1b50b2eba7d92a885d6f886ee48a5317c8b6957c4171b9f8c398ebabfc4bd",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-codex-1.0.0-rc.1.json",
+      "original_sha256": "e2b3fd99187ed6ad375532cc6906c796a8b6d22819d403970fd3926b74bb4a61",
+      "public_sha256": "e2b3fd99187ed6ad375532cc6906c796a8b6d22819d403970fd3926b74bb4a61",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-codex-1.0.0.json",
+      "original_sha256": "a79207c1e50c2fbadc0c4c6ee3c00cd2dd21611953bd2d7aa8f95d8f0d0c4ff6",
+      "public_sha256": "a79207c1e50c2fbadc0c4c6ee3c00cd2dd21611953bd2d7aa8f95d8f0d0c4ff6",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/blueprint.md",
+      "original_sha256": "7d5edef52a8d47ef0d0f69dd694e973f8b7fc2fc6f4c5c32b6fc1c5d92aeef98",
+      "public_sha256": "7d5edef52a8d47ef0d0f69dd694e973f8b7fc2fc6f4c5c32b6fc1c5d92aeef98",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/charter.md",
+      "original_sha256": "39b430dd66c75238d0d21a908b87127d5dea4e18b35716b1fe389110423e668c",
+      "public_sha256": "39b430dd66c75238d0d21a908b87127d5dea4e18b35716b1fe389110423e668c",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/continuation.md",
+      "original_sha256": "ff7a8e1b83a835192d0247ff2ed7208ddc3f0f83a7aa2ece5ebb71205fe7c7dd",
+      "public_sha256": "46f3d9e0f3e04ee6f67ce0cf7c06df10762fa7c198540af5cc58d984655b869c",
+      "sanitized": true
+    },
+    {
+      "path": "evals/reports/native-v1/program/coverage.json",
+      "original_sha256": "4d707d52e47276b9cb898c1dec2b4eabb5e880387e85a2609f661ac41d1238fa",
+      "public_sha256": "4d707d52e47276b9cb898c1dec2b4eabb5e880387e85a2609f661ac41d1238fa",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/job-tasks.md",
+      "original_sha256": "6b70e403499145037a588637d521eb854ad7ce99dddb086b05d117a3935fc167",
+      "public_sha256": "6b70e403499145037a588637d521eb854ad7ce99dddb086b05d117a3935fc167",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/owner-decisions.md",
+      "original_sha256": "0701681aa9adc4bead44897112e43d49a2b7a0798b573f497b15bb9e84c828b4",
+      "public_sha256": "0701681aa9adc4bead44897112e43d49a2b7a0798b573f497b15bb9e84c828b4",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/program.json",
+      "original_sha256": "515c09d7a39d510779476963b96c5645b9aae7609a6f965b715124b3a195175f",
+      "public_sha256": "515c09d7a39d510779476963b96c5645b9aae7609a6f965b715124b3a195175f",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/readiness-status.json",
+      "original_sha256": "afc7050d311abc35b43c81b750e6b041d1d518fd8359ef120e608731f4659cd3",
+      "public_sha256": "afc7050d311abc35b43c81b750e6b041d1d518fd8359ef120e608731f4659cd3",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/readiness.md",
+      "original_sha256": "486337c80336d8f6e2b23c47f71fdd358169eae48d096473ad7c7a4c4969e1a3",
+      "public_sha256": "486337c80336d8f6e2b23c47f71fdd358169eae48d096473ad7c7a4c4969e1a3",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/restricted/continuation-checks-2026-10-22/assemble.json",
+      "original_sha256": "84b3393e5764cf3e957a2213a943eb232e75f200db053a587d845300f71ac75a",
+      "public_sha256": "84b3393e5764cf3e957a2213a943eb232e75f200db053a587d845300f71ac75a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/restricted/continuation-checks-2026-10-22/coverage.json",
+      "original_sha256": "4d707d52e47276b9cb898c1dec2b4eabb5e880387e85a2609f661ac41d1238fa",
+      "public_sha256": "4d707d52e47276b9cb898c1dec2b4eabb5e880387e85a2609f661ac41d1238fa",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/restricted/continuation-checks-2026-10-22/status.json",
+      "original_sha256": "afc7050d311abc35b43c81b750e6b041d1d518fd8359ef120e608731f4659cd3",
+      "public_sha256": "afc7050d311abc35b43c81b750e6b041d1d518fd8359ef120e608731f4659cd3",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/restricted/continuation-checks-2026-10-22/validate.json",
+      "original_sha256": "78b69d250286befb514414c38b70d7e223d4ae5974c05e4fae82df28784cd52d",
+      "public_sha256": "78b69d250286befb514414c38b70d7e223d4ae5974c05e4fae82df28784cd52d",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/restricted/README.md",
+      "original_sha256": "80f382c128f4c699e12ef2c33d2ea6fbd6afd76ce1c5af7bcf7fe045e121c4aa",
+      "public_sha256": "80f382c128f4c699e12ef2c33d2ea6fbd6afd76ce1c5af7bcf7fe045e121c4aa",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/restricted/review-packet.json",
+      "original_sha256": "5934aade4ddd81626ce930c00aa97f8e59d23388adf192b3d8056a8165bccf7f",
+      "public_sha256": "5934aade4ddd81626ce930c00aa97f8e59d23388adf192b3d8056a8165bccf7f",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/skill-use.md",
+      "original_sha256": "2967427628addd9cf20ba22d46884748c6604091bac03d408ce057b151c335a7",
+      "public_sha256": "f13042a8f963a2b9c0fc52bc20e0f672004d0759358b1346a94818297a50a067",
+      "sanitized": true
+    },
+    {
+      "path": "evals/reports/native-v1/program/sources/access-v1.md",
+      "original_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "public_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/sources/brief.md",
+      "original_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "public_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/sources/ingestion-v1.md",
+      "original_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "public_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/sources/recovery-v1.md",
+      "original_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "public_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/summary.md",
+      "original_sha256": "1356921b72a184a3fe72edf54910f1c6493b6e7c6ee2a89145b3139ff660f63d",
+      "public_sha256": "1356921b72a184a3fe72edf54910f1c6493b6e7c6ee2a89145b3139ff660f63d",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/native-v1/program/validation.json",
+      "original_sha256": "78b69d250286befb514414c38b70d7e223d4ae5974c05e4fae82df28784cd52d",
+      "public_sha256": "78b69d250286befb514414c38b70d7e223d4ae5974c05e4fae82df28784cd52d",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/grader-used.py",
+      "original_sha256": "82157d7b6582660728da7167f2d51599c3442c2756d45666e858447cfb5e8638",
+      "public_sha256": "82157d7b6582660728da7167f2d51599c3442c2756d45666e858447cfb5e8638",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/grade.json",
+      "original_sha256": "00f613657dd267cb5e3944eb8ecaee3e2a38c73e0ff58dc83f02730be53360f7",
+      "public_sha256": "00f613657dd267cb5e3944eb8ecaee3e2a38c73e0ff58dc83f02730be53360f7",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/program.json",
+      "original_sha256": "939de8818b0958b49b66bed083d80df36c885b875312f184d553e843b4896f3e",
+      "public_sha256": "939de8818b0958b49b66bed083d80df36c885b875312f184d553e843b4896f3e",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/public/candidate-guide.md",
+      "original_sha256": "d05320aff4f96e00ae0b5628060887bbb774bf06a1f2a51ba47e53e856e2c672",
+      "public_sha256": "d05320aff4f96e00ae0b5628060887bbb774bf06a1f2a51ba47e53e856e2c672",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/blueprint-rationale.md",
+      "original_sha256": "3c28989f79943c19cbb1dd23ebe34ce695f31fd31e643a3097001ebd5c1f15d1",
+      "public_sha256": "3c28989f79943c19cbb1dd23ebe34ce695f31fd31e643a3097001ebd5c1f15d1",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/charter.md",
+      "original_sha256": "692befbfdf1f5fb392f379009ff0f4cdd6a4cc3f906790df633cedf3c76a8d08",
+      "public_sha256": "692befbfdf1f5fb392f379009ff0f4cdd6a4cc3f906790df633cedf3c76a8d08",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/decision-register.md",
+      "original_sha256": "d90fde2bdde27bf5d3affcbc3f2c5a48b6ef508a52ec76df37f6ab70004db89a",
+      "public_sha256": "d90fde2bdde27bf5d3affcbc3f2c5a48b6ef508a52ec76df37f6ab70004db89a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/evidence/access-v1.md",
+      "original_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "public_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/evidence/brief.md",
+      "original_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "public_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/evidence/ingestion-v1.md",
+      "original_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "public_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/evidence/recovery-v1.md",
+      "original_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "public_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/evidence/request.txt",
+      "original_sha256": "ab5f4aa46610832c6053367e6b9ecad753747b19ddb425cd3a8f139976423280",
+      "public_sha256": "c656f7c73dda7a087f76392e359a668eb9d653dfc820d39502f2c3c1ae9909fd",
+      "sanitized": true
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/evidence/workshop.md",
+      "original_sha256": "7d290edce7537325ff738e50189fb2e60b2707b58b5d2707f618d2bf077b1add",
+      "public_sha256": "7d290edce7537325ff738e50189fb2e60b2707b58b5d2707f618d2bf077b1add",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/follow-up-instrument.md",
+      "original_sha256": "0b8bfea64a354ff22b894706d1668f4dfff3a4b4e9ea3c248d2d6c8dff68e1af",
+      "public_sha256": "0b8bfea64a354ff22b894706d1668f4dfff3a4b4e9ea3c248d2d6c8dff68e1af",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/inventory.json",
+      "original_sha256": "7ccdaebadba1bb095563dfa950d2b9f687ae0cea598c96c94ae3cef11f043199",
+      "public_sha256": "7ccdaebadba1bb095563dfa950d2b9f687ae0cea598c96c94ae3cef11f043199",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/job-analysis.md",
+      "original_sha256": "ed1d6ab8032c14b72ee88d41f119e4337f9ebccedaba7d5f1419987135ac90f5",
+      "public_sha256": "ed1d6ab8032c14b72ee88d41f119e4337f9ebccedaba7d5f1419987135ac90f5",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/pilot-protocol.md",
+      "original_sha256": "6bf4a7e2a4f92d35c129e1fa21b85c90c7b49d73676f627960d0de45a785314e",
+      "public_sha256": "6bf4a7e2a4f92d35c129e1fa21b85c90c7b49d73676f627960d0de45a785314e",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/reference-templates.md",
+      "original_sha256": "b4540d6826a48350affebeedaab760d5ebaf9b5abf573b023fbbb1631fbacdeb",
+      "public_sha256": "b4540d6826a48350affebeedaab760d5ebaf9b5abf573b023fbbb1631fbacdeb",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/reviewer-packet.json",
+      "original_sha256": "ad54a317a8ff759336f35edc97a16fbc75a9e0d5c772f9424b1a9db525b885e5",
+      "public_sha256": "ad54a317a8ff759336f35edc97a16fbc75a9e0d5c772f9424b1a9db525b885e5",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/reviewer-packet.md",
+      "original_sha256": "1a4a6165d9a8cc34473ccedaefd8740983d48a58b164c409b0300ce885abbf64",
+      "public_sha256": "1a4a6165d9a8cc34473ccedaefd8740983d48a58b164c409b0300ce885abbf64",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/tooling/analysis.md",
+      "original_sha256": "c4b3ee646f361e254294dcf45b1ed5efa6b552245068104e9d16d033b80fc3c1",
+      "public_sha256": "c4b3ee646f361e254294dcf45b1ed5efa6b552245068104e9d16d033b80fc3c1",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/tooling/continuity.md",
+      "original_sha256": "9d67751735259c269f4fb4fbac8cb8f3418da9911494db83fc458dc4e6555838",
+      "public_sha256": "9d67751735259c269f4fb4fbac8cb8f3418da9911494db83fc458dc4e6555838",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/tooling/helpers.md",
+      "original_sha256": "9f8b3d921f657348c8c630cfab7b6c62f230e6880d0ee729a63d32867504b716",
+      "public_sha256": "9f8b3d921f657348c8c630cfab7b6c62f230e6880d0ee729a63d32867504b716",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/tooling/operating-contract.md",
+      "original_sha256": "0be364a6568494a4358a050acc621ff46cd2308815507be01a3bd8e2858b1ea8",
+      "public_sha256": "0be364a6568494a4358a050acc621ff46cd2308815507be01a3bd8e2858b1ea8",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/tooling/records.md",
+      "original_sha256": "5c8ea048a315d2365aac414ddf02c74b63dca1dc2840d9f7eb213e98ca5293b4",
+      "public_sha256": "5c8ea048a315d2365aac414ddf02c74b63dca1dc2840d9f7eb213e98ca5293b4",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/tooling/scripts/certification.py",
+      "original_sha256": "a07134283e224c47925fe6d5db796bf8258199fc3d7892a8efab325d7d46d68a",
+      "public_sha256": "a07134283e224c47925fe6d5db796bf8258199fc3d7892a8efab325d7d46d68a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/validation/coverage.json",
+      "original_sha256": "4685191d6e17e22fd22ff652da268499572daa966a5f3f4fab8e31dbcb69e863",
+      "public_sha256": "4685191d6e17e22fd22ff652da268499572daa966a5f3f4fab8e31dbcb69e863",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/validation/package-checks.json",
+      "original_sha256": "3b80781890c84d58d34b270b6f9dc74cd15d5d8f9f69a8cb91a81598e4182f41",
+      "public_sha256": "3b80781890c84d58d34b270b6f9dc74cd15d5d8f9f69a8cb91a81598e4182f41",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/validation/status.json",
+      "original_sha256": "3352bf148c563cd1b1f33e1a3f39367af406e451998a0527096c79247899e806",
+      "public_sha256": "3352bf148c563cd1b1f33e1a3f39367af406e451998a0527096c79247899e806",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/restricted/validation/validate.json",
+      "original_sha256": "7a57a78afc326a97844fd4677f7723ef102b8e739eed5c83865accc3570679af",
+      "public_sha256": "7a57a78afc326a97844fd4677f7723ef102b8e739eed5c83865accc3570679af",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/output/summary.md",
+      "original_sha256": "3c95f504041c08013f8bd83e8b0f19f913f467667059a383dd214978e996d1b3",
+      "public_sha256": "3c95f504041c08013f8bd83e8b0f19f913f467667059a383dd214978e996d1b3",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/receipt.json",
+      "original_sha256": "c912c5cef23e50d592e3be5d409956020cf281799ba271d8a0e07ce274aee2b7",
+      "public_sha256": "c912c5cef23e50d592e3be5d409956020cf281799ba271d8a0e07ce274aee2b7",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-1/review.json",
+      "original_sha256": "1ad178c65f009a8a7f0d79aa06f01a8b192aaa708032c89acff85199646b0fd5",
+      "public_sha256": "1ad178c65f009a8a7f0d79aa06f01a8b192aaa708032c89acff85199646b0fd5",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/grade.json",
+      "original_sha256": "5fc4e26605aca9599a73be43fc02dab96aa188a654dbcfbd1b2fd4bae589f587",
+      "public_sha256": "5fc4e26605aca9599a73be43fc02dab96aa188a654dbcfbd1b2fd4bae589f587",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/panel-summary.json",
+      "original_sha256": "268caaca7ac436630e41b37635885cccd96054b4d98a69b15ae301cad9bae1f9",
+      "public_sha256": "268caaca7ac436630e41b37635885cccd96054b4d98a69b15ae301cad9bae1f9",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/pilot-analysis.json",
+      "original_sha256": "a2ccf3b411bbd33ac28dd12f29c536f148380b1f3eeb4ce56f0ce8cf692b52e6",
+      "public_sha256": "a2ccf3b411bbd33ac28dd12f29c536f148380b1f3eeb4ce56f0ce8cf692b52e6",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/program.json",
+      "original_sha256": "813f67a69dc5b9e1ff2e93c6fe4ca8d4481af2d8253285f33031ad5b07120708",
+      "public_sha256": "813f67a69dc5b9e1ff2e93c6fe4ca8d4481af2d8253285f33031ad5b07120708",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/public/candidate-guide-v2.json",
+      "original_sha256": "978663dedc64e7f5c9b926f93c4e653c838ed9b7649e9bb7d6af021e9eb3b640",
+      "public_sha256": "978663dedc64e7f5c9b926f93c4e653c838ed9b7649e9bb7d6af021e9eb3b640",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/public/candidate-guide.md",
+      "original_sha256": "0f2a376424e391440461133bbccd5cd3f29491e30c79eaaf3883e833b33e5e57",
+      "public_sha256": "0f2a376424e391440461133bbccd5cd3f29491e30c79eaaf3883e833b33e5e57",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/release-recommendation.md",
+      "original_sha256": "b4ec90983726110aa6605433f457ce28109019c0b543335e058e14cc37044eda",
+      "public_sha256": "b4ec90983726110aa6605433f457ce28109019c0b543335e058e14cc37044eda",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/blueprint-rationale.md",
+      "original_sha256": "474a353a5a1d19eee17379c9a222f06c1c4f375fd4b9bd7ec077c8cb25f1bbd5",
+      "public_sha256": "474a353a5a1d19eee17379c9a222f06c1c4f375fd4b9bd7ec077c8cb25f1bbd5",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/change-impact-review.md",
+      "original_sha256": "3c2dd8edffc9eab4cf54e167e46fdc6b1e6361fc5fb5cb4bdaec91402aafea2f",
+      "public_sha256": "3c2dd8edffc9eab4cf54e167e46fdc6b1e6361fc5fb5cb4bdaec91402aafea2f",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/charter.md",
+      "original_sha256": "c607ed4b557df96ab3591b79ed0f0eccbfc4cec55a83f198f6df6a4c9349a845",
+      "public_sha256": "c607ed4b557df96ab3591b79ed0f0eccbfc4cec55a83f198f6df6a4c9349a845",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/data/exclusions.json",
+      "original_sha256": "2a937086cbd38fb02faaf10a257e8b4781ae8703ba0600bbe43bc9a8f8496151",
+      "public_sha256": "2a937086cbd38fb02faaf10a257e8b4781ae8703ba0600bbe43bc9a8f8496151",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/data/pilot-complete-cases.csv",
+      "original_sha256": "837c080d3dc6bcfd8def7d5d2fad7d77dcd0085ecd892f61a2ed74a5392a4842",
+      "public_sha256": "837c080d3dc6bcfd8def7d5d2fad7d77dcd0085ecd892f61a2ed74a5392a4842",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/data/total-score-distribution.json",
+      "original_sha256": "f164a71b2dfee1b2305a334c071cbf74d92efa3925f9c61038035c682d182589",
+      "public_sha256": "f164a71b2dfee1b2305a334c071cbf74d92efa3925f9c61038035c682d182589",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/decision-register.md",
+      "original_sha256": "00acfaf98f7ad74f8f2ba586e3959aa775a36a2523486b6c33292631cb19f8f6",
+      "public_sha256": "00acfaf98f7ad74f8f2ba586e3959aa775a36a2523486b6c33292631cb19f8f6",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/evidence/access-v1.md",
+      "original_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "public_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/evidence/access-v2.md",
+      "original_sha256": "e51733ff8794a99bf71902276d1f5cc0efc3c757ebc032d76ac36d02bc014875",
+      "public_sha256": "e51733ff8794a99bf71902276d1f5cc0efc3c757ebc032d76ac36d02bc014875",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/evidence/brief.md",
+      "original_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "public_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/evidence/ingestion-v1.md",
+      "original_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "public_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/evidence/recovery-v1.md",
+      "original_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "public_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/evidence/request.txt",
+      "original_sha256": "ab5f4aa46610832c6053367e6b9ecad753747b19ddb425cd3a8f139976423280",
+      "public_sha256": "c656f7c73dda7a087f76392e359a668eb9d653dfc820d39502f2c3c1ae9909fd",
+      "sanitized": true
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/evidence/workshop.md",
+      "original_sha256": "7d290edce7537325ff738e50189fb2e60b2707b58b5d2707f618d2bf077b1add",
+      "public_sha256": "7d290edce7537325ff738e50189fb2e60b2707b58b5d2707f618d2bf077b1add",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/follow-up-instrument.md",
+      "original_sha256": "0b8bfea64a354ff22b894706d1668f4dfff3a4b4e9ea3c248d2d6c8dff68e1af",
+      "public_sha256": "0b8bfea64a354ff22b894706d1668f4dfff3a4b4e9ea3c248d2d6c8dff68e1af",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/program.json",
+      "original_sha256": "939de8818b0958b49b66bed083d80df36c885b875312f184d553e843b4896f3e",
+      "public_sha256": "939de8818b0958b49b66bed083d80df36c885b875312f184d553e843b4896f3e",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/public/candidate-guide.md",
+      "original_sha256": "d05320aff4f96e00ae0b5628060887bbb774bf06a1f2a51ba47e53e856e2c672",
+      "public_sha256": "d05320aff4f96e00ae0b5628060887bbb774bf06a1f2a51ba47e53e856e2c672",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/blueprint-rationale.md",
+      "original_sha256": "3c28989f79943c19cbb1dd23ebe34ce695f31fd31e643a3097001ebd5c1f15d1",
+      "public_sha256": "3c28989f79943c19cbb1dd23ebe34ce695f31fd31e643a3097001ebd5c1f15d1",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/charter.md",
+      "original_sha256": "692befbfdf1f5fb392f379009ff0f4cdd6a4cc3f906790df633cedf3c76a8d08",
+      "public_sha256": "692befbfdf1f5fb392f379009ff0f4cdd6a4cc3f906790df633cedf3c76a8d08",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/decision-register.md",
+      "original_sha256": "d90fde2bdde27bf5d3affcbc3f2c5a48b6ef508a52ec76df37f6ab70004db89a",
+      "public_sha256": "d90fde2bdde27bf5d3affcbc3f2c5a48b6ef508a52ec76df37f6ab70004db89a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/evidence/access-v1.md",
+      "original_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "public_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/evidence/brief.md",
+      "original_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "public_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/evidence/ingestion-v1.md",
+      "original_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "public_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/evidence/recovery-v1.md",
+      "original_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "public_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/evidence/request.txt",
+      "original_sha256": "ab5f4aa46610832c6053367e6b9ecad753747b19ddb425cd3a8f139976423280",
+      "public_sha256": "c656f7c73dda7a087f76392e359a668eb9d653dfc820d39502f2c3c1ae9909fd",
+      "sanitized": true
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/evidence/workshop.md",
+      "original_sha256": "7d290edce7537325ff738e50189fb2e60b2707b58b5d2707f618d2bf077b1add",
+      "public_sha256": "7d290edce7537325ff738e50189fb2e60b2707b58b5d2707f618d2bf077b1add",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/follow-up-instrument.md",
+      "original_sha256": "0b8bfea64a354ff22b894706d1668f4dfff3a4b4e9ea3c248d2d6c8dff68e1af",
+      "public_sha256": "0b8bfea64a354ff22b894706d1668f4dfff3a4b4e9ea3c248d2d6c8dff68e1af",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/inventory.json",
+      "original_sha256": "7ccdaebadba1bb095563dfa950d2b9f687ae0cea598c96c94ae3cef11f043199",
+      "public_sha256": "7ccdaebadba1bb095563dfa950d2b9f687ae0cea598c96c94ae3cef11f043199",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/job-analysis.md",
+      "original_sha256": "ed1d6ab8032c14b72ee88d41f119e4337f9ebccedaba7d5f1419987135ac90f5",
+      "public_sha256": "ed1d6ab8032c14b72ee88d41f119e4337f9ebccedaba7d5f1419987135ac90f5",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/pilot-protocol.md",
+      "original_sha256": "6bf4a7e2a4f92d35c129e1fa21b85c90c7b49d73676f627960d0de45a785314e",
+      "public_sha256": "6bf4a7e2a4f92d35c129e1fa21b85c90c7b49d73676f627960d0de45a785314e",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/reference-templates.md",
+      "original_sha256": "b4540d6826a48350affebeedaab760d5ebaf9b5abf573b023fbbb1631fbacdeb",
+      "public_sha256": "b4540d6826a48350affebeedaab760d5ebaf9b5abf573b023fbbb1631fbacdeb",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/reviewer-packet.json",
+      "original_sha256": "ad54a317a8ff759336f35edc97a16fbc75a9e0d5c772f9424b1a9db525b885e5",
+      "public_sha256": "ad54a317a8ff759336f35edc97a16fbc75a9e0d5c772f9424b1a9db525b885e5",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/reviewer-packet.md",
+      "original_sha256": "1a4a6165d9a8cc34473ccedaefd8740983d48a58b164c409b0300ce885abbf64",
+      "public_sha256": "1a4a6165d9a8cc34473ccedaefd8740983d48a58b164c409b0300ce885abbf64",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/tooling/analysis.md",
+      "original_sha256": "c4b3ee646f361e254294dcf45b1ed5efa6b552245068104e9d16d033b80fc3c1",
+      "public_sha256": "c4b3ee646f361e254294dcf45b1ed5efa6b552245068104e9d16d033b80fc3c1",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/tooling/continuity.md",
+      "original_sha256": "9d67751735259c269f4fb4fbac8cb8f3418da9911494db83fc458dc4e6555838",
+      "public_sha256": "9d67751735259c269f4fb4fbac8cb8f3418da9911494db83fc458dc4e6555838",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/tooling/helpers.md",
+      "original_sha256": "9f8b3d921f657348c8c630cfab7b6c62f230e6880d0ee729a63d32867504b716",
+      "public_sha256": "9f8b3d921f657348c8c630cfab7b6c62f230e6880d0ee729a63d32867504b716",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/tooling/operating-contract.md",
+      "original_sha256": "0be364a6568494a4358a050acc621ff46cd2308815507be01a3bd8e2858b1ea8",
+      "public_sha256": "0be364a6568494a4358a050acc621ff46cd2308815507be01a3bd8e2858b1ea8",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/tooling/records.md",
+      "original_sha256": "5c8ea048a315d2365aac414ddf02c74b63dca1dc2840d9f7eb213e98ca5293b4",
+      "public_sha256": "5c8ea048a315d2365aac414ddf02c74b63dca1dc2840d9f7eb213e98ca5293b4",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/tooling/scripts/certification.py",
+      "original_sha256": "a07134283e224c47925fe6d5db796bf8258199fc3d7892a8efab325d7d46d68a",
+      "public_sha256": "a07134283e224c47925fe6d5db796bf8258199fc3d7892a8efab325d7d46d68a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/validation/coverage.json",
+      "original_sha256": "4685191d6e17e22fd22ff652da268499572daa966a5f3f4fab8e31dbcb69e863",
+      "public_sha256": "4685191d6e17e22fd22ff652da268499572daa966a5f3f4fab8e31dbcb69e863",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/validation/package-checks.json",
+      "original_sha256": "3b80781890c84d58d34b270b6f9dc74cd15d5d8f9f69a8cb91a81598e4182f41",
+      "public_sha256": "3b80781890c84d58d34b270b6f9dc74cd15d5d8f9f69a8cb91a81598e4182f41",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/validation/status.json",
+      "original_sha256": "3352bf148c563cd1b1f33e1a3f39367af406e451998a0527096c79247899e806",
+      "public_sha256": "3352bf148c563cd1b1f33e1a3f39367af406e451998a0527096c79247899e806",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/restricted/validation/validate.json",
+      "original_sha256": "7a57a78afc326a97844fd4677f7723ef102b8e739eed5c83865accc3570679af",
+      "public_sha256": "7a57a78afc326a97844fd4677f7723ef102b8e739eed5c83865accc3570679af",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/pre-2.0-draft/summary.md",
+      "original_sha256": "3c95f504041c08013f8bd83e8b0f19f913f467667059a383dd214978e996d1b3",
+      "public_sha256": "3c95f504041c08013f8bd83e8b0f19f913f467667059a383dd214978e996d1b3",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/panel-judgments.csv",
+      "original_sha256": "9f4b80efeb721e46b4ca13693b7e67e69ba9cea2d144f689e7d38c928aa67a7e",
+      "public_sha256": "9f4b80efeb721e46b4ca13693b7e67e69ba9cea2d144f689e7d38c928aa67a7e",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/pilot-scores-raw.csv",
+      "original_sha256": "bfa3371ef11b9ee2b35a59ddcbfa35c739a664f8f45a5d140eab5bcc8e42c241",
+      "public_sha256": "bfa3371ef11b9ee2b35a59ddcbfa35c739a664f8f45a5d140eab5bcc8e42c241",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/program.json",
+      "original_sha256": "82174c42db7bea9801de711175e128cb9951c96ba527e531879e0f9615a33999",
+      "public_sha256": "82174c42db7bea9801de711175e128cb9951c96ba527e531879e0f9615a33999",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/public/candidate-guide.md",
+      "original_sha256": "d05320aff4f96e00ae0b5628060887bbb774bf06a1f2a51ba47e53e856e2c672",
+      "public_sha256": "d05320aff4f96e00ae0b5628060887bbb774bf06a1f2a51ba47e53e856e2c672",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/blueprint-rationale.md",
+      "original_sha256": "3c28989f79943c19cbb1dd23ebe34ce695f31fd31e643a3097001ebd5c1f15d1",
+      "public_sha256": "3c28989f79943c19cbb1dd23ebe34ce695f31fd31e643a3097001ebd5c1f15d1",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/charter.md",
+      "original_sha256": "692befbfdf1f5fb392f379009ff0f4cdd6a4cc3f906790df633cedf3c76a8d08",
+      "public_sha256": "692befbfdf1f5fb392f379009ff0f4cdd6a4cc3f906790df633cedf3c76a8d08",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/decision-register.md",
+      "original_sha256": "d90fde2bdde27bf5d3affcbc3f2c5a48b6ef508a52ec76df37f6ab70004db89a",
+      "public_sha256": "d90fde2bdde27bf5d3affcbc3f2c5a48b6ef508a52ec76df37f6ab70004db89a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/evidence/access-v1.md",
+      "original_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "public_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/evidence/brief.md",
+      "original_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "public_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/evidence/ingestion-v1.md",
+      "original_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "public_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/evidence/recovery-v1.md",
+      "original_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "public_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/evidence/request.txt",
+      "original_sha256": "ab5f4aa46610832c6053367e6b9ecad753747b19ddb425cd3a8f139976423280",
+      "public_sha256": "c656f7c73dda7a087f76392e359a668eb9d653dfc820d39502f2c3c1ae9909fd",
+      "sanitized": true
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/evidence/workshop.md",
+      "original_sha256": "7d290edce7537325ff738e50189fb2e60b2707b58b5d2707f618d2bf077b1add",
+      "public_sha256": "7d290edce7537325ff738e50189fb2e60b2707b58b5d2707f618d2bf077b1add",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/follow-up-instrument.md",
+      "original_sha256": "0b8bfea64a354ff22b894706d1668f4dfff3a4b4e9ea3c248d2d6c8dff68e1af",
+      "public_sha256": "0b8bfea64a354ff22b894706d1668f4dfff3a4b4e9ea3c248d2d6c8dff68e1af",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/inventory.json",
+      "original_sha256": "7ccdaebadba1bb095563dfa950d2b9f687ae0cea598c96c94ae3cef11f043199",
+      "public_sha256": "7ccdaebadba1bb095563dfa950d2b9f687ae0cea598c96c94ae3cef11f043199",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/job-analysis.md",
+      "original_sha256": "ed1d6ab8032c14b72ee88d41f119e4337f9ebccedaba7d5f1419987135ac90f5",
+      "public_sha256": "ed1d6ab8032c14b72ee88d41f119e4337f9ebccedaba7d5f1419987135ac90f5",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/pilot-protocol.md",
+      "original_sha256": "6bf4a7e2a4f92d35c129e1fa21b85c90c7b49d73676f627960d0de45a785314e",
+      "public_sha256": "6bf4a7e2a4f92d35c129e1fa21b85c90c7b49d73676f627960d0de45a785314e",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/reference-templates.md",
+      "original_sha256": "b4540d6826a48350affebeedaab760d5ebaf9b5abf573b023fbbb1631fbacdeb",
+      "public_sha256": "b4540d6826a48350affebeedaab760d5ebaf9b5abf573b023fbbb1631fbacdeb",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/reviewer-packet.json",
+      "original_sha256": "ad54a317a8ff759336f35edc97a16fbc75a9e0d5c772f9424b1a9db525b885e5",
+      "public_sha256": "ad54a317a8ff759336f35edc97a16fbc75a9e0d5c772f9424b1a9db525b885e5",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/reviewer-packet.md",
+      "original_sha256": "1a4a6165d9a8cc34473ccedaefd8740983d48a58b164c409b0300ce885abbf64",
+      "public_sha256": "1a4a6165d9a8cc34473ccedaefd8740983d48a58b164c409b0300ce885abbf64",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/tooling/analysis.md",
+      "original_sha256": "c4b3ee646f361e254294dcf45b1ed5efa6b552245068104e9d16d033b80fc3c1",
+      "public_sha256": "c4b3ee646f361e254294dcf45b1ed5efa6b552245068104e9d16d033b80fc3c1",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/tooling/continuity.md",
+      "original_sha256": "9d67751735259c269f4fb4fbac8cb8f3418da9911494db83fc458dc4e6555838",
+      "public_sha256": "9d67751735259c269f4fb4fbac8cb8f3418da9911494db83fc458dc4e6555838",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/tooling/helpers.md",
+      "original_sha256": "9f8b3d921f657348c8c630cfab7b6c62f230e6880d0ee729a63d32867504b716",
+      "public_sha256": "9f8b3d921f657348c8c630cfab7b6c62f230e6880d0ee729a63d32867504b716",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/tooling/operating-contract.md",
+      "original_sha256": "0be364a6568494a4358a050acc621ff46cd2308815507be01a3bd8e2858b1ea8",
+      "public_sha256": "0be364a6568494a4358a050acc621ff46cd2308815507be01a3bd8e2858b1ea8",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/tooling/records.md",
+      "original_sha256": "5c8ea048a315d2365aac414ddf02c74b63dca1dc2840d9f7eb213e98ca5293b4",
+      "public_sha256": "5c8ea048a315d2365aac414ddf02c74b63dca1dc2840d9f7eb213e98ca5293b4",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/tooling/scripts/certification.py",
+      "original_sha256": "a07134283e224c47925fe6d5db796bf8258199fc3d7892a8efab325d7d46d68a",
+      "public_sha256": "a07134283e224c47925fe6d5db796bf8258199fc3d7892a8efab325d7d46d68a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/validation/coverage.json",
+      "original_sha256": "4685191d6e17e22fd22ff652da268499572daa966a5f3f4fab8e31dbcb69e863",
+      "public_sha256": "4685191d6e17e22fd22ff652da268499572daa966a5f3f4fab8e31dbcb69e863",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/validation/package-checks.json",
+      "original_sha256": "3b80781890c84d58d34b270b6f9dc74cd15d5d8f9f69a8cb91a81598e4182f41",
+      "public_sha256": "3b80781890c84d58d34b270b6f9dc74cd15d5d8f9f69a8cb91a81598e4182f41",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/validation/status.json",
+      "original_sha256": "3352bf148c563cd1b1f33e1a3f39367af406e451998a0527096c79247899e806",
+      "public_sha256": "3352bf148c563cd1b1f33e1a3f39367af406e451998a0527096c79247899e806",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/restricted/validation/validate.json",
+      "original_sha256": "7a57a78afc326a97844fd4677f7723ef102b8e739eed5c83865accc3570679af",
+      "public_sha256": "7a57a78afc326a97844fd4677f7723ef102b8e739eed5c83865accc3570679af",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/simulation-receipt.md",
+      "original_sha256": "8951eea5f802a4d2cea012208e63fcf12011b8e1dedeca11acf1950a755d6d25",
+      "public_sha256": "8951eea5f802a4d2cea012208e63fcf12011b8e1dedeca11acf1950a755d6d25",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/history/product-1.0-pilot/summary.md",
+      "original_sha256": "3c95f504041c08013f8bd83e8b0f19f913f467667059a383dd214978e996d1b3",
+      "public_sha256": "3c95f504041c08013f8bd83e8b0f19f913f467667059a383dd214978e996d1b3",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/inventory-v2.json",
+      "original_sha256": "bc796819408a72f17ccadeab0baaf190d678924bf3c6da7ba3e02fdc4150e5ec",
+      "public_sha256": "bc796819408a72f17ccadeab0baaf190d678924bf3c6da7ba3e02fdc4150e5ec",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/inventory.json",
+      "original_sha256": "7ccdaebadba1bb095563dfa950d2b9f687ae0cea598c96c94ae3cef11f043199",
+      "public_sha256": "7ccdaebadba1bb095563dfa950d2b9f687ae0cea598c96c94ae3cef11f043199",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/job-analysis.md",
+      "original_sha256": "77fa46b6b0558103d194822e7c71f1a320e2a0e3dc6370be5aefd545234c6b17",
+      "public_sha256": "77fa46b6b0558103d194822e7c71f1a320e2a0e3dc6370be5aefd545234c6b17",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/pilot-protocol.md",
+      "original_sha256": "8313b833a6447cedf7714ad11093719e584fd3b227b14f2269c18f82277f286e",
+      "public_sha256": "8313b833a6447cedf7714ad11093719e584fd3b227b14f2269c18f82277f286e",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/access-v2.md",
+      "original_sha256": "e51733ff8794a99bf71902276d1f5cc0efc3c757ebc032d76ac36d02bc014875",
+      "public_sha256": "e51733ff8794a99bf71902276d1f5cc0efc3c757ebc032d76ac36d02bc014875",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/program.json",
+      "original_sha256": "939de8818b0958b49b66bed083d80df36c885b875312f184d553e843b4896f3e",
+      "public_sha256": "939de8818b0958b49b66bed083d80df36c885b875312f184d553e843b4896f3e",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/public/candidate-guide.md",
+      "original_sha256": "d05320aff4f96e00ae0b5628060887bbb774bf06a1f2a51ba47e53e856e2c672",
+      "public_sha256": "d05320aff4f96e00ae0b5628060887bbb774bf06a1f2a51ba47e53e856e2c672",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/blueprint-rationale.md",
+      "original_sha256": "3c28989f79943c19cbb1dd23ebe34ce695f31fd31e643a3097001ebd5c1f15d1",
+      "public_sha256": "3c28989f79943c19cbb1dd23ebe34ce695f31fd31e643a3097001ebd5c1f15d1",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/charter.md",
+      "original_sha256": "692befbfdf1f5fb392f379009ff0f4cdd6a4cc3f906790df633cedf3c76a8d08",
+      "public_sha256": "692befbfdf1f5fb392f379009ff0f4cdd6a4cc3f906790df633cedf3c76a8d08",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/decision-register.md",
+      "original_sha256": "d90fde2bdde27bf5d3affcbc3f2c5a48b6ef508a52ec76df37f6ab70004db89a",
+      "public_sha256": "d90fde2bdde27bf5d3affcbc3f2c5a48b6ef508a52ec76df37f6ab70004db89a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/evidence/access-v1.md",
+      "original_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "public_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/evidence/brief.md",
+      "original_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "public_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/evidence/ingestion-v1.md",
+      "original_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "public_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/evidence/recovery-v1.md",
+      "original_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "public_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/evidence/request.txt",
+      "original_sha256": "ab5f4aa46610832c6053367e6b9ecad753747b19ddb425cd3a8f139976423280",
+      "public_sha256": "c656f7c73dda7a087f76392e359a668eb9d653dfc820d39502f2c3c1ae9909fd",
+      "sanitized": true
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/evidence/workshop.md",
+      "original_sha256": "7d290edce7537325ff738e50189fb2e60b2707b58b5d2707f618d2bf077b1add",
+      "public_sha256": "7d290edce7537325ff738e50189fb2e60b2707b58b5d2707f618d2bf077b1add",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/follow-up-instrument.md",
+      "original_sha256": "0b8bfea64a354ff22b894706d1668f4dfff3a4b4e9ea3c248d2d6c8dff68e1af",
+      "public_sha256": "0b8bfea64a354ff22b894706d1668f4dfff3a4b4e9ea3c248d2d6c8dff68e1af",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/inventory.json",
+      "original_sha256": "7ccdaebadba1bb095563dfa950d2b9f687ae0cea598c96c94ae3cef11f043199",
+      "public_sha256": "7ccdaebadba1bb095563dfa950d2b9f687ae0cea598c96c94ae3cef11f043199",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/job-analysis.md",
+      "original_sha256": "ed1d6ab8032c14b72ee88d41f119e4337f9ebccedaba7d5f1419987135ac90f5",
+      "public_sha256": "ed1d6ab8032c14b72ee88d41f119e4337f9ebccedaba7d5f1419987135ac90f5",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/pilot-protocol.md",
+      "original_sha256": "6bf4a7e2a4f92d35c129e1fa21b85c90c7b49d73676f627960d0de45a785314e",
+      "public_sha256": "6bf4a7e2a4f92d35c129e1fa21b85c90c7b49d73676f627960d0de45a785314e",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/reference-templates.md",
+      "original_sha256": "b4540d6826a48350affebeedaab760d5ebaf9b5abf573b023fbbb1631fbacdeb",
+      "public_sha256": "b4540d6826a48350affebeedaab760d5ebaf9b5abf573b023fbbb1631fbacdeb",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/reviewer-packet.json",
+      "original_sha256": "ad54a317a8ff759336f35edc97a16fbc75a9e0d5c772f9424b1a9db525b885e5",
+      "public_sha256": "ad54a317a8ff759336f35edc97a16fbc75a9e0d5c772f9424b1a9db525b885e5",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/reviewer-packet.md",
+      "original_sha256": "1a4a6165d9a8cc34473ccedaefd8740983d48a58b164c409b0300ce885abbf64",
+      "public_sha256": "1a4a6165d9a8cc34473ccedaefd8740983d48a58b164c409b0300ce885abbf64",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/tooling/analysis.md",
+      "original_sha256": "c4b3ee646f361e254294dcf45b1ed5efa6b552245068104e9d16d033b80fc3c1",
+      "public_sha256": "c4b3ee646f361e254294dcf45b1ed5efa6b552245068104e9d16d033b80fc3c1",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/tooling/continuity.md",
+      "original_sha256": "9d67751735259c269f4fb4fbac8cb8f3418da9911494db83fc458dc4e6555838",
+      "public_sha256": "9d67751735259c269f4fb4fbac8cb8f3418da9911494db83fc458dc4e6555838",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/tooling/helpers.md",
+      "original_sha256": "9f8b3d921f657348c8c630cfab7b6c62f230e6880d0ee729a63d32867504b716",
+      "public_sha256": "9f8b3d921f657348c8c630cfab7b6c62f230e6880d0ee729a63d32867504b716",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/tooling/operating-contract.md",
+      "original_sha256": "0be364a6568494a4358a050acc621ff46cd2308815507be01a3bd8e2858b1ea8",
+      "public_sha256": "0be364a6568494a4358a050acc621ff46cd2308815507be01a3bd8e2858b1ea8",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/tooling/records.md",
+      "original_sha256": "5c8ea048a315d2365aac414ddf02c74b63dca1dc2840d9f7eb213e98ca5293b4",
+      "public_sha256": "5c8ea048a315d2365aac414ddf02c74b63dca1dc2840d9f7eb213e98ca5293b4",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/tooling/scripts/certification.py",
+      "original_sha256": "a07134283e224c47925fe6d5db796bf8258199fc3d7892a8efab325d7d46d68a",
+      "public_sha256": "a07134283e224c47925fe6d5db796bf8258199fc3d7892a8efab325d7d46d68a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/validation/coverage.json",
+      "original_sha256": "4685191d6e17e22fd22ff652da268499572daa966a5f3f4fab8e31dbcb69e863",
+      "public_sha256": "4685191d6e17e22fd22ff652da268499572daa966a5f3f4fab8e31dbcb69e863",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/validation/package-checks.json",
+      "original_sha256": "3b80781890c84d58d34b270b6f9dc74cd15d5d8f9f69a8cb91a81598e4182f41",
+      "public_sha256": "3b80781890c84d58d34b270b6f9dc74cd15d5d8f9f69a8cb91a81598e4182f41",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/validation/status.json",
+      "original_sha256": "3352bf148c563cd1b1f33e1a3f39367af406e451998a0527096c79247899e806",
+      "public_sha256": "3352bf148c563cd1b1f33e1a3f39367af406e451998a0527096c79247899e806",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/restricted/validation/validate.json",
+      "original_sha256": "7a57a78afc326a97844fd4677f7723ef102b8e739eed5c83865accc3570679af",
+      "public_sha256": "7a57a78afc326a97844fd4677f7723ef102b8e739eed5c83865accc3570679af",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/historical-evidence/summary.md",
+      "original_sha256": "3c95f504041c08013f8bd83e8b0f19f913f467667059a383dd214978e996d1b3",
+      "public_sha256": "3c95f504041c08013f8bd83e8b0f19f913f467667059a383dd214978e996d1b3",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/panel-judgments.csv",
+      "original_sha256": "9f4b80efeb721e46b4ca13693b7e67e69ba9cea2d144f689e7d38c928aa67a7e",
+      "public_sha256": "9f4b80efeb721e46b4ca13693b7e67e69ba9cea2d144f689e7d38c928aa67a7e",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/pilot-scores.csv",
+      "original_sha256": "bfa3371ef11b9ee2b35a59ddcbfa35c739a664f8f45a5d140eab5bcc8e42c241",
+      "public_sha256": "bfa3371ef11b9ee2b35a59ddcbfa35c739a664f8f45a5d140eab5bcc8e42c241",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/pilot-snapshot.json",
+      "original_sha256": "82174c42db7bea9801de711175e128cb9951c96ba527e531879e0f9615a33999",
+      "public_sha256": "82174c42db7bea9801de711175e128cb9951c96ba527e531879e0f9615a33999",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/request.txt",
+      "original_sha256": "3b047d03c5db27490b5de59984ed4da1e0302ebfa23b3d07e8a33930a1d81c11",
+      "public_sha256": "64c26b3b11cb96dadb71e239564094e2f534640a2ba20e4ed1a18165d9e50a9a",
+      "sanitized": true
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/raw-inputs/simulation-receipt.md",
+      "original_sha256": "8951eea5f802a4d2cea012208e63fcf12011b8e1dedeca11acf1950a755d6d25",
+      "public_sha256": "8951eea5f802a4d2cea012208e63fcf12011b8e1dedeca11acf1950a755d6d25",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/reference-templates.md",
+      "original_sha256": "d9c9d6e31a7699fb8b4f4ef54bbe659dc513f6592daf4b15fcbd9ad0b1e10b18",
+      "public_sha256": "d9c9d6e31a7699fb8b4f4ef54bbe659dc513f6592daf4b15fcbd9ad0b1e10b18",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/review-packet-v2.json",
+      "original_sha256": "14fa99bf161f3574cbf32e8974fe0d1e83d92a4ccfe8d0a219e8bb19dc52f60a",
+      "public_sha256": "14fa99bf161f3574cbf32e8974fe0d1e83d92a4ccfe8d0a219e8bb19dc52f60a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/reviewer-packet.json",
+      "original_sha256": "ad54a317a8ff759336f35edc97a16fbc75a9e0d5c772f9424b1a9db525b885e5",
+      "public_sha256": "ad54a317a8ff759336f35edc97a16fbc75a9e0d5c772f9424b1a9db525b885e5",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/reviewer-packet.md",
+      "original_sha256": "a2153b8e76b7e14c9a8d5632979de9019ec802f5fc4cb23b7f083ef0e4e7e011",
+      "public_sha256": "a2153b8e76b7e14c9a8d5632979de9019ec802f5fc4cb23b7f083ef0e4e7e011",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/tooling/analysis.md",
+      "original_sha256": "c4b3ee646f361e254294dcf45b1ed5efa6b552245068104e9d16d033b80fc3c1",
+      "public_sha256": "c4b3ee646f361e254294dcf45b1ed5efa6b552245068104e9d16d033b80fc3c1",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/tooling/continuation-readme.md",
+      "original_sha256": "2515c1fe73ac751b49533699dec61f95b92678f268b3420facfbf3cda0b305ae",
+      "public_sha256": "2515c1fe73ac751b49533699dec61f95b92678f268b3420facfbf3cda0b305ae",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/tooling/continuity.md",
+      "original_sha256": "9d67751735259c269f4fb4fbac8cb8f3418da9911494db83fc458dc4e6555838",
+      "public_sha256": "9d67751735259c269f4fb4fbac8cb8f3418da9911494db83fc458dc4e6555838",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/tooling/finalize.py",
+      "original_sha256": "98753026bda8fb202d0ae3ad40711c37a57aa9553e5ff5571d20174ab26b025c",
+      "public_sha256": "98753026bda8fb202d0ae3ad40711c37a57aa9553e5ff5571d20174ab26b025c",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/tooling/helpers.md",
+      "original_sha256": "9f8b3d921f657348c8c630cfab7b6c62f230e6880d0ee729a63d32867504b716",
+      "public_sha256": "9f8b3d921f657348c8c630cfab7b6c62f230e6880d0ee729a63d32867504b716",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/tooling/operating-contract.md",
+      "original_sha256": "0be364a6568494a4358a050acc621ff46cd2308815507be01a3bd8e2858b1ea8",
+      "public_sha256": "0be364a6568494a4358a050acc621ff46cd2308815507be01a3bd8e2858b1ea8",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/tooling/prepare.py",
+      "original_sha256": "a80ebe4a835fe99377bd47c186288b2432a2aafe7609002b23a408f30f7f3dd4",
+      "public_sha256": "a80ebe4a835fe99377bd47c186288b2432a2aafe7609002b23a408f30f7f3dd4",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/tooling/records.md",
+      "original_sha256": "5c8ea048a315d2365aac414ddf02c74b63dca1dc2840d9f7eb213e98ca5293b4",
+      "public_sha256": "5c8ea048a315d2365aac414ddf02c74b63dca1dc2840d9f7eb213e98ca5293b4",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/tooling/revise.py",
+      "original_sha256": "4a4c876930a6b90bd46985ed0cb8e36a47b4910c725707fcf3589cf6263f9b9c",
+      "public_sha256": "4a4c876930a6b90bd46985ed0cb8e36a47b4910c725707fcf3589cf6263f9b9c",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/tooling/scripts/certification.py",
+      "original_sha256": "a07134283e224c47925fe6d5db796bf8258199fc3d7892a8efab325d7d46d68a",
+      "public_sha256": "a07134283e224c47925fe6d5db796bf8258199fc3d7892a8efab325d7d46d68a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/validation/access-impact-historical.json",
+      "original_sha256": "2897ae49e6436ef579cb6a4d09158cfeaf49221178bc822234c0cf5517a4b173",
+      "public_sha256": "2897ae49e6436ef579cb6a4d09158cfeaf49221178bc822234c0cf5517a4b173",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/validation/coverage.json",
+      "original_sha256": "4685191d6e17e22fd22ff652da268499572daa966a5f3f4fab8e31dbcb69e863",
+      "public_sha256": "4685191d6e17e22fd22ff652da268499572daa966a5f3f4fab8e31dbcb69e863",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/validation/current-v2-coverage.json",
+      "original_sha256": "0b892b24895d1538d001f227fd5b87173518b4d373d7c9e1512254b9834479ef",
+      "public_sha256": "0b892b24895d1538d001f227fd5b87173518b4d373d7c9e1512254b9834479ef",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/validation/current-v2-status.json",
+      "original_sha256": "1ed3f703f0be50db517abe74776f3a8e77e933b492d4622d2098b0724ad3e06a",
+      "public_sha256": "1ed3f703f0be50db517abe74776f3a8e77e933b492d4622d2098b0724ad3e06a",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/validation/current-v2-validate.json",
+      "original_sha256": "7a57a78afc326a97844fd4677f7723ef102b8e739eed5c83865accc3570679af",
+      "public_sha256": "7a57a78afc326a97844fd4677f7723ef102b8e739eed5c83865accc3570679af",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/validation/final-v2-assemble.json",
+      "original_sha256": "acea961124e7ae704108a835eefb0d6e7dad62b8b9fb4e6898829790cbff4c38",
+      "public_sha256": "acea961124e7ae704108a835eefb0d6e7dad62b8b9fb4e6898829790cbff4c38",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/validation/final-v2-check-form.json",
+      "original_sha256": "a84a9c83abe9d3b54eb71c9f8f916a9cf72a11a167cecb464f710f9991d585cd",
+      "public_sha256": "a84a9c83abe9d3b54eb71c9f8f916a9cf72a11a167cecb464f710f9991d585cd",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/validation/final-v2-status.json",
+      "original_sha256": "967f716c127dd76366d78eb5f44d451de7f6624caa4bbc492b27b925ad1f0778",
+      "public_sha256": "967f716c127dd76366d78eb5f44d451de7f6624caa4bbc492b27b925ad1f0778",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/validation/final-v2-validate.json",
+      "original_sha256": "7a57a78afc326a97844fd4677f7723ef102b8e739eed5c83865accc3570679af",
+      "public_sha256": "7a57a78afc326a97844fd4677f7723ef102b8e739eed5c83865accc3570679af",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/validation/historical-form.json",
+      "original_sha256": "80233ce0e897f92bc7d671b09786af3ab98a6880d083306ce699a2026c4a1239",
+      "public_sha256": "80233ce0e897f92bc7d671b09786af3ab98a6880d083306ce699a2026c4a1239",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/validation/historical-validate.json",
+      "original_sha256": "7a57a78afc326a97844fd4677f7723ef102b8e739eed5c83865accc3570679af",
+      "public_sha256": "7a57a78afc326a97844fd4677f7723ef102b8e739eed5c83865accc3570679af",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/validation/package-checks.json",
+      "original_sha256": "3b80781890c84d58d34b270b6f9dc74cd15d5d8f9f69a8cb91a81598e4182f41",
+      "public_sha256": "3b80781890c84d58d34b270b6f9dc74cd15d5d8f9f69a8cb91a81598e4182f41",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/validation/package-verification.json",
+      "original_sha256": "c82103abf6d493c4e62f93528fe7e3a05aee30e1061b9c83d775e9bf04b5fc6f",
+      "public_sha256": "c82103abf6d493c4e62f93528fe7e3a05aee30e1061b9c83d775e9bf04b5fc6f",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/validation/status.json",
+      "original_sha256": "3352bf148c563cd1b1f33e1a3f39367af406e451998a0527096c79247899e806",
+      "public_sha256": "3352bf148c563cd1b1f33e1a3f39367af406e451998a0527096c79247899e806",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/restricted/validation/validate.json",
+      "original_sha256": "7a57a78afc326a97844fd4677f7723ef102b8e739eed5c83865accc3570679af",
+      "public_sha256": "7a57a78afc326a97844fd4677f7723ef102b8e739eed5c83865accc3570679af",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/output/summary.md",
+      "original_sha256": "56e389b03d85f3da868a29a1d3dbf0f22df71cc05fb227b1f49b6ecf7c83d4d2",
+      "public_sha256": "56e389b03d85f3da868a29a1d3dbf0f22df71cc05fb227b1f49b6ecf7c83d4d2",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/receipt.json",
+      "original_sha256": "f98a936e4cb74329c6e3debfe0190df321ea310bb48bfd2ace53818930304534",
+      "public_sha256": "f98a936e4cb74329c6e3debfe0190df321ea310bb48bfd2ace53818930304534",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/phase-2/review.json",
+      "original_sha256": "878c0bcb9ab066bbb5f891c1f992c445e432894a703779d4430b21b6fab8b61c",
+      "public_sha256": "878c0bcb9ab066bbb5f891c1f992c445e432894a703779d4430b21b6fab8b61c",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/northstar-01/restore-verification.json",
+      "original_sha256": "b8b4be7459f09833e1cbe828c57ec2cd7e7721aa00e2fe5141ddac3e65d583d6",
+      "public_sha256": "b8b4be7459f09833e1cbe828c57ec2cd7e7721aa00e2fe5141ddac3e65d583d6",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/offline-scenarios-0.1.1.json",
+      "original_sha256": "a8dd4c77fc316d99576606ae7c285314239f713cf502574a4320ea9b41825e86",
+      "public_sha256": "a8dd4c77fc316d99576606ae7c285314239f713cf502574a4320ea9b41825e86",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/offline-scenarios-0.1.2.json",
+      "original_sha256": "f216cbabf30056ea8b5b74569dc3215418d83fabae97df1246eb37077a06ea22",
+      "public_sha256": "f216cbabf30056ea8b5b74569dc3215418d83fabae97df1246eb37077a06ea22",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/offline-scenarios-1.0.0-rc.1.json",
+      "original_sha256": "5199b6a49549c46e4b2774d824fa5ac5e403014d674e69592d94d2ffb7136020",
+      "public_sha256": "5199b6a49549c46e4b2774d824fa5ac5e403014d674e69592d94d2ffb7136020",
+      "sanitized": false
+    },
+    {
+      "path": "evals/reports/offline-scenarios-1.0.0.json",
+      "original_sha256": "a8178802fdc2c7124f2cca3b34c0308ff58a0e6424825f0373767d87b26ad7eb",
+      "public_sha256": "a8178802fdc2c7124f2cca3b34c0308ff58a0e6424825f0373767d87b26ad7eb",
+      "sanitized": false
+    },
+    {
+      "path": "evals/review-rubric.md",
+      "original_sha256": "5c27672e265897a8c8b189070aceca747867f5955ae6db26dea25629a562e178",
+      "public_sha256": "5c27672e265897a8c8b189070aceca747867f5955ae6db26dea25629a562e178",
+      "sanitized": false
+    },
+    {
+      "path": "evals/run.py",
+      "original_sha256": "660405b43cdbaf52f9ece5127beded8f28f47ac34f914413fa3e6c1fcd79d886",
+      "public_sha256": "660405b43cdbaf52f9ece5127beded8f28f47ac34f914413fa3e6c1fcd79d886",
+      "sanitized": false
+    },
+    {
+      "path": "evals/scenarios.py",
+      "original_sha256": "4cadb05f3c5b6e4fb1ec520a101aae0603cd4b126306dc2f8be3848a36f962b7",
+      "public_sha256": "4cadb05f3c5b6e4fb1ec520a101aae0603cd4b126306dc2f8be3848a36f962b7",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/candidate-guide.json",
+      "original_sha256": "71be49cebb87595fea80ecbbf8587fcced5dbc3be02a151382e92fcae5fc9194",
+      "public_sha256": "71be49cebb87595fea80ecbbf8587fcced5dbc3be02a151382e92fcae5fc9194",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/changed-program.json",
+      "original_sha256": "bd0154a07512ffcae8f2cabd7784d2d5bf3280916841ab35bed94b65079e3603",
+      "public_sha256": "bd0154a07512ffcae8f2cabd7784d2d5bf3280916841ab35bed94b65079e3603",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/charter-and-study.md",
+      "original_sha256": "5d35009fd2cd30b47549d8774f67dfd7e3382d5f68052a03cee4f8cdc5a76c3f",
+      "public_sha256": "5d35009fd2cd30b47549d8774f67dfd7e3382d5f68052a03cee4f8cdc5a76c3f",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/draft-program.json",
+      "original_sha256": "a007cf593e14e87783c81d088aa010a0c5035e7095f11a1fc9705cdd50fead4f",
+      "public_sha256": "a007cf593e14e87783c81d088aa010a0c5035e7095f11a1fc9705cdd50fead4f",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/journey-report.json",
+      "original_sha256": "10a59bd40597c99cfeb391926b1097bcdc3b9893418bc6ab22e527b0cd3b5625",
+      "public_sha256": "10a59bd40597c99cfeb391926b1097bcdc3b9893418bc6ab22e527b0cd3b5625",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/launch-and-operations.md",
+      "original_sha256": "6669b1690be5ebc5711407b88ef9b4550357027d455e6bf4a3bf36c78f5378cb",
+      "public_sha256": "6669b1690be5ebc5711407b88ef9b4550357027d455e6bf4a3bf36c78f5378cb",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/operations-program.json",
+      "original_sha256": "beeac55cc9bf872e1601cc015b83d062e617e1001bc87bf13e5f91d0159bcb98",
+      "public_sha256": "beeac55cc9bf872e1601cc015b83d062e617e1001bc87bf13e5f91d0159bcb98",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/panel-judgments.csv",
+      "original_sha256": "6cb8e3ff39b2bd043d6fe791e812f740b36cd13b893c2dcc1383da348ac1694e",
+      "public_sha256": "6cb8e3ff39b2bd043d6fe791e812f740b36cd13b893c2dcc1383da348ac1694e",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/pilot-scores.csv",
+      "original_sha256": "67d57780a3636ef14d12a0838404d0dabb4d84997f6a5888c667e8ad44b39037",
+      "public_sha256": "67d57780a3636ef14d12a0838404d0dabb4d84997f6a5888c667e8ad44b39037",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/program.json",
+      "original_sha256": "11395f352c5b2ef5df846992ca6f12645e09aed8a4d13232d2691b91fef2b6aa",
+      "public_sha256": "11395f352c5b2ef5df846992ca6f12645e09aed8a4d13232d2691b91fef2b6aa",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/request.md",
+      "original_sha256": "6a46034af8bdafd30431b481ef0357ab755e124798b7e295bb4e92b35a73170a",
+      "public_sha256": "6a46034af8bdafd30431b481ef0357ab755e124798b7e295bb4e92b35a73170a",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/restricted-delivery.json",
+      "original_sha256": "c2e27c222ea531f4c1b35dbd9f3c014b4f2f36074caa79694748492dcc2c9b08",
+      "public_sha256": "c2e27c222ea531f4c1b35dbd9f3c014b4f2f36074caa79694748492dcc2c9b08",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/review-packet.json",
+      "original_sha256": "f6cd38ee1cc02b71bf20a7ab06612e90309a130ed23c6b543550abf254358b26",
+      "public_sha256": "f6cd38ee1cc02b71bf20a7ab06612e90309a130ed23c6b543550abf254358b26",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/review-register.md",
+      "original_sha256": "c959e28f8713949bc1b84329042c6c018fa1a0f120d7d5ec25f2af151495b6d2",
+      "public_sha256": "c959e28f8713949bc1b84329042c6c018fa1a0f120d7d5ec25f2af151495b6d2",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/sources/data.md",
+      "original_sha256": "ebe0c9b42f74599bd1bade9d8b3b8989dd8732e7f79629cfca10adf19d839f57",
+      "public_sha256": "ebe0c9b42f74599bd1bade9d8b3b8989dd8732e7f79629cfca10adf19d839f57",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/sources/rec.md",
+      "original_sha256": "0a0e579e0d5c691e859d44ae65e364e6f281f7b6acde849e157d47f168534b47",
+      "public_sha256": "0a0e579e0d5c691e859d44ae65e364e6f281f7b6acde849e157d47f168534b47",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/sources/sec-v2.md",
+      "original_sha256": "89bec73efa1696ee88c4de25d076831c25a28df190c0ed65936dd8c5fcb336ee",
+      "public_sha256": "89bec73efa1696ee88c4de25d076831c25a28df190c0ed65936dd8c5fcb336ee",
+      "sanitized": false
+    },
+    {
+      "path": "examples/harbor/sources/sec.md",
+      "original_sha256": "a533cee18e52d4a81ed9351949c558b91ff79703a4b82e203ba843c98603635e",
+      "public_sha256": "a533cee18e52d4a81ed9351949c558b91ff79703a4b82e203ba843c98603635e",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/author-changes.json",
+      "original_sha256": "83a8277fd42aa16ea4ce46142b8345272a443959a96cb6c40fe321eb38caeebb",
+      "public_sha256": "83a8277fd42aa16ea4ce46142b8345272a443959a96cb6c40fe321eb38caeebb",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/blueprint-rationale.md",
+      "original_sha256": "3c28989f79943c19cbb1dd23ebe34ce695f31fd31e643a3097001ebd5c1f15d1",
+      "public_sha256": "3c28989f79943c19cbb1dd23ebe34ce695f31fd31e643a3097001ebd5c1f15d1",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/candidate-guide.md",
+      "original_sha256": "0f2a376424e391440461133bbccd5cd3f29491e30c79eaaf3883e833b33e5e57",
+      "public_sha256": "0f2a376424e391440461133bbccd5cd3f29491e30c79eaaf3883e833b33e5e57",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/change-impact-review.md",
+      "original_sha256": "3c2dd8edffc9eab4cf54e167e46fdc6b1e6361fc5fb5cb4bdaec91402aafea2f",
+      "public_sha256": "3c2dd8edffc9eab4cf54e167e46fdc6b1e6361fc5fb5cb4bdaec91402aafea2f",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/charter.md",
+      "original_sha256": "692befbfdf1f5fb392f379009ff0f4cdd6a4cc3f906790df633cedf3c76a8d08",
+      "public_sha256": "692befbfdf1f5fb392f379009ff0f4cdd6a4cc3f906790df633cedf3c76a8d08",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/decision-register.md",
+      "original_sha256": "00acfaf98f7ad74f8f2ba586e3959aa775a36a2523486b6c33292631cb19f8f6",
+      "public_sha256": "00acfaf98f7ad74f8f2ba586e3959aa775a36a2523486b6c33292631cb19f8f6",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/follow-up-instrument.md",
+      "original_sha256": "0b8bfea64a354ff22b894706d1668f4dfff3a4b4e9ea3c248d2d6c8dff68e1af",
+      "public_sha256": "0b8bfea64a354ff22b894706d1668f4dfff3a4b4e9ea3c248d2d6c8dff68e1af",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/job-analysis.md",
+      "original_sha256": "ed1d6ab8032c14b72ee88d41f119e4337f9ebccedaba7d5f1419987135ac90f5",
+      "public_sha256": "ed1d6ab8032c14b72ee88d41f119e4337f9ebccedaba7d5f1419987135ac90f5",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/pilot-protocol.md",
+      "original_sha256": "6bf4a7e2a4f92d35c129e1fa21b85c90c7b49d73676f627960d0de45a785314e",
+      "public_sha256": "6bf4a7e2a4f92d35c129e1fa21b85c90c7b49d73676f627960d0de45a785314e",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/program.json",
+      "original_sha256": "5e4bc1902dbba83b39989457f6f655d9aa2e05d8ab9d335d1befa02771a6879c",
+      "public_sha256": "5e4bc1902dbba83b39989457f6f655d9aa2e05d8ab9d335d1befa02771a6879c",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/README.md",
+      "original_sha256": "d4ade841f0cbeccadb5dd10ac294f793c6635e4e2d7aa560abb6709de62ad4af",
+      "public_sha256": "d4ade841f0cbeccadb5dd10ac294f793c6635e4e2d7aa560abb6709de62ad4af",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/release-recommendation.md",
+      "original_sha256": "b4ec90983726110aa6605433f457ce28109019c0b543335e058e14cc37044eda",
+      "public_sha256": "b4ec90983726110aa6605433f457ce28109019c0b543335e058e14cc37044eda",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/restricted/evidence/access-v1.md",
+      "original_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "public_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/restricted/evidence/access-v2.md",
+      "original_sha256": "e51733ff8794a99bf71902276d1f5cc0efc3c757ebc032d76ac36d02bc014875",
+      "public_sha256": "e51733ff8794a99bf71902276d1f5cc0efc3c757ebc032d76ac36d02bc014875",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/restricted/evidence/brief.md",
+      "original_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "public_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/restricted/evidence/ingestion-v1.md",
+      "original_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "public_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/restricted/evidence/recovery-v1.md",
+      "original_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "public_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/restricted/evidence/workshop.md",
+      "original_sha256": "7d290edce7537325ff738e50189fb2e60b2707b58b5d2707f618d2bf077b1add",
+      "public_sha256": "7d290edce7537325ff738e50189fb2e60b2707b58b5d2707f618d2bf077b1add",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/review-packet.json",
+      "original_sha256": "b883bdd6c7d1cc15ef1a72d5a81638fe7fd98af7bef6302749504aa90edb127b",
+      "public_sha256": "b883bdd6c7d1cc15ef1a72d5a81638fe7fd98af7bef6302749504aa90edb127b",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/review.html",
+      "original_sha256": "4de5b465c3e2cb63229ee664e347792d0bab7e041b1057d25b335d9967d9b165",
+      "public_sha256": "4de5b465c3e2cb63229ee664e347792d0bab7e041b1057d25b335d9967d9b165",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-owner-review/REVIEW.md",
+      "original_sha256": "cbf6c91266cb9e1ee3ed8c6d6aaf1426bdf50b72839afe5b951b477b370cf0c3",
+      "public_sha256": "cbf6c91266cb9e1ee3ed8c6d6aaf1426bdf50b72839afe5b951b477b370cf0c3",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/author-changes.json",
+      "original_sha256": "d4cf8cea10cf9cec469b35cb792cbe4b73578988e5aa89dbf9d480cb5024117a",
+      "public_sha256": "d4cf8cea10cf9cec469b35cb792cbe4b73578988e5aa89dbf9d480cb5024117a",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/blueprint-rationale.md",
+      "original_sha256": "4123f31d81dcb08f1280ed86369ff632187ae9a5a3c4bed996ae231026d77d92",
+      "public_sha256": "4123f31d81dcb08f1280ed86369ff632187ae9a5a3c4bed996ae231026d77d92",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/candidate-guide.json",
+      "original_sha256": "25db27acf982a2647722efbc639635c2056b20e0e831d7f8dbc0caf72dbdc71b",
+      "public_sha256": "25db27acf982a2647722efbc639635c2056b20e0e831d7f8dbc0caf72dbdc71b",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/candidate-guide.md",
+      "original_sha256": "cb875ac80b304b95070e4d5be73116f09fa74d976a2f374735b1b9eb1929d1aa",
+      "public_sha256": "cb875ac80b304b95070e4d5be73116f09fa74d976a2f374735b1b9eb1929d1aa",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/CERTIFICATION.md",
+      "original_sha256": "44de9ba166fcc81f9195c21ad938bacb5b91fe5dc59303069b8c83ad78b0e60c",
+      "public_sha256": "44de9ba166fcc81f9195c21ad938bacb5b91fe5dc59303069b8c83ad78b0e60c",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/charter.md",
+      "original_sha256": "895138630f07b058ed0a4126058975c38fd5f8b11c9c6eb87d2b957e9a11a298",
+      "public_sha256": "895138630f07b058ed0a4126058975c38fd5f8b11c9c6eb87d2b957e9a11a298",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/design-review.md",
+      "original_sha256": "e081ff7adb78eeaaa26a8532394e93805961b9f1db568a12bd8faa61599062a3",
+      "public_sha256": "e081ff7adb78eeaaa26a8532394e93805961b9f1db568a12bd8faa61599062a3",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/follow-up-instrument.md",
+      "original_sha256": "e6a3d87bdfb7847fa0a90feb4c20a10e28a24af47a111d64f0ab82d61654e84d",
+      "public_sha256": "e6a3d87bdfb7847fa0a90feb4c20a10e28a24af47a111d64f0ab82d61654e84d",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/item-review.json",
+      "original_sha256": "9a5f6a582b1f48ead060f638d2c1b3539099813766d09c6ab67f765d0e9ba851",
+      "public_sha256": "9a5f6a582b1f48ead060f638d2c1b3539099813766d09c6ab67f765d0e9ba851",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/pilot-protocol.md",
+      "original_sha256": "f51be106f12803e0f0b91b7b27f09c1f1d36468784a890c76017957b949fa534",
+      "public_sha256": "f51be106f12803e0f0b91b7b27f09c1f1d36468784a890c76017957b949fa534",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/program.json",
+      "original_sha256": "d3b6c931d122a226f43f7f0bfb019bdd91ceb71c639391c1d1276386001909f4",
+      "public_sha256": "d3b6c931d122a226f43f7f0bfb019bdd91ceb71c639391c1d1276386001909f4",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/README.md",
+      "original_sha256": "8584275ce47f073e9c49e9af5f26dabc97a864e6038f20e217d27c65ec9c71d6",
+      "public_sha256": "8584275ce47f073e9c49e9af5f26dabc97a864e6038f20e217d27c65ec9c71d6",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/restricted/evidence/access-v1.md",
+      "original_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "public_sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/restricted/evidence/access-v2.md",
+      "original_sha256": "e51733ff8794a99bf71902276d1f5cc0efc3c757ebc032d76ac36d02bc014875",
+      "public_sha256": "e51733ff8794a99bf71902276d1f5cc0efc3c757ebc032d76ac36d02bc014875",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/restricted/evidence/brief.md",
+      "original_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "public_sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/restricted/evidence/ingestion-v1.md",
+      "original_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "public_sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/restricted/evidence/recovery-v1.md",
+      "original_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "public_sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/restricted/evidence/workshop.md",
+      "original_sha256": "7d290edce7537325ff738e50189fb2e60b2707b58b5d2707f618d2bf077b1add",
+      "public_sha256": "7d290edce7537325ff738e50189fb2e60b2707b58b5d2707f618d2bf077b1add",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/review-packet.json",
+      "original_sha256": "c2874ec8d53de628236ea57bb64f24f145185e0d4b2e7c7c0c10cb9d1beb2879",
+      "public_sha256": "c2874ec8d53de628236ea57bb64f24f145185e0d4b2e7c7c0c10cb9d1beb2879",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/scoring-examples.json",
+      "original_sha256": "1cf443082824d8832875cab7053c677a623e7e2891e91fac26fcf445d69b64d2",
+      "public_sha256": "1cf443082824d8832875cab7053c677a623e7e2891e91fac26fcf445d69b64d2",
+      "sanitized": false
+    },
+    {
+      "path": "examples/northstar-v1/scoring-examples.md",
+      "original_sha256": "acc3bd14c0d4447ee5d2d9abc673bb566e70d95d68ba85ef6159c79fec5a7510",
+      "public_sha256": "acc3bd14c0d4447ee5d2d9abc673bb566e70d95d68ba85ef6159c79fec5a7510",
+      "sanitized": false
+    },
+    {
+      "path": "LICENSE",
+      "original_sha256": "cbbe75cfc81058475f774ec73aecbbd10661d01a30aaf326f8a597dc20cdd3ad",
+      "public_sha256": "cbbe75cfc81058475f774ec73aecbbd10661d01a30aaf326f8a597dc20cdd3ad",
+      "sanitized": false
+    },
+    {
+      "path": "NOTICE.md",
+      "original_sha256": "abd034df4bd4ad8221c4f75f174dd4ac71d45c031643575d43d7924b8bbbe67f",
+      "public_sha256": "abd034df4bd4ad8221c4f75f174dd4ac71d45c031643575d43d7924b8bbbe67f",
+      "sanitized": false
+    },
+    {
+      "path": "plugin.json",
+      "original_sha256": "3cbdd5e0ffe2c49ef703715fed92abd6a74811f543193c741afa33d23ea0f7fe",
+      "public_sha256": "3cbdd5e0ffe2c49ef703715fed92abd6a74811f543193c741afa33d23ea0f7fe",
+      "sanitized": false
+    },
+    {
+      "path": "PRIVACY.md",
+      "original_sha256": "d5eb0c5d035c50e82dbc4d8148bf3f3db0d6dd61d3b2deecec33bf8f5ea79dea",
+      "public_sha256": "d5eb0c5d035c50e82dbc4d8148bf3f3db0d6dd61d3b2deecec33bf8f5ea79dea",
+      "sanitized": false
+    },
+    {
+      "path": "README.md",
+      "original_sha256": "899387900025bdfcded346609dd27b9799326889545f75b21729e23c56b9ea42",
+      "public_sha256": "899387900025bdfcded346609dd27b9799326889545f75b21729e23c56b9ea42",
+      "sanitized": false
+    },
+    {
+      "path": "requirements.txt",
+      "original_sha256": "f4b44747cf46c0bdffe03f0ddada8b6978def4c2347ff85f484c80d333fd9b04",
+      "public_sha256": "f4b44747cf46c0bdffe03f0ddada8b6978def4c2347ff85f484c80d333fd9b04",
+      "sanitized": false
+    },
+    {
+      "path": "scripts/install.py",
+      "original_sha256": "7ddf37ebc9a2a72427efd98ee6b117167b6b11bbf8dc566a6acb95c7b6921fc7",
+      "public_sha256": "7ddf37ebc9a2a72427efd98ee6b117167b6b11bbf8dc566a6acb95c7b6921fc7",
+      "sanitized": false
+    },
+    {
+      "path": "scripts/package.py",
+      "original_sha256": "915368bbdb6d6be6ad4888de92d4be342014e79c9cbc306eaa0e187951933d8d",
+      "public_sha256": "915368bbdb6d6be6ad4888de92d4be342014e79c9cbc306eaa0e187951933d8d",
+      "sanitized": false
+    },
+    {
+      "path": "scripts/public_export.py",
+      "original_sha256": "bdea3cf4f8560f135391bc6f3013ee564d0ee098297da79dac7efcabaf31ac7e",
+      "public_sha256": "bdea3cf4f8560f135391bc6f3013ee564d0ee098297da79dac7efcabaf31ac7e",
+      "sanitized": false
+    },
+    {
+      "path": "scripts/validate.py",
+      "original_sha256": "7d452519bdc27f3f70c69c9a3fbe1761f7984494d733c296854769cce4b36c91",
+      "public_sha256": "7d452519bdc27f3f70c69c9a3fbe1761f7984494d733c296854769cce4b36c91",
+      "sanitized": false
+    },
+    {
+      "path": "SECURITY.md",
+      "original_sha256": "c2d76c45bce0337993ed54eda0266ca5cabfca11bb3dcf3b761941b181459dc2",
+      "public_sha256": "c2d76c45bce0337993ed54eda0266ca5cabfca11bb3dcf3b761941b181459dc2",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-blueprint/agents/openai.yaml",
+      "original_sha256": "c14e22bc07e4a36287146509d70820e2603633667097fd4345fbe8810fdb7caa",
+      "public_sha256": "c14e22bc07e4a36287146509d70820e2603633667097fd4345fbe8810fdb7caa",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-blueprint/SKILL.md",
+      "original_sha256": "94d040597b468c69b8fdcf79c4c043a4f1374db39256c8489c1cf46a723087b1",
+      "public_sha256": "94d040597b468c69b8fdcf79c4c043a4f1374db39256c8489c1cf46a723087b1",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-items/agents/openai.yaml",
+      "original_sha256": "59e5d498d8e49ccf5aded37383285336346373c7df95a07c590b50b75fa704ed",
+      "public_sha256": "59e5d498d8e49ccf5aded37383285336346373c7df95a07c590b50b75fa704ed",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-items/SKILL.md",
+      "original_sha256": "bf8d8036a3e295be6fc11d77ec230a86fd08865613aaa41f9311cc677710f200",
+      "public_sha256": "bf8d8036a3e295be6fc11d77ec230a86fd08865613aaa41f9311cc677710f200",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-job-analysis/agents/openai.yaml",
+      "original_sha256": "b480830de8c4e78a528bb8f9af4e00aaee6f527a98b72afd99dd6b771c756160",
+      "public_sha256": "b480830de8c4e78a528bb8f9af4e00aaee6f527a98b72afd99dd6b771c756160",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-job-analysis/SKILL.md",
+      "original_sha256": "23eb1bca88b0d8127b8074a15fce1002e682a2ac4ff60319e101e9b10a3ca52a",
+      "public_sha256": "23eb1bca88b0d8127b8074a15fce1002e682a2ac4ff60319e101e9b10a3ca52a",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-launch/agents/openai.yaml",
+      "original_sha256": "fe8fccef03eaecb92396a4a47fd39d4d23f4aac18b04d85306bb7f1835613122",
+      "public_sha256": "fe8fccef03eaecb92396a4a47fd39d4d23f4aac18b04d85306bb7f1835613122",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-launch/SKILL.md",
+      "original_sha256": "b904632b6a8f79858e74066937bc2863e7877397ae04da2fd5106ce8cd2ad771",
+      "public_sha256": "b904632b6a8f79858e74066937bc2863e7877397ae04da2fd5106ce8cd2ad771",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-maintenance/agents/openai.yaml",
+      "original_sha256": "be182e41c3e06683d108e4112a0cfc16af4ad17f559f5a8baefb5a3fa215a862",
+      "public_sha256": "be182e41c3e06683d108e4112a0cfc16af4ad17f559f5a8baefb5a3fa215a862",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-maintenance/SKILL.md",
+      "original_sha256": "79e208086ee870fd507d26287380fda257c82aba7ae3aef151d57557d64c54b5",
+      "public_sha256": "79e208086ee870fd507d26287380fda257c82aba7ae3aef151d57557d64c54b5",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-operations/agents/openai.yaml",
+      "original_sha256": "02ff8a79c8e52b54995d0288d64e09a77451369c91ab9fae7913bd4d9ca1b345",
+      "public_sha256": "02ff8a79c8e52b54995d0288d64e09a77451369c91ab9fae7913bd4d9ca1b345",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-operations/SKILL.md",
+      "original_sha256": "b1ded198310905978b1411760aaac8a42b999b90d9abaaa87472b88e65821525",
+      "public_sha256": "b1ded198310905978b1411760aaac8a42b999b90d9abaaa87472b88e65821525",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-pilot/agents/openai.yaml",
+      "original_sha256": "b8906a86627431054681e2cac5de588e3a1fb88ff057843e1ccc45df796ef1cf",
+      "public_sha256": "b8906a86627431054681e2cac5de588e3a1fb88ff057843e1ccc45df796ef1cf",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-pilot/SKILL.md",
+      "original_sha256": "6eb9d9b5b07252db063328e78ecb1b86771300893dbaff79723ecb29d532ae40",
+      "public_sha256": "6eb9d9b5b07252db063328e78ecb1b86771300893dbaff79723ecb29d532ae40",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-review/agents/openai.yaml",
+      "original_sha256": "2be5aec27aa8abb9823da8037090feed366edd8005f061f7dc2757f458b75b7e",
+      "public_sha256": "2be5aec27aa8abb9823da8037090feed366edd8005f061f7dc2757f458b75b7e",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-review/SKILL.md",
+      "original_sha256": "ce9f2fc747b079bd58fe25ce202d15ff62f73d9cb05537faee1bda54f8763d36",
+      "public_sha256": "ce9f2fc747b079bd58fe25ce202d15ff62f73d9cb05537faee1bda54f8763d36",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-setup/agents/openai.yaml",
+      "original_sha256": "b359f5a6ea36c04d2466b20fa4a971e928fda4b63f1bc785a4a8f91cc39f6e4f",
+      "public_sha256": "b359f5a6ea36c04d2466b20fa4a971e928fda4b63f1bc785a4a8f91cc39f6e4f",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-setup/SKILL.md",
+      "original_sha256": "96541e7a1e1d746db5d3cecb62f21e81f745796cbe873370f6f174b0b453d71c",
+      "public_sha256": "96541e7a1e1d746db5d3cecb62f21e81f745796cbe873370f6f174b0b453d71c",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-workshop/agents/openai.yaml",
+      "original_sha256": "c4732cb5ce5c953c6d3170bfb8cf79e5e250dd9bbf68ef7c19941ea61cc5e732",
+      "public_sha256": "c4732cb5ce5c953c6d3170bfb8cf79e5e250dd9bbf68ef7c19941ea61cc5e732",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-workshop/assets/templates.md",
+      "original_sha256": "62288085798d5df31162757c233a70a66f6b000648ac629353ff00de78391f73",
+      "public_sha256": "62288085798d5df31162757c233a70a66f6b000648ac629353ff00de78391f73",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-workshop/references/analysis.md",
+      "original_sha256": "c4b3ee646f361e254294dcf45b1ed5efa6b552245068104e9d16d033b80fc3c1",
+      "public_sha256": "c4b3ee646f361e254294dcf45b1ed5efa6b552245068104e9d16d033b80fc3c1",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-workshop/references/continuity.md",
+      "original_sha256": "9d67751735259c269f4fb4fbac8cb8f3418da9911494db83fc458dc4e6555838",
+      "public_sha256": "9d67751735259c269f4fb4fbac8cb8f3418da9911494db83fc458dc4e6555838",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-workshop/references/helpers.md",
+      "original_sha256": "9f8b3d921f657348c8c630cfab7b6c62f230e6880d0ee729a63d32867504b716",
+      "public_sha256": "9f8b3d921f657348c8c630cfab7b6c62f230e6880d0ee729a63d32867504b716",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-workshop/references/method.md",
+      "original_sha256": "f2086226868d606c0bbf9421afcf93f388f0b40fc60e504c23f9ca31728cd631",
+      "public_sha256": "f2086226868d606c0bbf9421afcf93f388f0b40fc60e504c23f9ca31728cd631",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-workshop/references/operating-contract.md",
+      "original_sha256": "0be364a6568494a4358a050acc621ff46cd2308815507be01a3bd8e2858b1ea8",
+      "public_sha256": "0be364a6568494a4358a050acc621ff46cd2308815507be01a3bd8e2858b1ea8",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-workshop/references/records.md",
+      "original_sha256": "5c8ea048a315d2365aac414ddf02c74b63dca1dc2840d9f7eb213e98ca5293b4",
+      "public_sha256": "5c8ea048a315d2365aac414ddf02c74b63dca1dc2840d9f7eb213e98ca5293b4",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-workshop/scripts/certification.py",
+      "original_sha256": "a07134283e224c47925fe6d5db796bf8258199fc3d7892a8efab325d7d46d68a",
+      "public_sha256": "a07134283e224c47925fe6d5db796bf8258199fc3d7892a8efab325d7d46d68a",
+      "sanitized": false
+    },
+    {
+      "path": "skills/certification-workshop/SKILL.md",
+      "original_sha256": "215761cd7aedd450a4c77bfcfcba5c5d72a0c40247bcc4cee6037a213d4f5716",
+      "public_sha256": "215761cd7aedd450a4c77bfcfcba5c5d72a0c40247bcc4cee6037a213d4f5716",
+      "sanitized": false
+    },
+    {
+      "path": "tests/test_certification.py",
+      "original_sha256": "b91de3401a29cd8bbc83c42771d801a31d4aa57d8d16e755884f5d359151590c",
+      "public_sha256": "b91de3401a29cd8bbc83c42771d801a31d4aa57d8d16e755884f5d359151590c",
+      "sanitized": false
+    },
+    {
+      "path": "tests/test_evidence_boundaries.py",
+      "original_sha256": "82075a0c8a1fc5fe5cf33f1854aaa79bd7dd0722199f183a6ce7a5dbfd7b612f",
+      "public_sha256": "82075a0c8a1fc5fe5cf33f1854aaa79bd7dd0722199f183a6ce7a5dbfd7b612f",
+      "sanitized": false
+    },
+    {
+      "path": "tests/test_form_solver.py",
+      "original_sha256": "79d27035d8a28635c0baa6648c1366a9261167dab27dddf544a1b0fd46ab5f43",
+      "public_sha256": "79d27035d8a28635c0baa6648c1366a9261167dab27dddf544a1b0fd46ab5f43",
+      "sanitized": false
+    },
+    {
+      "path": "tests/test_program_eval.py",
+      "original_sha256": "d226722832aa2bd64990598ebf2d5d62ed8baa5a13dcd479238291a6c0ab2e4d",
+      "public_sha256": "d226722832aa2bd64990598ebf2d5d62ed8baa5a13dcd479238291a6c0ab2e4d",
+      "sanitized": false
+    },
+    {
+      "path": "tests/test_public_export.py",
+      "original_sha256": "a724fa2e5b7193c63346c130cb8d6d97c895fa99e0a4983ad33dbcf6f17e602f",
+      "public_sha256": "a724fa2e5b7193c63346c130cb8d6d97c895fa99e0a4983ad33dbcf6f17e602f",
+      "sanitized": false
+    }
+  ]
+}

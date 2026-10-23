@@ -1,0 +1,43 @@
+{
+  "version": "1.0.0",
+  "host": "Codex CLI 0.163.0-alpha.10.2; Windows/Python 3.11",
+  "native_install_and_enabled_readback": true,
+  "copied_helper_initialization_and_validation": true,
+  "normal_config_unchanged": true,
+  "runtime_files": 28,
+  "runtime_identical_to_observed_rc_create_resume": true,
+  "runtime_sha256": {
+    "skills/certification-blueprint/SKILL.md": "94d040597b468c69b8fdcf79c4c043a4f1374db39256c8489c1cf46a723087b1",
+    "skills/certification-blueprint/agents/openai.yaml": "c14e22bc07e4a36287146509d70820e2603633667097fd4345fbe8810fdb7caa",
+    "skills/certification-items/SKILL.md": "bf8d8036a3e295be6fc11d77ec230a86fd08865613aaa41f9311cc677710f200",
+    "skills/certification-items/agents/openai.yaml": "59e5d498d8e49ccf5aded37383285336346373c7df95a07c590b50b75fa704ed",
+    "skills/certification-job-analysis/SKILL.md": "23eb1bca88b0d8127b8074a15fce1002e682a2ac4ff60319e101e9b10a3ca52a",
+    "skills/certification-job-analysis/agents/openai.yaml": "b480830de8c4e78a528bb8f9af4e00aaee6f527a98b72afd99dd6b771c756160",
+    "skills/certification-launch/SKILL.md": "b904632b6a8f79858e74066937bc2863e7877397ae04da2fd5106ce8cd2ad771",
+    "skills/certification-launch/agents/openai.yaml": "fe8fccef03eaecb92396a4a47fd39d4d23f4aac18b04d85306bb7f1835613122",
+    "skills/certification-maintenance/SKILL.md": "79e208086ee870fd507d26287380fda257c82aba7ae3aef151d57557d64c54b5",
+    "skills/certification-maintenance/agents/openai.yaml": "be182e41c3e06683d108e4112a0cfc16af4ad17f559f5a8baefb5a3fa215a862",
+    "skills/certification-operations/SKILL.md": "b1ded198310905978b1411760aaac8a42b999b90d9abaaa87472b88e65821525",
+    "skills/certification-operations/agents/openai.yaml": "02ff8a79c8e52b54995d0288d64e09a77451369c91ab9fae7913bd4d9ca1b345",
+    "skills/certification-pilot/SKILL.md": "6eb9d9b5b07252db063328e78ecb1b86771300893dbaff79723ecb29d532ae40",
+    "skills/certification-pilot/agents/openai.yaml": "b8906a86627431054681e2cac5de588e3a1fb88ff057843e1ccc45df796ef1cf",
+    "skills/certification-review/SKILL.md": "ce9f2fc747b079bd58fe25ce202d15ff62f73d9cb05537faee1bda54f8763d36",
+    "skills/certification-review/agents/openai.yaml": "2be5aec27aa8abb9823da8037090feed366edd8005f061f7dc2757f458b75b7e",
+    "skills/certification-setup/SKILL.md": "96541e7a1e1d746db5d3cecb62f21e81f745796cbe873370f6f174b0b453d71c",
+    "skills/certification-setup/agents/openai.yaml": "b359f5a6ea36c04d2466b20fa4a971e928fda4b63f1bc785a4a8f91cc39f6e4f",
+    "skills/certification-workshop/SKILL.md": "215761cd7aedd450a4c77bfcfcba5c5d72a0c40247bcc4cee6037a213d4f5716",
+    "skills/certification-workshop/agents/openai.yaml": "c4732cb5ce5c953c6d3170bfb8cf79e5e250dd9bbf68ef7c19941ea61cc5e732",
+    "skills/certification-workshop/assets/templates.md": "62288085798d5df31162757c233a70a66f6b000648ac629353ff00de78391f73",
+    "skills/certification-workshop/references/analysis.md": "c4b3ee646f361e254294dcf45b1ed5efa6b552245068104e9d16d033b80fc3c1",
+    "skills/certification-workshop/references/continuity.md": "9d67751735259c269f4fb4fbac8cb8f3418da9911494db83fc458dc4e6555838",
+    "skills/certification-workshop/references/helpers.md": "9f8b3d921f657348c8c630cfab7b6c62f230e6880d0ee729a63d32867504b716",
+    "skills/certification-workshop/references/method.md": "f2086226868d606c0bbf9421afcf93f388f0b40fc60e504c23f9ca31728cd631",
+    "skills/certification-workshop/references/operating-contract.md": "0be364a6568494a4358a050acc621ff46cd2308815507be01a3bd8e2858b1ea8",
+    "skills/certification-workshop/references/records.md": "5c8ea048a315d2365aac414ddf02c74b63dca1dc2840d9f7eb213e98ca5293b4",
+    "skills/certification-workshop/scripts/certification.py": "a07134283e224c47925fe6d5db796bf8258199fc3d7892a8efab325d7d46d68a"
+  },
+  "limits": [
+    "Final installation/helper checks are new observations. Model creation/continuation is carried evidence from the identical RC runtime, not a new final-version model run.",
+    "Disposable profile only; no global activation, public publication or Claude test."
+  ]
+}

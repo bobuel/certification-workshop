@@ -1,0 +1,4 @@
+interface:
+  display_name: "Certification Job Analysis"
+  short_description: "Certification workflow: Job Analysis"
+  default_prompt: "Use $certification-job-analysis to help with my certification program."

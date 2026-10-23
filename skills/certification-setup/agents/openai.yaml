@@ -1,0 +1,4 @@
+interface:
+  display_name: "Certification Setup"
+  short_description: "Certification workflow: Setup"
+  default_prompt: "Use $certification-setup to help with my certification program."

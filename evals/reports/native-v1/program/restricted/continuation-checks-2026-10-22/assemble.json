@@ -1,0 +1,42 @@
+{
+  "assembled": false,
+  "reason": "infeasible",
+  "coverage": {
+    "domains": [
+      {
+        "domain_id": "D1",
+        "target_items": 1,
+        "eligible_items": 0,
+        "shortfall": 1,
+        "eligible_by_method": {
+          "practical": 0,
+          "single_choice": 0
+        }
+      },
+      {
+        "domain_id": "D2",
+        "target_items": 1,
+        "eligible_items": 0,
+        "shortfall": 1,
+        "eligible_by_method": {
+          "practical": 0,
+          "single_choice": 0
+        }
+      },
+      {
+        "domain_id": "D3",
+        "target_items": 1,
+        "eligible_items": 0,
+        "shortfall": 1,
+        "eligible_by_method": {
+          "practical": 0,
+          "single_choice": 0
+        }
+      }
+    ],
+    "issues": [],
+    "ready_to_assemble": false,
+    "note": "Count coverage only; method/enemy-group feasibility is checked by assemble."
+  },
+  "nodes": 1
+}

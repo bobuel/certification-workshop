@@ -1,0 +1,102 @@
+{
+  "classification": "restricted",
+  "form_id": "PILOT1",
+  "form_fingerprint": "e38eba56df2e198120e47de15b1aee23cee0e14b3dd6d5082e8659bd6eb330a4",
+  "n": 23,
+  "max_score": 33,
+  "mean_total": 18.82608695652174,
+  "sd_total": 3.601163623974939,
+  "coefficient_alpha": -0.689257709678313,
+  "items": [
+    {
+      "item_id": "NS_A01",
+      "revision": 1,
+      "mean_score": 0.7391304347826086,
+      "mean_proportion_of_max": 0.7391304347826086,
+      "corrected_item_total_correlation": -0.20646488972402272
+    },
+    {
+      "item_id": "NS_A02",
+      "revision": 1,
+      "mean_score": 0.782608695652174,
+      "mean_proportion_of_max": 0.782608695652174,
+      "corrected_item_total_correlation": 0.12904459646117467
+    },
+    {
+      "item_id": "NS_A03",
+      "revision": 1,
+      "mean_score": 0.7391304347826086,
+      "mean_proportion_of_max": 0.7391304347826086,
+      "corrected_item_total_correlation": -0.25993082266939077
+    },
+    {
+      "item_id": "NS_A04",
+      "revision": 1,
+      "mean_score": 4.217391304347826,
+      "mean_proportion_of_max": 0.5271739130434783,
+      "corrected_item_total_correlation": -0.11955153021609881
+    },
+    {
+      "item_id": "NS_I01",
+      "revision": 1,
+      "mean_score": 0.7391304347826086,
+      "mean_proportion_of_max": 0.7391304347826086,
+      "corrected_item_total_correlation": -0.06960812249617886
+    },
+    {
+      "item_id": "NS_I02",
+      "revision": 1,
+      "mean_score": 0.782608695652174,
+      "mean_proportion_of_max": 0.782608695652174,
+      "corrected_item_total_correlation": -0.22830815498502532
+    },
+    {
+      "item_id": "NS_I03",
+      "revision": 1,
+      "mean_score": 0.7391304347826086,
+      "mean_proportion_of_max": 0.7391304347826086,
+      "corrected_item_total_correlation": 0.04335283765022605
+    },
+    {
+      "item_id": "NS_I04",
+      "revision": 1,
+      "mean_score": 0.8260869565217391,
+      "mean_proportion_of_max": 0.8260869565217391,
+      "corrected_item_total_correlation": -0.12921654189980664
+    },
+    {
+      "item_id": "NS_I05",
+      "revision": 1,
+      "mean_score": 3.739130434782609,
+      "mean_proportion_of_max": 0.4673913043478261,
+      "corrected_item_total_correlation": -0.531153185568022
+    },
+    {
+      "item_id": "NS_R01",
+      "revision": 1,
+      "mean_score": 0.782608695652174,
+      "mean_proportion_of_max": 0.782608695652174,
+      "corrected_item_total_correlation": -0.05338378754761759
+    },
+    {
+      "item_id": "NS_R02",
+      "revision": 1,
+      "mean_score": 0.7391304347826086,
+      "mean_proportion_of_max": 0.7391304347826086,
+      "corrected_item_total_correlation": -0.15228056704664936
+    },
+    {
+      "item_id": "NS_R03",
+      "revision": 1,
+      "mean_score": 4.0,
+      "mean_proportion_of_max": 0.5,
+      "corrected_item_total_correlation": 0.0439592111843039
+    }
+  ],
+  "limitations": [
+    "Descriptive statistics for this supplied complete-case scored matrix only.",
+    "Null correlation/alpha means insufficient observations or zero variance; not zero.",
+    "No automatic pass decisions, item deletion, fairness, validity, equating or representativeness conclusion.",
+    "For practical tasks these are recorded scores, not independent rater-agreement evidence."
+  ]
+}

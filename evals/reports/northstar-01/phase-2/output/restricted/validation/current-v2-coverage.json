@@ -1,0 +1,37 @@
+{
+  "domains": [
+    {
+      "domain_id": "D_I",
+      "target_items": 5,
+      "eligible_items": 5,
+      "shortfall": 0,
+      "eligible_by_method": {
+        "practical": 1,
+        "single_choice": 4
+      }
+    },
+    {
+      "domain_id": "D_A",
+      "target_items": 4,
+      "eligible_items": 0,
+      "shortfall": 4,
+      "eligible_by_method": {
+        "practical": 0,
+        "single_choice": 0
+      }
+    },
+    {
+      "domain_id": "D_R",
+      "target_items": 3,
+      "eligible_items": 2,
+      "shortfall": 1,
+      "eligible_by_method": {
+        "practical": 0,
+        "single_choice": 2
+      }
+    }
+  ],
+  "issues": [],
+  "ready_to_assemble": false,
+  "note": "Count coverage only; method/enemy-group feasibility is checked by assemble."
+}

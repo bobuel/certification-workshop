@@ -1,0 +1,66 @@
+{
+  "source_program_sha256": "813f67a69dc5b9e1ff2e93c6fe4ca8d4481af2d8253285f33031ad5b07120708",
+  "changes": [
+    {
+      "id": "NS_I01",
+      "from_revision": 1,
+      "to_revision": 2,
+      "reason": "Comparable options; common context in stem; refreshed rationale. Human plausibility review pending."
+    },
+    {
+      "id": "NS_I02",
+      "from_revision": 1,
+      "to_revision": 2,
+      "reason": "Comparable options; common context in stem; refreshed rationale. Human plausibility review pending."
+    },
+    {
+      "id": "NS_I03",
+      "from_revision": 1,
+      "to_revision": 2,
+      "reason": "Comparable options; common context in stem; refreshed rationale. Human plausibility review pending."
+    },
+    {
+      "id": "NS_I04",
+      "from_revision": 1,
+      "to_revision": 2,
+      "reason": "Comparable options; common context in stem; refreshed rationale. Human plausibility review pending."
+    },
+    {
+      "id": "NS_A01",
+      "from_revision": 2,
+      "to_revision": 3,
+      "reason": "Comparable options; common context in stem; refreshed rationale. Human plausibility review pending."
+    },
+    {
+      "id": "NS_A02",
+      "from_revision": 2,
+      "to_revision": 3,
+      "reason": "Comparable options; common context in stem; refreshed rationale. Human plausibility review pending."
+    },
+    {
+      "id": "NS_A03",
+      "from_revision": 2,
+      "to_revision": 3,
+      "reason": "Comparable options; common context in stem; refreshed rationale. Human plausibility review pending."
+    },
+    {
+      "id": "NS_A04",
+      "from_revision": 2,
+      "to_revision": 3,
+      "reason": "Split overloaded Scope into two observable one-point criteria. Exposure remains in Verification; total stays eight."
+    },
+    {
+      "id": "NS_R01",
+      "from_revision": 1,
+      "to_revision": 2,
+      "reason": "Comparable options; common context in stem; refreshed rationale. Human plausibility review pending."
+    },
+    {
+      "id": "NS_R02",
+      "from_revision": 1,
+      "to_revision": 2,
+      "reason": "Comparable options; common context in stem; refreshed rationale. Human plausibility review pending."
+    }
+  ],
+  "review_status": "Unreviewed draft"
+}

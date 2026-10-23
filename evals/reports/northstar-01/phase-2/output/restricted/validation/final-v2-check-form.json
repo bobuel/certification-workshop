@@ -1,0 +1,18 @@
+{
+  "form_id": "PILOT2",
+  "checks_pass": false,
+  "scope": "development_record_checks",
+  "issues": [
+    "item_not_approved:NS_A01",
+    "item_not_approved:NS_A02",
+    "item_not_approved:NS_A03",
+    "item_not_approved:NS_A04",
+    "item_not_approved:NS_R03",
+    "missing_current_content_acceptance:NS_A01",
+    "missing_current_content_acceptance:NS_A02",
+    "missing_current_content_acceptance:NS_A03",
+    "missing_current_content_acceptance:NS_A04",
+    "missing_current_content_acceptance:NS_R03"
+  ],
+  "note": "Record checks do not authenticate evidence, authorize launch, or establish validity."
+}

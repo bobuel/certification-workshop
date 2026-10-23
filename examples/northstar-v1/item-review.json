@@ -1,0 +1,103 @@
+{
+  "reviewer": "Codex AI",
+  "review_type": "User-delegated design/content review",
+  "evidence_scope": "Document inspection and artifact reasoning only; no real SME panel or empirical study.",
+  "items": [
+    {
+      "id": "NS_I01",
+      "revision": 2,
+      "fingerprint": "3bd4ba17b9faf7392d371798b326c3801e474901f87e8009bee0f95742cf7d45",
+      "source_check": "Compared with supplied fictional source sections; key/anchor supported.",
+      "decision": "Retain as illustrative development draft after AI review.",
+      "specific_note": "Source-defined invalid-key behavior; foundational item retained in open-reference context."
+    },
+    {
+      "id": "NS_I02",
+      "revision": 2,
+      "fingerprint": "0807c939d2c15fd0ab208160340b72657e492871e61a88dd5142448fe7dc2f94",
+      "source_check": "Compared with supplied fictional source sections; key/anchor supported.",
+      "decision": "Retain as illustrative development draft after AI review.",
+      "specific_note": "Distinguishes count agreement from disposition and authority."
+    },
+    {
+      "id": "NS_I03",
+      "revision": 2,
+      "fingerprint": "84f97a48cf9fbeecca2e4c56fc91120437a1881a4353da8729c998b8e9f9ed0a",
+      "source_check": "Compared with supplied fictional source sections; key/anchor supported.",
+      "decision": "Retain as illustrative development draft after AI review.",
+      "specific_note": "Separates accounting gap from sample inspection."
+    },
+    {
+      "id": "NS_I04",
+      "revision": 2,
+      "fingerprint": "3138f36635bf61897d63b9642b28eb1436609f5501a586901f7b86d6a720f539",
+      "source_check": "Compared with supplied fictional source sections; key/anchor supported.",
+      "decision": "Retain as illustrative development draft after AI review.",
+      "specific_note": "Retain as tool-purpose application; source explicitly defines preview as non-mutating."
+    },
+    {
+      "id": "NS_I05",
+      "revision": 2,
+      "fingerprint": "08bf809b764bd3c0165866097ab2a2ca77433c134bf4a4ee0cdf81e890a93527",
+      "source_check": "Compared with supplied fictional source sections; key/anchor supported.",
+      "decision": "Retain as illustrative development draft after AI review.",
+      "specific_note": "All eight points now observable; no implicit overall failure rule."
+    },
+    {
+      "id": "NS_A01",
+      "revision": 3,
+      "fingerprint": "aeabea5edf5c628c1b7099595410cc02737b6105b8b9ed5810c4bce4448089ad",
+      "source_check": "Compared with supplied fictional source sections; key/anchor supported.",
+      "decision": "Retain as illustrative development draft after AI review.",
+      "specific_note": "Both grants jointly required; no removed dataset-reader role offered as correct."
+    },
+    {
+      "id": "NS_A02",
+      "revision": 3,
+      "fingerprint": "53540b3cbf6f45b9e79b21362fca2fb6e8306d491d50ea800929b19781d66aef",
+      "source_check": "Compared with supplied fictional source sections; key/anchor supported.",
+      "decision": "Retain as illustrative development draft after AI review.",
+      "specific_note": "Correct intended identity and all positive/negative observations required."
+    },
+    {
+      "id": "NS_A03",
+      "revision": 3,
+      "fingerprint": "5412d5d79bdfb37ac4b869e138da7b991b27f6bbf4e5dd51623d42e4c145427f",
+      "source_check": "Compared with supplied fictional source sections; key/anchor supported.",
+      "decision": "Retain as illustrative development draft after AI review.",
+      "specific_note": "Revocation plus authorized replacement supported by ACC 1.0 A3, explicitly unchanged in ACC 2.0 A3."
+    },
+    {
+      "id": "NS_A04",
+      "revision": 4,
+      "fingerprint": "f769eab5c7ccb2cb4253fa69925d409a1e6fe10015cf6cf6d2b09825ad9098ae",
+      "source_check": "Compared with supplied fictional source sections; key/anchor supported.",
+      "decision": "Retain as illustrative development draft after AI review.",
+      "specific_note": "Separates current observations, proposed grants and future rechecks; eight scoring decisions."
+    },
+    {
+      "id": "NS_R01",
+      "revision": 2,
+      "fingerprint": "b82d1441ead6c0d72462e1a21528d8e41efd7c39f8b75e9fd51d15cb27f09541",
+      "source_check": "Compared with supplied fictional source sections; key/anchor supported.",
+      "decision": "Retain as illustrative development draft after AI review.",
+      "specific_note": "No unapproved recovery objective invented."
+    },
+    {
+      "id": "NS_R02",
+      "revision": 2,
+      "fingerprint": "e9c853ff90e4d758038b9a6459f9fdf91497d070b116c29341d081b0e2ade160",
+      "source_check": "Compared with supplied fictional source sections; key/anchor supported.",
+      "decision": "Retain as illustrative development draft after AI review.",
+      "specific_note": "Customer authority must match exact version before redirection."
+    },
+    {
+      "id": "NS_R03",
+      "revision": 3,
+      "fingerprint": "44d917b9ca38c9c303bb56e3a8327a6901d1cd3e75c5bd92bb39d68f0d25ae3e",
+      "source_check": "Compared with supplied fictional source sections; key/anchor supported.",
+      "decision": "Retain as illustrative development draft after AI review.",
+      "specific_note": "Count and permission failures remain independent blockers; eight scoring decisions."
+    }
+  ]
+}

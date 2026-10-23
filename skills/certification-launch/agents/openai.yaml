@@ -1,0 +1,4 @@
+interface:
+  display_name: "Certification Launch"
+  short_description: "Certification workflow: Launch"
+  default_prompt: "Use $certification-launch to help with my certification program."

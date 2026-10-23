@@ -1,0 +1,174 @@
+{
+  "suite": "offline-cli-scenarios",
+  "version": "1.0.0-rc.1",
+  "helper_sha256": "a07134283e224c47925fe6d5db796bf8258199fc3d7892a8efab325d7d46d68a",
+  "passed": true,
+  "case_count": 13,
+  "passed_count": 13,
+  "cases": [
+    {
+      "id": "from-scratch",
+      "passed": true,
+      "expected": "Create resumable records without inventing a bank or existing certification.",
+      "observed": {
+        "created": true,
+        "items": 0,
+        "forms": 0,
+        "next_action": "Develop the charter, task hypotheses and SME instruments from the available sources."
+      }
+    },
+    {
+      "id": "unreviewed-bank",
+      "passed": true,
+      "expected": "Decline to assemble a form from unreviewed draft items.",
+      "observed": {
+        "assembled": false,
+        "reason": "infeasible"
+      }
+    },
+    {
+      "id": "review-conflict",
+      "passed": true,
+      "expected": "Acceptance cannot conceal a current unresolved rejection.",
+      "observed": [
+        "unresolved_negative_review:D01"
+      ]
+    },
+    {
+      "id": "missing-pilot-data",
+      "passed": true,
+      "expected": "Reject missing scores without silently imputing or writing a report.",
+      "observed": {
+        "error": "Missing score at row 2; supply an explicit scoring policy",
+        "output_created": false
+      }
+    },
+    {
+      "id": "matrix-identity",
+      "passed": true,
+      "expected": "Map scores by exact item/revision headers, not column position.",
+      "observed": {
+        "reports_equal": true,
+        "automatic_awards_or_pass_decisions": false
+      }
+    },
+    {
+      "id": "unchanged-revision-edit",
+      "passed": true,
+      "expected": "Reject old score data when content changed without a version increment.",
+      "observed": {
+        "error": "Unpinned or changed form content: recover the verified historical snapshot; do not attach old scores to current items"
+      }
+    },
+    {
+      "id": "legacy-import",
+      "passed": true,
+      "expected": "Preserve imported records; require verified historical content before pinning.",
+      "observed": {
+        "structure_preserved": true,
+        "analysis_refused": true,
+        "reason": "Unpinned or changed form content: recover the verified historical snapshot; do not attach old scores to current items"
+      }
+    },
+    {
+      "id": "source-revision",
+      "passed": true,
+      "expected": "Flag source dependencies and retain an interpretable historical snapshot.",
+      "observed": {
+        "affected_items": [
+          "S01",
+          "S02",
+          "S03"
+        ],
+        "old_snapshot_still_usable": true
+      }
+    },
+    {
+      "id": "public-export",
+      "passed": true,
+      "expected": "Keep restricted records and unrecognized public fields out of the candidate guide.",
+      "observed": {
+        "restricted_canary_absent": true,
+        "classification": "public-draft"
+      }
+    },
+    {
+      "id": "synthetic-live-release",
+      "passed": true,
+      "expected": "Do not treat the completed synthetic rehearsal as a live release.",
+      "observed": {
+        "live_checks_pass": false,
+        "issues": [
+          "missing_current_content_acceptance:D01",
+          "missing_current_content_acceptance:D02",
+          "missing_current_content_acceptance:D03",
+          "missing_current_content_acceptance:D04",
+          "missing_current_content_acceptance:R01",
+          "missing_current_content_acceptance:R02",
+          "missing_current_content_acceptance:S01",
+          "missing_current_content_acceptance:S02",
+          "missing_policy:accommodations",
+          "missing_policy:appeals",
+          "missing_policy:data_retention",
+          "missing_policy:delivery",
+          "missing_policy:eligibility",
+          "missing_policy:passing_standard",
+          "missing_policy:renewal",
+          "missing_policy:retakes",
+          "missing_real_approval:blueprint",
+          "missing_real_approval:form",
+          "missing_real_approval:program",
+          "missing_release_evidence:delivery_verification",
+          "missing_release_evidence:job_analysis_report",
+          "missing_release_evidence:pilot_report",
+          "missing_release_evidence:standard_setting_report",
+          "not_approved:form",
+          "not_approved:program",
+          "synthetic_program",
+          "synthetic_source:D01",
+          "synthetic_source:D02",
+          "synthetic_source:D03",
+          "synthetic_source:D04",
+          "synthetic_source:R01",
+          "synthetic_source:R02",
+          "synthetic_source:S01",
+          "synthetic_source:S02"
+        ]
+      }
+    },
+    {
+      "id": "unknown-issuance",
+      "passed": true,
+      "expected": "Request provider readback rather than assuming failure or authorizing a duplicate.",
+      "observed": {
+        "retry_not_authorized": true,
+        "issues": [
+          {
+            "award_id": "AWARD1",
+            "code": "readback_before_retry"
+          }
+        ]
+      }
+    },
+    {
+      "id": "output-collision",
+      "passed": true,
+      "expected": "Preserve existing output files on a refused overwrite.",
+      "observed": {
+        "original_output_preserved": true
+      }
+    },
+    {
+      "id": "read-only-helpers",
+      "passed": true,
+      "expected": "All analysis, proposal and export commands leave the input program unchanged.",
+      "observed": {
+        "original_program_unchanged": true
+      }
+    }
+  ],
+  "limits": [
+    "Synthetic CLI scenarios, not model behavioral eval scores.",
+    "No external delivery, issuance or psychometric claims."
+  ]
+}

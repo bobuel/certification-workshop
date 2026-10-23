@@ -1,0 +1,1 @@
+Synthetic rehearsal only. The case operator simulated content acceptance of the exact phase-1 items and a 24-person pilot on PILOT1. This is not real review, a validated study, release approval, or permission to issue credentials. The historical source files are in historical-evidence. Preserve this snapshot; use its exact content for score analysis.

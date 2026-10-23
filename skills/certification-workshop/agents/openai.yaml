@@ -1,0 +1,4 @@
+interface:
+  display_name: "Certification Workshop"
+  short_description: "Certification workflow: Workshop"
+  default_prompt: "Use $certification-workshop to help with my certification program."

@@ -1,0 +1,511 @@
+{
+  "classification": "restricted",
+  "program_id": "NS_IMPLEMENTER",
+  "items": [
+    {
+      "id": "NS_I01",
+      "revision": 1,
+      "domain_id": "D_I",
+      "competency_ids": [
+        "C_I"
+      ],
+      "task_ids": [
+        "T_I1"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "A UTF-8 CSV starts with field names and contains empty and repeated customer_id values. Which configuration and expected behavior match version 1.0?",
+      "options": {
+        "A": "Set header=true, require customer_id, and expect empty or duplicate key rows to be rejected.",
+        "B": "Set header=true and generate replacement IDs for invalid rows.",
+        "C": "Set header=false and make customer_id optional.",
+        "D": "Set header=true and accept duplicate IDs when other columns differ."
+      },
+      "answer_key": "A",
+      "rationale": "A follows I1. B invents ID generation; C misreads headers and required key; D contradicts duplicate rejection.",
+      "source_refs": [
+        {
+          "source_id": "ING",
+          "version": "1.0",
+          "locator": "I1 Configure"
+        }
+      ],
+      "max_score": 1,
+      "cognitive_level": "Apply/analyze documented rules within a scenario",
+      "intended_challenge": "Distinguish adequate evidence from plausible shortcuts; empirical difficulty unknown",
+      "response_time_minutes": 2,
+      "author": "AI draft, fictional Northstar case",
+      "enemy_groups": []
+    },
+    {
+      "id": "NS_I02",
+      "revision": 1,
+      "domain_id": "D_I",
+      "competency_ids": [
+        "C_I"
+      ],
+      "task_ids": [
+        "T_I2"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "Of 1,000 rows, 970 are accepted, 20 rejected for empty keys and 10 for duplicate keys. No exclusion is agreed. What next?",
+      "options": {
+        "A": "Publish because accepted plus rejected equals 1,000.",
+        "B": "Retry unchanged input until all rows are accepted.",
+        "C": "Review rejections and document correction or explicitly agreed exclusion before considering publication.",
+        "D": "Publish accepted rows and treat rejected rows as implicitly excluded."
+      },
+      "answer_key": "C",
+      "rationale": "C follows I2. A confuses count agreement with permission; B cannot repair invalid input; D invents agreement.",
+      "source_refs": [
+        {
+          "source_id": "ING",
+          "version": "1.0",
+          "locator": "I2 Reconcile; I4 Worked data"
+        }
+      ],
+      "max_score": 1,
+      "cognitive_level": "Apply/analyze documented rules within a scenario",
+      "intended_challenge": "Distinguish adequate evidence from plausible shortcuts; empirical difficulty unknown",
+      "response_time_minutes": 2,
+      "author": "AI draft, fictional Northstar case",
+      "enemy_groups": []
+    },
+    {
+      "id": "NS_I03",
+      "revision": 1,
+      "domain_id": "D_I",
+      "competency_ids": [
+        "C_I"
+      ],
+      "task_ids": [
+        "T_I2",
+        "T_I3"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "A 1,000-row import reports 990 accepted and 5 rejected. What conclusion is supported?",
+      "options": {
+        "A": "Treat the five remaining rows as duplicates.",
+        "B": "Investigate the unexplained gap before publication; escalate unresolved discrepancy to the customer data owner.",
+        "C": "Publish because acceptance is at least 99 percent.",
+        "D": "Preview five accepted rows to account for the missing rows."
+      },
+      "answer_key": "B",
+      "rationale": "B follows I2/I3: only 995 rows are accounted for. A invents reasons; C invents threshold; D confuses sampling with accounting.",
+      "source_refs": [
+        {
+          "source_id": "ING",
+          "version": "1.0",
+          "locator": "I2 Reconcile; I3 Verify and release; I4 Worked data"
+        }
+      ],
+      "max_score": 1,
+      "cognitive_level": "Apply/analyze documented rules within a scenario",
+      "intended_challenge": "Distinguish adequate evidence from plausible shortcuts; empirical difficulty unknown",
+      "response_time_minutes": 2,
+      "author": "AI draft, fictional Northstar case",
+      "enemy_groups": []
+    },
+    {
+      "id": "NS_I04",
+      "revision": 1,
+      "domain_id": "D_I",
+      "competency_ids": [
+        "C_I"
+      ],
+      "task_ids": [
+        "T_I3"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "Counts reconcile and rejection dispositions are documented. A colleague says preview --limit 5 repairs mapping errors and proves readiness. What should you do?",
+      "options": {
+        "A": "Use preview to repair, then publish without retaining evidence.",
+        "B": "Treat preview completion as proof that all values are correct.",
+        "C": "Skip mappings because counts reconcile.",
+        "D": "Use preview to inspect accepted rows without changing them; check required mappings and representative values, retaining source and reconciliation evidence."
+      },
+      "answer_key": "D",
+      "rationale": "D follows I3. A incorrectly makes preview mutating; B overclaims sampling; C omits verification.",
+      "source_refs": [
+        {
+          "source_id": "ING",
+          "version": "1.0",
+          "locator": "I3 Verify and release"
+        }
+      ],
+      "max_score": 1,
+      "cognitive_level": "Apply/analyze documented rules within a scenario",
+      "intended_challenge": "Distinguish adequate evidence from plausible shortcuts; empirical difficulty unknown",
+      "response_time_minutes": 2,
+      "author": "AI draft, fictional Northstar case",
+      "enemy_groups": []
+    },
+    {
+      "id": "NS_I05",
+      "revision": 1,
+      "domain_id": "D_I",
+      "competency_ids": [
+        "C_I"
+      ],
+      "task_ids": [
+        "T_I1",
+        "T_I2",
+        "T_I3"
+      ],
+      "type": "practical",
+      "status": "approved",
+      "prompt": "Complete an ingestion evidence sheet and publication recommendation for B-17.",
+      "setup": "Synthetic paper case; no commands executed. Previous published P-16 remains available. UTF-8 CSV header customer_id,amount. Six data rows: 1 C101,10; 2 C102,20; 3 [empty],30; 4 C102,40; 5 C105,50; 6 C106,60. Supplied rejection report: row 3 empty key and row 4 duplicate key. Accepted=4, rejected=2. Configuration: header=true, customer_id required. Preview shows C101/10 and C105/50. Mapping log maps source amount to destination customer_name instead of amount. No exclusion agreed. Treat the report as authoritative about which duplicate row was rejected; do not invent duplicate semantics.",
+      "deliverable": "One sheet with configuration/mapping findings, row accounting, rejection disposition/rerun plan and publication recommendation with evidence and escalation. Distinguish supplied evidence from proposed repairs.",
+      "rubric": [
+        {
+          "criterion": "Configuration",
+          "points": 2,
+          "anchor": "2: identifies appropriate header/key settings AND wrong amount mapping requiring correction; 1: only one; 0: neither or accepts mapping."
+        },
+        {
+          "criterion": "Reconciliation",
+          "points": 2,
+          "anchor": "2: gives 4+2=6 and says count agreement alone does not authorize release; 1: correct arithmetic without release implication; 0: arithmetic wrong or says totals alone permit release."
+        },
+        {
+          "criterion": "Rejected rows",
+          "points": 2,
+          "anchor": "2: addresses both invalid keys through correction with owner input or explicit agreed exclusion, then rerun/reconcile; 1: fully handles one or omits agreement/rerun; 0: silent exclusion or unchanged retry as repair."
+        },
+        {
+          "criterion": "Release/evidence",
+          "points": 2,
+          "anchor": "2: holds pending corrected mapping/dispositions and representative recheck, retains source/reconciliation and previous version, escalates unresolved discrepancy to data owner; 1: holds with incomplete evidence/rechecks/escalation; 0: recommends publication now."
+        }
+      ],
+      "rationale": "Evidence-sheet exercise integrates documented checks and action planning; it does not observe software execution.",
+      "source_refs": [
+        {
+          "source_id": "ING",
+          "version": "1.0",
+          "locator": "I1 Configure; I2 Reconcile; I3 Verify and release"
+        }
+      ],
+      "max_score": 8,
+      "cognitive_level": "Analyze/evaluate evidence and justify safe next steps",
+      "intended_challenge": "Integrate several conditions; empirical difficulty unknown",
+      "response_time_minutes": 12,
+      "author": "AI draft, fictional Northstar case",
+      "enemy_groups": []
+    },
+    {
+      "id": "NS_A01",
+      "revision": 2,
+      "domain_id": "D_A",
+      "competency_ids": [
+        "C_A"
+      ],
+      "task_ids": [
+        "T_A1"
+      ],
+      "type": "single_choice",
+      "status": "draft",
+      "prompt": "Under Northstar 2.0, an integration must read only orders. Which grant configuration meets the requirement?",
+      "options": {
+        "A": "Workspace traverse only",
+        "B": "Dataset orders query only",
+        "C": "Workspace traverse and dataset orders query",
+        "D": "Workspace reader"
+      },
+      "answer_key": "C",
+      "rationale": "2.0 A1 requires both traverse and dataset-specific query. A cannot read data; B cannot navigate; D grants all datasets and is broader than necessary. The old dataset reader role is removed.",
+      "source_refs": [
+        {
+          "source_id": "ACC",
+          "version": "2.0",
+          "locator": "A1 Grant"
+        }
+      ],
+      "max_score": 1,
+      "cognitive_level": "Apply/analyze documented rules within a scenario",
+      "intended_challenge": "Distinguish adequate evidence from plausible shortcuts; empirical difficulty unknown",
+      "response_time_minutes": 2,
+      "author": "AI draft, fictional Northstar case",
+      "enemy_groups": []
+    },
+    {
+      "id": "NS_A02",
+      "revision": 2,
+      "domain_id": "D_A",
+      "competency_ids": [
+        "C_A"
+      ],
+      "task_ids": [
+        "T_A2"
+      ],
+      "type": "single_choice",
+      "status": "draft",
+      "prompt": "An administrator can read orders. What additional evidence verifies the read-only service account?",
+      "options": {
+        "A": "The administrator fails to write orders.",
+        "B": "The service identity reads orders, is denied orders write and is denied unrelated customer datasets.",
+        "C": "The service identity reads orders and has read-only in its name.",
+        "D": "The administrator confirms the account exists."
+      },
+      "answer_key": "B",
+      "rationale": "B follows A2. A tests wrong identity; C omits negative tests; D proves existence only.",
+      "source_refs": [
+        {
+          "source_id": "ACC",
+          "version": "2.0",
+          "locator": "A2 Verify"
+        }
+      ],
+      "max_score": 1,
+      "cognitive_level": "Apply/analyze documented rules within a scenario",
+      "intended_challenge": "Distinguish adequate evidence from plausible shortcuts; empirical difficulty unknown",
+      "response_time_minutes": 2,
+      "author": "AI draft, fictional Northstar case",
+      "enemy_groups": []
+    },
+    {
+      "id": "NS_A03",
+      "revision": 2,
+      "domain_id": "D_A",
+      "competency_ids": [
+        "C_A"
+      ],
+      "task_ids": [
+        "T_A3"
+      ],
+      "type": "single_choice",
+      "status": "draft",
+      "prompt": "A service token was disclosed in a shared note. What follows the documented procedure?",
+      "options": {
+        "A": "Revoke the token and obtain authorized replacement; record the incident without the secret.",
+        "B": "Rename the account and keep using the token.",
+        "C": "Create a second token and assume the first stopped working.",
+        "D": "Copy the token into a support ticket for identification."
+      },
+      "answer_key": "A",
+      "rationale": "A follows A3. B/C do not invalidate the old token; D spreads the secret.",
+      "source_refs": [
+        {
+          "source_id": "ACC",
+          "version": "2.0",
+          "locator": "A3 Compromise"
+        }
+      ],
+      "max_score": 1,
+      "cognitive_level": "Apply/analyze documented rules within a scenario",
+      "intended_challenge": "Distinguish adequate evidence from plausible shortcuts; empirical difficulty unknown",
+      "response_time_minutes": 2,
+      "author": "AI draft, fictional Northstar case",
+      "enemy_groups": []
+    },
+    {
+      "id": "NS_A04",
+      "revision": 2,
+      "domain_id": "D_A",
+      "competency_ids": [
+        "C_A"
+      ],
+      "task_ids": [
+        "T_A1",
+        "T_A2",
+        "T_A3"
+      ],
+      "type": "practical",
+      "status": "draft",
+      "prompt": "For Northstar 2.0, complete an access evidence sheet for svc-orders and a safe remediation sequence.",
+      "setup": "Synthetic 2.0 paper case; no token supplied or changes executed. Requirement: read orders only. Current grant: workspace reader. A proposed replacement has workspace traverse only and no dataset query grant. Under the CURRENT broad grant, svc-orders orders read succeeds, orders write is denied, unrelated customer ledger read succeeds. An administrator read also succeeds. No tests of the proposed replacement have run. A service token was disclosed in a shared note, represented only as TOKEN_REDACTED.",
+      "deliverable": "One sheet: exact grant replacement and explanation of each required component; interpretation of current results and proposed replacement; service-identity recheck plan; token response sequence; credential-free incident/evidence record. Separate proposed actions from supplied observations.",
+      "rubric": [
+        {
+          "criterion": "Scope",
+          "points": 2,
+          "anchor": "2: removes broad workspace reader and specifies BOTH workspace traverse AND dataset orders query, explains traverse-only cannot read and query-only is insufficient, and identifies unrelated exposure; 1: proposes both narrow grants but omits removal or one explanation; 0: recommends either grant alone, removed dataset reader, broad reader, writer or administrator as sufficient."
+        },
+        {
+          "criterion": "Verification",
+          "points": 2,
+          "anchor": "2: identifies current ledger success as failure and requires service-identity orders read success, orders write denial and unrelated-data denial after BOTH replacement grants; 1: recognizes exposure but rechecks incomplete; 0: accepts administrator test or current results as verification of proposed replacement."
+        },
+        {
+          "criterion": "Disclosure",
+          "points": 2,
+          "anchor": "2: revokes disclosed token and gets authorized replacement; 1: only one; 0: rename/add token only or keep using disclosed token."
+        },
+        {
+          "criterion": "Evidence",
+          "points": 2,
+          "anchor": "2: records identity, outcomes and incident/action status without secrets and labels proposed rechecks as proposed; 1: safe record with missing identity/status detail; 0: copies secret or falsely claims remediation happened."
+        }
+      ],
+      "rationale": "2.0 A1 changes remediation to two jointly necessary grants. A2 verification and A3 revocation/replacement remain required. Paper evidence planning does not demonstrate actual execution.",
+      "source_refs": [
+        {
+          "source_id": "ACC",
+          "version": "2.0",
+          "locator": "A1 Grant; A2 Verify; A3 Compromise"
+        }
+      ],
+      "max_score": 8,
+      "cognitive_level": "Analyze/evaluate evidence and justify safe next steps",
+      "intended_challenge": "Integrate several conditions; empirical difficulty unknown",
+      "response_time_minutes": 12,
+      "author": "AI draft, fictional Northstar case",
+      "enemy_groups": []
+    },
+    {
+      "id": "NS_R01",
+      "revision": 1,
+      "domain_id": "D_R",
+      "competency_ids": [
+        "C_R"
+      ],
+      "task_ids": [
+        "T_R1"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "A snapshot is two hours old and no recovery objective is recorded. Where should a rehearsal restore go, and how should age be treated?",
+      "options": {
+        "A": "Overwrite active data and assume two hours is acceptable.",
+        "B": "Restore separately and accept any snapshot under one day old.",
+        "C": "Restore into active data after the consultant chooses the objective.",
+        "D": "Restore into a new namespace and escalate the missing customer-approved objective before claiming acceptable loss."
+      },
+      "answer_key": "D",
+      "rationale": "D follows R1. A/C overwrite active data. A/B/C invent authority or acceptable loss windows.",
+      "source_refs": [
+        {
+          "source_id": "REC",
+          "version": "1.0",
+          "locator": "R1 Restore"
+        }
+      ],
+      "max_score": 1,
+      "cognitive_level": "Apply/analyze documented rules within a scenario",
+      "intended_challenge": "Distinguish adequate evidence from plausible shortcuts; empirical difficulty unknown",
+      "response_time_minutes": 2,
+      "author": "AI draft, fictional Northstar case",
+      "enemy_groups": []
+    },
+    {
+      "id": "NS_R02",
+      "revision": 1,
+      "domain_id": "D_R",
+      "competency_ids": [
+        "C_R"
+      ],
+      "task_ids": [
+        "T_R2",
+        "T_R3"
+      ],
+      "type": "single_choice",
+      "status": "approved",
+      "prompt": "Separate restore counts, representative values and service permissions pass, and age meets the approved objective. What remains before redirecting clients?",
+      "options": {
+        "A": "Delete the old namespace.",
+        "B": "Prepare cutover/rollback recommendation, retain old namespace and obtain customer authorization recording who approved which version.",
+        "C": "Redirect because verification grants incident command authority.",
+        "D": "Redirect now and seek authorization afterward."
+      },
+      "answer_key": "B",
+      "rationale": "B follows R3. A removes rollback; C invents authority; D reverses authorization sequence.",
+      "source_refs": [
+        {
+          "source_id": "REC",
+          "version": "1.0",
+          "locator": "R2 Verify; R3 Cut over"
+        }
+      ],
+      "max_score": 1,
+      "cognitive_level": "Apply/analyze documented rules within a scenario",
+      "intended_challenge": "Distinguish adequate evidence from plausible shortcuts; empirical difficulty unknown",
+      "response_time_minutes": 2,
+      "author": "AI draft, fictional Northstar case",
+      "enemy_groups": []
+    },
+    {
+      "id": "NS_R03",
+      "revision": 2,
+      "domain_id": "D_R",
+      "competency_ids": [
+        "C_R"
+      ],
+      "task_ids": [
+        "T_R1",
+        "T_R2",
+        "T_R3"
+      ],
+      "type": "practical",
+      "status": "draft",
+      "prompt": "Complete a recovery evidence sheet and recommendation for R-22.",
+      "setup": "Synthetic paper case, no executable lab. Active prod-old remains in service. Immutable S-22 snapshot taken 08:00; decision time 11:00. Customer-approved maximum snapshot age is four hours. Separate restore target rehearsal-new. Manifest count=500; restored=497. Representative IDs/values match supplied manifest examples. Intended service identity reads orders, is denied orders write, but CAN read unrelated customer data. Job status complete. No customer cutover authorization.",
+      "deliverable": "One sheet: age/namespace checks, count/value/permission findings, hold/cutover decision and investigation plan, conditional cutover/rollback and authorization record. Separate observed evidence from required rechecks.",
+      "rubric": [
+        {
+          "criterion": "Starting state",
+          "points": 2,
+          "anchor": "2: computes three-hour age within four-hour objective AND confirms separate namespace protects active data; 1: only one; 0: wrong age or proposes overwrite."
+        },
+        {
+          "criterion": "Failures",
+          "points": 2,
+          "anchor": "2: identifies three-row mismatch AND excess service access despite completion/sample match; 1: one failure; 0: accepts restore as verified."
+        },
+        {
+          "criterion": "Recommendation",
+          "points": 2,
+          "anchor": "2: holds cutover for investigation/correction and repeat counts/values/intended-permission tests; 1: holds with incomplete follow-up; 0: cutover despite a failure."
+        },
+        {
+          "criterion": "Authority/rollback",
+          "points": 2,
+          "anchor": "2: retains prod-old, specifies rollback route to retained namespace and requires customer authorization with actor/exact version before redirect; 1: retains old and requires approval but lacks rollback/version detail; 0: deletes old, redirects unapproved or claims incident command."
+        }
+      ],
+      "rationale": "Evidence-sheet exercise integrates documented checks and action planning; it does not observe software execution.",
+      "source_refs": [
+        {
+          "source_id": "REC",
+          "version": "1.0",
+          "locator": "R1 Restore; R2 Verify; R3 Cut over"
+        },
+        {
+          "source_id": "ACC",
+          "version": "2.0",
+          "locator": "A2 Verify"
+        }
+      ],
+      "max_score": 8,
+      "cognitive_level": "Analyze/evaluate evidence and justify safe next steps",
+      "intended_challenge": "Integrate several conditions; empirical difficulty unknown",
+      "response_time_minutes": 15,
+      "author": "AI draft, fictional Northstar case",
+      "enemy_groups": []
+    }
+  ],
+  "item_fingerprints": {
+    "NS_I01": "7f86bf72ffe04899b61f23f4f39c42ff133d33f6b9f239bdaca7a1febca76dc1",
+    "NS_I02": "75bd18d1eec88d8ca85eba8016e1ba7e46884c9c1550f26c461cbbb4c63343ce",
+    "NS_I03": "b3fe1755973c828bb1ba987ae55822d3114a8ec0efc2ea0a32677da1cc7c1b18",
+    "NS_I04": "f3cc48236bc28b75b11c102e62246c38e7fe61ab8276985b43e18922f20b9f92",
+    "NS_I05": "52505c20a207784aafe17ea57dfed37648a9f27ed7e3bd167a1b6448c95351aa",
+    "NS_A01": "1a05905b8d61e91c81d5c70edec3e966eecabda33b46ca2cb8ca879c4b28ed76",
+    "NS_A02": "aa4dd3bfa11a6ff6564f30bd2f57aad129d78baaa4896d2f2534778b363ff6a4",
+    "NS_A03": "ffff52b07386879c7252c8ed6af5ad38f7ec26bc8486135133ea261150420eac",
+    "NS_A04": "3cb89d8f3ebcc8bbb3b98385fffd8181360f0859c592bccaa219eba8fcb214bf",
+    "NS_R01": "f9779963364949533242f8680d8812096caff6ed934ec1af3515cc63b8bac6a5",
+    "NS_R02": "3e82447be9d91e67d741e2140f46620e814b698b4da8960f6a065f23c1dd8d08",
+    "NS_R03": "86d29862d96c2e63d2b897c9e76e5ab5a719c42eba66ac89cb6cf768c1da2a5c"
+  },
+  "review_questions": [
+    "Does it assess the mapped work at the intended level?",
+    "Is the key/rubric supported and unambiguous?",
+    "Are irrelevant language, accessibility or bias barriers present?",
+    "Accept, revise or reject this exact revision, with evidence."
+  ],
+  "note": "Prepared packet; no reviewer was contacted and no human review occurred."
+}

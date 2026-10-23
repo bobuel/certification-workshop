@@ -1,0 +1,4 @@
+interface:
+  display_name: "Certification Maintenance"
+  short_description: "Certification workflow: Maintenance"
+  default_prompt: "Use $certification-maintenance to help with my certification program."

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Certification Review"
+  short_description: "Certification workflow: Review"
+  default_prompt: "Use $certification-review to help with my certification program."

@@ -1,0 +1,31 @@
+{
+  "classification": "public-draft",
+  "program_title": "Northstar Implementation Evidence \u2014 development example",
+  "guide": {
+    "overview": "Using the supplied procedures, interpret evidence from a bounded deployment, identify unsafe or incomplete conditions, and recommend justified verification, correction and escalation steps. Fictional feasibility-study example; no credential is offered.",
+    "audience": "Partner implementers; excludes architecture, incident command and commercial management.",
+    "eligibility": "Design: first recruit six volunteer partner consultants with varied experience for a feasibility study; no enrollment has occurred.",
+    "format": "Nine selected-response items and three written practicals; 33 raw points. Plan a 70-minute working session, record completion times, and permit documented overrun for feasibility observation. No speed or pass/fail inference.",
+    "permitted_resources": "Design: supplied versioned procedures and individual work. No outside or generative assistance during the study; accessible equivalents arranged before participation.",
+    "accommodations": "Contact Morgan privately before scheduling; final process/contact route pending.",
+    "retakes": "No pass/fail, awards or operational retake entitlement in this feasibility study.",
+    "appeals": "Raise concerns privately to Morgan; deadline and independent reviewer pending.",
+    "renewal": "Not applicable to the feasibility study: no credential is issued.",
+    "support": "Fictional example only. A real study must name a delivery contact and obtain actual participation/data-handling authorization."
+  },
+  "domains": [
+    {
+      "title": "Ingestion and verification",
+      "weight_percent_of_items": 42
+    },
+    {
+      "title": "Safe service access",
+      "weight_percent_of_items": 33
+    },
+    {
+      "title": "Recovery and authorized cutover",
+      "weight_percent_of_items": 25
+    }
+  ],
+  "note": "Review public text before sharing; this is a guide, not an exam."
+}

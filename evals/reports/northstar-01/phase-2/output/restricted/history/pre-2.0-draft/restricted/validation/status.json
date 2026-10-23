@@ -1,0 +1,136 @@
+{
+  "program_id": "NS_IMPLEMENTER",
+  "mode": "demo",
+  "coverage": {
+    "domains": [
+      {
+        "domain_id": "D_I",
+        "target_items": 5,
+        "eligible_items": 0,
+        "shortfall": 5,
+        "eligible_by_method": {
+          "practical": 0,
+          "single_choice": 0
+        }
+      },
+      {
+        "domain_id": "D_A",
+        "target_items": 4,
+        "eligible_items": 0,
+        "shortfall": 4,
+        "eligible_by_method": {
+          "practical": 0,
+          "single_choice": 0
+        }
+      },
+      {
+        "domain_id": "D_R",
+        "target_items": 3,
+        "eligible_items": 0,
+        "shortfall": 3,
+        "eligible_by_method": {
+          "practical": 0,
+          "single_choice": 0
+        }
+      }
+    ],
+    "issues": [],
+    "ready_to_assemble": false,
+    "note": "Count coverage only; method/enemy-group feasibility is checked by assemble."
+  },
+  "item_issues": [
+    {
+      "item_id": "NS_I01",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    },
+    {
+      "item_id": "NS_I02",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    },
+    {
+      "item_id": "NS_I03",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    },
+    {
+      "item_id": "NS_I04",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    },
+    {
+      "item_id": "NS_I05",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    },
+    {
+      "item_id": "NS_A01",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    },
+    {
+      "item_id": "NS_A02",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    },
+    {
+      "item_id": "NS_A03",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    },
+    {
+      "item_id": "NS_A04",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    },
+    {
+      "item_id": "NS_R01",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    },
+    {
+      "item_id": "NS_R02",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    },
+    {
+      "item_id": "NS_R03",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    }
+  ],
+  "decision_target_fingerprints": {
+    "program": "b7f2ca05c8f1c8e16e0d522e11ae5529fed8818d534d258b9ee34ddee7e70190",
+    "blueprint": "171af46fea0c0f51eff82e60d715db38808bb1deeaae6b0ca6943fc21b39744c",
+    "forms": {},
+    "awards": {}
+  },
+  "forms": [],
+  "next_action": "Develop or review items to close the reported blueprint coverage gaps.",
+  "note": "This summary is derived from records; read the decision register and owner context before acting."
+}

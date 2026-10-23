@@ -1,0 +1,20 @@
+{
+  "name": "certification-workshop",
+  "interface": {
+    "displayName": "Certification Workshop"
+  },
+  "plugins": [
+    {
+      "name": "certification-workshop",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

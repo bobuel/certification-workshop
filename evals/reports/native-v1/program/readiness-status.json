@@ -1,0 +1,73 @@
+{
+  "program_id": "northstar",
+  "mode": "demo",
+  "coverage": {
+    "domains": [
+      {
+        "domain_id": "D1",
+        "target_items": 1,
+        "eligible_items": 0,
+        "shortfall": 1,
+        "eligible_by_method": {
+          "practical": 0,
+          "single_choice": 0
+        }
+      },
+      {
+        "domain_id": "D2",
+        "target_items": 1,
+        "eligible_items": 0,
+        "shortfall": 1,
+        "eligible_by_method": {
+          "practical": 0,
+          "single_choice": 0
+        }
+      },
+      {
+        "domain_id": "D3",
+        "target_items": 1,
+        "eligible_items": 0,
+        "shortfall": 1,
+        "eligible_by_method": {
+          "practical": 0,
+          "single_choice": 0
+        }
+      }
+    ],
+    "issues": [],
+    "ready_to_assemble": false,
+    "note": "Count coverage only; method/enemy-group feasibility is checked by assemble."
+  },
+  "item_issues": [
+    {
+      "item_id": "Q1",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    },
+    {
+      "item_id": "Q2",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    },
+    {
+      "item_id": "P1",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    }
+  ],
+  "decision_target_fingerprints": {
+    "program": "16af58f49dcc2061125d1e662487cbaf54b7be19b2114ba1f0659c9497d072d3",
+    "blueprint": "d35dd5891c256078b543cb1994f2a34751249cd3a83ddf44430c93199f6c4d1e",
+    "forms": {},
+    "awards": {}
+  },
+  "forms": [],
+  "next_action": "Develop or review items to close the reported blueprint coverage gaps.",
+  "note": "This summary is derived from records; read the decision register and owner context before acting."
+}

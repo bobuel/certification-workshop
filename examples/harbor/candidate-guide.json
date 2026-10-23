@@ -1,0 +1,31 @@
+{
+  "classification": "public-draft",
+  "program_title": "Harbor Data Platform Administrator",
+  "guide": {
+    "overview": "Illustrative Harbor administrator certification. This is a synthetic demonstration, not an offered credential.",
+    "audience": "Implementation administrators working within the stated Harbor role scope.",
+    "eligibility": "Proposed for owner review; no actual enrollment.",
+    "format": "Demo: eight tasks/questions including a scored practical exercise.",
+    "permitted_resources": "Synthetic product reference supplied for this demonstration.",
+    "accommodations": "A real program must publish an accessible request and decision process.",
+    "retakes": "Owner decision pending for a real program.",
+    "appeals": "Owner decision pending for a real program.",
+    "renewal": "Owner decision pending for a real program.",
+    "support": "No live service; demonstration only."
+  },
+  "domains": [
+    {
+      "title": "Data ingestion",
+      "weight_percent_of_items": 50
+    },
+    {
+      "title": "Access control",
+      "weight_percent_of_items": 25
+    },
+    {
+      "title": "Recovery",
+      "weight_percent_of_items": 25
+    }
+  ],
+  "note": "Review public text before sharing; this is a guide, not an exam."
+}

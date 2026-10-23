@@ -1,0 +1,25 @@
+{
+  "source_program_sha256": "5e4bc1902dbba83b39989457f6f655d9aa2e05d8ab9d335d1befa02771a6879c",
+  "changes": [
+    {
+      "item_id": "NS_I05",
+      "before": 1,
+      "after": 2,
+      "change": "Eight separately awarded binary points replace bundled partial-credit criteria; maximum remains eight."
+    },
+    {
+      "item_id": "NS_A04",
+      "before": 3,
+      "after": 4,
+      "change": "Eight separately awarded binary points replace bundled partial-credit criteria; maximum remains eight."
+    },
+    {
+      "item_id": "NS_R03",
+      "before": 2,
+      "after": 3,
+      "change": "Eight separately awarded binary points replace bundled partial-credit criteria; maximum remains eight."
+    }
+  ],
+  "claim_changed": true,
+  "reviewer": "Codex AI; user-delegated design review, not human psychometrician certification"
+}

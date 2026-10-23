@@ -1,0 +1,31 @@
+{
+  "classification": "public-draft",
+  "program_title": "Northstar Partner Implementation Certification",
+  "guide": {
+    "overview": "Fictional product 2.0 development draft for bounded implementation reasoning. No credential launch or passing rule is approved; the historical 1.0 pilot is synthetic.",
+    "audience": "Partner implementers; excludes architecture, incident command and commercial management.",
+    "eligibility": "Proposed volunteers with implementation exposure; owner confirmation pending.",
+    "format": "Proposed 12 tasks: nine selected-response questions and three written evidence-sheet practicals; 70 minutes unvalidated. Existing LMS and evidence sheets. These do not observe actual software execution.",
+    "permitted_resources": "Proposed: supplied product 2.0 access reference, unchanged ingestion/recovery procedures and personal notes; individual work without outside or generative assistance. Owner confirmation pending.",
+    "accommodations": "Contact Morgan privately before scheduling; final process/contact route pending.",
+    "retakes": "No pass/fail or awards in pilot; future policy pending.",
+    "appeals": "Raise concerns privately to Morgan; deadline and independent reviewer pending.",
+    "renewal": "Undecided; no pilot credential.",
+    "support": "Morgan Lee (fictional); contact channel and registration pending."
+  },
+  "domains": [
+    {
+      "title": "Ingestion and verification",
+      "weight_percent_of_items": 42
+    },
+    {
+      "title": "Safe service access",
+      "weight_percent_of_items": 33
+    },
+    {
+      "title": "Recovery and authorized cutover",
+      "weight_percent_of_items": 25
+    }
+  ],
+  "note": "Review public text before sharing; this is a guide, not an exam."
+}

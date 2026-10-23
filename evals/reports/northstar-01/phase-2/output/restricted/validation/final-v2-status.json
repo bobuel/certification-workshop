@@ -1,0 +1,108 @@
+{
+  "program_id": "NS_IMPLEMENTER",
+  "mode": "demo",
+  "coverage": {
+    "domains": [
+      {
+        "domain_id": "D_I",
+        "target_items": 5,
+        "eligible_items": 5,
+        "shortfall": 0,
+        "eligible_by_method": {
+          "practical": 1,
+          "single_choice": 4
+        }
+      },
+      {
+        "domain_id": "D_A",
+        "target_items": 4,
+        "eligible_items": 0,
+        "shortfall": 4,
+        "eligible_by_method": {
+          "practical": 0,
+          "single_choice": 0
+        }
+      },
+      {
+        "domain_id": "D_R",
+        "target_items": 3,
+        "eligible_items": 2,
+        "shortfall": 1,
+        "eligible_by_method": {
+          "practical": 0,
+          "single_choice": 2
+        }
+      }
+    ],
+    "issues": [],
+    "ready_to_assemble": false,
+    "note": "Count coverage only; method/enemy-group feasibility is checked by assemble."
+  },
+  "item_issues": [
+    {
+      "item_id": "NS_A01",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    },
+    {
+      "item_id": "NS_A02",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    },
+    {
+      "item_id": "NS_A03",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    },
+    {
+      "item_id": "NS_A04",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    },
+    {
+      "item_id": "NS_R03",
+      "issues": [
+        "item_not_approved",
+        "missing_current_content_acceptance"
+      ]
+    }
+  ],
+  "decision_target_fingerprints": {
+    "program": "9d3435d4785161b400241ccfd769f9c33856d273175f66af8980e3b198c90259",
+    "blueprint": "0ba312f8ce3774662b591185c5267f5cd04cceb5a9923ee9b01ac4595b3cf2ac",
+    "forms": {
+      "PILOT2": "42ecdc7c9b694e4eb2ef8adb3b0f0b6756c23ea445cde3d1fe2753662e24fd47"
+    },
+    "awards": {}
+  },
+  "forms": [
+    {
+      "form_id": "PILOT2",
+      "checks_pass": false,
+      "scope": "development_record_checks",
+      "issues": [
+        "item_not_approved:NS_A01",
+        "item_not_approved:NS_A02",
+        "item_not_approved:NS_A03",
+        "item_not_approved:NS_A04",
+        "item_not_approved:NS_R03",
+        "missing_current_content_acceptance:NS_A01",
+        "missing_current_content_acceptance:NS_A02",
+        "missing_current_content_acceptance:NS_A03",
+        "missing_current_content_acceptance:NS_A04",
+        "missing_current_content_acceptance:NS_R03"
+      ],
+      "note": "Record checks do not authenticate evidence, authorize launch, or establish validity."
+    }
+  ],
+  "next_action": "Develop or review items to close the reported blueprint coverage gaps.",
+  "note": "This summary is derived from records; read the decision register and owner context before acting."
+}

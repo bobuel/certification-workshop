@@ -1,0 +1,27 @@
+{
+  "source_ids": [
+    "ACC"
+  ],
+  "tasks": [
+    "T_A1",
+    "T_A2",
+    "T_A3"
+  ],
+  "competencies": [
+    "C_A"
+  ],
+  "domains": [
+    "D_A"
+  ],
+  "items": [
+    "NS_A01",
+    "NS_A02",
+    "NS_A03",
+    "NS_A04",
+    "NS_R03"
+  ],
+  "forms": [
+    "PILOT1"
+  ],
+  "note": "Conservative dependency impact. Inspect semantic changes; no records were modified."
+}

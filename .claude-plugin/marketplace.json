@@ -1,0 +1,13 @@
+{
+  "name": "certification-workshop",
+  "owner": {
+    "name": "bobuel"
+  },
+  "plugins": [
+    {
+      "name": "certification-workshop",
+      "source": "./",
+      "description": "Create, develop, launch and maintain certification programs with connected evidence and existing tools."
+    }
+  ]
+}

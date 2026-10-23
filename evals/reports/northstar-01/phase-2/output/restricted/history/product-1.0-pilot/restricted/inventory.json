@@ -1,0 +1,117 @@
+{
+  "scope": "result files except this inventory and Python bytecode caches",
+  "files": [
+    {
+      "path": "program.json",
+      "sha256": "939de8818b0958b49b66bed083d80df36c885b875312f184d553e843b4896f3e"
+    },
+    {
+      "path": "public/candidate-guide.md",
+      "sha256": "d05320aff4f96e00ae0b5628060887bbb774bf06a1f2a51ba47e53e856e2c672"
+    },
+    {
+      "path": "restricted/blueprint-rationale.md",
+      "sha256": "3c28989f79943c19cbb1dd23ebe34ce695f31fd31e643a3097001ebd5c1f15d1"
+    },
+    {
+      "path": "restricted/charter.md",
+      "sha256": "692befbfdf1f5fb392f379009ff0f4cdd6a4cc3f906790df633cedf3c76a8d08"
+    },
+    {
+      "path": "restricted/decision-register.md",
+      "sha256": "d90fde2bdde27bf5d3affcbc3f2c5a48b6ef508a52ec76df37f6ab70004db89a"
+    },
+    {
+      "path": "restricted/evidence/access-v1.md",
+      "sha256": "60e5742a88788377e4089d02437249aa5954b5bae7f00ce449d18f6ef9a71b7c"
+    },
+    {
+      "path": "restricted/evidence/brief.md",
+      "sha256": "83bbe9ea244e4e3a3b1ee7fc308ae7c600c9976b71920bdf621b0e05fad0758a"
+    },
+    {
+      "path": "restricted/evidence/ingestion-v1.md",
+      "sha256": "e2c35c3ac8695406c4027f099a670bf1d91227e013bcf1f4cfa5428422cd4abe"
+    },
+    {
+      "path": "restricted/evidence/recovery-v1.md",
+      "sha256": "45ff87f862938a2fdf5cb053f93696eb234103d95de3ebc78623394930af3a6b"
+    },
+    {
+      "path": "restricted/evidence/request.txt",
+      "sha256": "ab5f4aa46610832c6053367e6b9ecad753747b19ddb425cd3a8f139976423280"
+    },
+    {
+      "path": "restricted/evidence/workshop.md",
+      "sha256": "7d290edce7537325ff738e50189fb2e60b2707b58b5d2707f618d2bf077b1add"
+    },
+    {
+      "path": "restricted/follow-up-instrument.md",
+      "sha256": "0b8bfea64a354ff22b894706d1668f4dfff3a4b4e9ea3c248d2d6c8dff68e1af"
+    },
+    {
+      "path": "restricted/job-analysis.md",
+      "sha256": "ed1d6ab8032c14b72ee88d41f119e4337f9ebccedaba7d5f1419987135ac90f5"
+    },
+    {
+      "path": "restricted/pilot-protocol.md",
+      "sha256": "6bf4a7e2a4f92d35c129e1fa21b85c90c7b49d73676f627960d0de45a785314e"
+    },
+    {
+      "path": "restricted/reference-templates.md",
+      "sha256": "b4540d6826a48350affebeedaab760d5ebaf9b5abf573b023fbbb1631fbacdeb"
+    },
+    {
+      "path": "restricted/reviewer-packet.json",
+      "sha256": "ad54a317a8ff759336f35edc97a16fbc75a9e0d5c772f9424b1a9db525b885e5"
+    },
+    {
+      "path": "restricted/reviewer-packet.md",
+      "sha256": "1a4a6165d9a8cc34473ccedaefd8740983d48a58b164c409b0300ce885abbf64"
+    },
+    {
+      "path": "restricted/tooling/analysis.md",
+      "sha256": "c4b3ee646f361e254294dcf45b1ed5efa6b552245068104e9d16d033b80fc3c1"
+    },
+    {
+      "path": "restricted/tooling/continuity.md",
+      "sha256": "9d67751735259c269f4fb4fbac8cb8f3418da9911494db83fc458dc4e6555838"
+    },
+    {
+      "path": "restricted/tooling/helpers.md",
+      "sha256": "9f8b3d921f657348c8c630cfab7b6c62f230e6880d0ee729a63d32867504b716"
+    },
+    {
+      "path": "restricted/tooling/operating-contract.md",
+      "sha256": "0be364a6568494a4358a050acc621ff46cd2308815507be01a3bd8e2858b1ea8"
+    },
+    {
+      "path": "restricted/tooling/records.md",
+      "sha256": "5c8ea048a315d2365aac414ddf02c74b63dca1dc2840d9f7eb213e98ca5293b4"
+    },
+    {
+      "path": "restricted/tooling/scripts/certification.py",
+      "sha256": "a07134283e224c47925fe6d5db796bf8258199fc3d7892a8efab325d7d46d68a"
+    },
+    {
+      "path": "restricted/validation/coverage.json",
+      "sha256": "4685191d6e17e22fd22ff652da268499572daa966a5f3f4fab8e31dbcb69e863"
+    },
+    {
+      "path": "restricted/validation/package-checks.json",
+      "sha256": "3b80781890c84d58d34b270b6f9dc74cd15d5d8f9f69a8cb91a81598e4182f41"
+    },
+    {
+      "path": "restricted/validation/status.json",
+      "sha256": "3352bf148c563cd1b1f33e1a3f39367af406e451998a0527096c79247899e806"
+    },
+    {
+      "path": "restricted/validation/validate.json",
+      "sha256": "7a57a78afc326a97844fd4677f7723ef102b8e739eed5c83865accc3570679af"
+    },
+    {
+      "path": "summary.md",
+      "sha256": "3c95f504041c08013f8bd83e8b0f19f913f467667059a383dd214978e996d1b3"
+    }
+  ]
+}

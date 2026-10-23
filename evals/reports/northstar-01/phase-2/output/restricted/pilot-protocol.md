@@ -1,0 +1,31 @@
+> Historical product-1.0 development document, retained for context. Current product-2.0 definition is ../program.json; current changes and review requests are change-impact-review.md and review-packet-v2.json; current release position is ../release-recommendation.md. Earlier pending-state claims are superseded only as documented there.
+
+# Pilot protocol — unadministered draft
+
+Fictional/synthetic case. No responses, judgments or results exist. Morgan must approve the exact low-stakes pilot and staffing. Six-week sequence is in charter.md.
+
+Purpose: examine clarity, timing, realistic evidence interpretation and scoring feasibility. Propose voluntary participation by the twenty expected consultants with no pass/fail or credential effect. Record actual invitations/responses and experience/deployment bands; disclose convenience sampling and missing perspectives. No invitations sent.
+
+Before administration resolve DEC01–05/07/08, conduct actual content review of twelve exact revisions, revise/re-review changes, preserve a named source/content/scoring snapshot and obtain pilot-specific owner authority. Planned order: NS_I01–NS_I05, NS_A01–NS_A04, NS_R01–NS_R03. This is not an approved form. Assemble/pin only after accepted content exists; do not approve drafts to satisfy helpers.
+
+Use existing LMS for nine MC and restricted evidence sheets for three practicals. Supply version-1.0 procedures, confirmed resource rules and proposed 70 minutes. Record pseudonymous ID, exact form/version, start/submit/section times and interruptions. Proposed individual work permits references/personal notes, with no outside/generative assistance, pending owner approval. Arrange accessible formats/timing privately. No production data, credentials or executed commands.
+
+Delivery checks still required: identify existing LMS import contract; after authorized setup verify isolated import IDs, options/key alignment, 0/1 scores, no mid-attempt answer feedback, keyboard/screen-reader navigation, sheet access and submission permissions. Use deliberately correct/incorrect test responses and retain versioned readback. No provider import or accessibility user test has occurred.
+
+Content reviewer budget: each 120 minutes =10 orientation +72 six primary reviews x12 +30 joint practical calibration +8 recorded dispositions. A reviews NS_I01–NS_I05 and NS_R01; B reviews NS_A01–NS_A04 and NS_R02–NS_R03. Confirm actual people/expertise/conflicts; do not assume workshop participants accepted. This gives one primary review per item, not two independent reviews throughout. No re-review reserve; changed items require capacity or rescheduling.
+
+Candidate burden: twenty x70 minutes =23 hours 20 minutes collectively, plus optional five-minute feedback each (1 hour 40 minutes). Practical primary scoring estimate: 20 x3 x5 minutes =300 minutes; double-score six candidates across three practicals =90 minutes; adjudication allowance 60 minutes: 7.5 extra rater-hours beyond content review. Select double-score cases across experience/response patterns, not to maximize agreement. Administration, LMS preparation, follow-up analysis and panel work need separate assigned time. DEC03 must allocate resources or reduce cohort/reschedule.
+
+Scoring: MC correct 1, otherwise 0 under a preannounced omission rule; practical criteria 0/1/2, maximum total 33. Anchors in reviewer packet govern. Unsafe contradictions score zero on the affected criterion; no invented overall automatic fail. Flag unsafe recommendations for review regardless of total. Preserve raw independent ratings and adjudication reasons.
+
+Distinguish intentional blank from interrupted/inaccessible task or lost record. Do not silently replace missing with zero. Preserve raw data; resolve under owner-approved rule and keep row-level correction/exclusion reasons/authority. Create separate justified complete matrix for helper: candidate_id plus exact ITEM_ID@REVISION columns. Do not combine changed forms or independent-count repeat attempts. No score matrix is fabricated.
+
+Use P001-style pseudonyms; identity map separately held by owner. Restrict candidate work, keys, ratings and comments. Approve consent/use, storage/access and retention before collection; proposed 90-day pilot retention is pending, with no automatic deletion. Version history needs a separately approved retention plan; folders alone are not access controls.
+
+Feedback form: ID ____; total/section time ____; unclear item/instruction and reason ____; realism 1 unrealistic/2 partly/3 mostly/4 close to work/NA ____; reference/navigation difficulties ____; technical/accessibility obstacle (optional, no diagnosis) ____; time sufficient? ____; improvement ____; optional experience band ____.
+
+Analysis: actual n, selection, missingness/exclusions and form identity first; then item score proportions, total distribution and practical criterion patterns. Item-total associations/alpha are descriptive small-sample diagnostics, not validity evidence or automatic removal thresholds. Interpret content/feedback together. Describe double-score agreement/disagreements if actual ratings exist; no formal reliability study is claimed. No DIF, IRT, equating, classification accuracy, field prediction or fairness conclusions. New revisions require new relevant evidence.
+
+Standard-setting proposal after content stabilizes: minimally competent consultant follows bounded procedures with references, accounts for evidence, detects unsafe conditions and seeks missing authority. Recruit qualified implementation/access/recovery perspectives and record conflicts; two content reviewers are not automatically a sufficient panel and have no assigned panel hours. Train on definition/rubrics, collect independent expected scores (MC 0–1; practical 0–8), discuss discrepancies, then collect a second independent round. Preserve both rounds and rationale. Helper totals summarize judgments only. Morgan separately considers uncertainty, consequences, rounding, compensation/critical-error, retakes and appeals before approving any passing rule. Never default to 70% or fabricate judgments.
+
+Week-six report must identify actual administration/findings, retained/revised/withdrawn items, timing/scoring evidence, limitations and next decision. This protocol is not a completed pilot report.

@@ -1,0 +1,196 @@
+{
+  "suite": "synthetic lifecycle",
+  "passed": true,
+  "phases": [
+    "empty program initialization",
+    "document-derived charter/tasks/competencies",
+    "draft blueprint and bank",
+    "synthetic content review",
+    "exact mixed-method form",
+    "scored pilot analysis",
+    "expected-score panel arithmetic",
+    "audience-separated launch handoff",
+    "award record reconciliation",
+    "changed-source impact and historical retention"
+  ],
+  "form_check": {
+    "form_id": "PILOT1",
+    "checks_pass": true,
+    "scope": "development_record_checks",
+    "issues": [],
+    "note": "Record checks do not authenticate evidence, authorize launch, or establish validity."
+  },
+  "pilot": {
+    "classification": "restricted",
+    "form_id": "PILOT1",
+    "form_fingerprint": "5c0c2b46d8c12aa7ca8a81962aef533b032e6f0302fc8f7d139670279f72eaf1",
+    "n": 12,
+    "max_score": 11,
+    "mean_total": 8.416666666666666,
+    "sd_total": 1.729862492345632,
+    "coefficient_alpha": 0.02893309222423149,
+    "items": [
+      {
+        "item_id": "D01",
+        "revision": 1,
+        "mean_score": 1.0,
+        "mean_proportion_of_max": 1.0,
+        "corrected_item_total_correlation": null
+      },
+      {
+        "item_id": "D02",
+        "revision": 1,
+        "mean_score": 0.9166666666666666,
+        "mean_proportion_of_max": 0.9166666666666666,
+        "corrected_item_total_correlation": -0.09090909090909091
+      },
+      {
+        "item_id": "D03",
+        "revision": 1,
+        "mean_score": 0.8333333333333334,
+        "mean_proportion_of_max": 0.8333333333333334,
+        "corrected_item_total_correlation": 0.023218173010628597
+      },
+      {
+        "item_id": "D04",
+        "revision": 1,
+        "mean_score": 2.25,
+        "mean_proportion_of_max": 0.5625,
+        "corrected_item_total_correlation": 0.12795921120877396
+      },
+      {
+        "item_id": "R01",
+        "revision": 1,
+        "mean_score": 0.6666666666666666,
+        "mean_proportion_of_max": 0.6666666666666666,
+        "corrected_item_total_correlation": 3.708381696846868e-17
+      },
+      {
+        "item_id": "R02",
+        "revision": 1,
+        "mean_score": 1.0,
+        "mean_proportion_of_max": 1.0,
+        "corrected_item_total_correlation": null
+      },
+      {
+        "item_id": "S01",
+        "revision": 1,
+        "mean_score": 0.9166666666666666,
+        "mean_proportion_of_max": 0.9166666666666666,
+        "corrected_item_total_correlation": -0.2648204488514249
+      },
+      {
+        "item_id": "S02",
+        "revision": 1,
+        "mean_score": 0.8333333333333334,
+        "mean_proportion_of_max": 0.8333333333333334,
+        "corrected_item_total_correlation": 0.1680537858185703
+      }
+    ],
+    "limitations": [
+      "Descriptive statistics for this supplied complete-case scored matrix only.",
+      "Null correlation/alpha means insufficient observations or zero variance; not zero.",
+      "No automatic pass decisions, item deletion, fairness, validity, equating or representativeness conclusion.",
+      "For practical tasks these are recorded scores, not independent rater-agreement evidence."
+    ]
+  },
+  "panel": {
+    "classification": "restricted",
+    "form_id": "PILOT1",
+    "form_fingerprint": "5c0c2b46d8c12aa7ca8a81962aef533b032e6f0302fc8f7d139670279f72eaf1",
+    "judges": 3,
+    "mean_expected_total": 6.6,
+    "min_expected_total": 6.05,
+    "max_expected_total": 7.150000000000002,
+    "item_mean_expected_scores": {
+      "D01": 0.6,
+      "D02": 0.6,
+      "D03": 0.6,
+      "D04": 2.4,
+      "R01": 0.6,
+      "R02": 0.6,
+      "S01": 0.6,
+      "S02": 0.6
+    },
+    "note": "Arithmetic summary of supplied expected-score judgments, not an approved cut score. Do not invent judges, choose a rounding rule, or issue credentials from this value."
+  },
+  "live_readiness_correctly_blocked": {
+    "form_id": "PILOT1",
+    "checks_pass": false,
+    "scope": "live_record_checks",
+    "issues": [
+      "missing_current_content_acceptance:D01",
+      "missing_current_content_acceptance:D02",
+      "missing_current_content_acceptance:D03",
+      "missing_current_content_acceptance:D04",
+      "missing_current_content_acceptance:R01",
+      "missing_current_content_acceptance:R02",
+      "missing_current_content_acceptance:S01",
+      "missing_current_content_acceptance:S02",
+      "missing_policy:accommodations",
+      "missing_policy:appeals",
+      "missing_policy:data_retention",
+      "missing_policy:delivery",
+      "missing_policy:eligibility",
+      "missing_policy:passing_standard",
+      "missing_policy:renewal",
+      "missing_policy:retakes",
+      "missing_real_approval:blueprint",
+      "missing_real_approval:form",
+      "missing_real_approval:program",
+      "missing_release_evidence:delivery_verification",
+      "missing_release_evidence:job_analysis_report",
+      "missing_release_evidence:pilot_report",
+      "missing_release_evidence:standard_setting_report",
+      "not_approved:form",
+      "not_approved:program",
+      "synthetic_program",
+      "synthetic_source:D01",
+      "synthetic_source:D02",
+      "synthetic_source:D03",
+      "synthetic_source:D04",
+      "synthetic_source:R01",
+      "synthetic_source:R02",
+      "synthetic_source:S01",
+      "synthetic_source:S02"
+    ],
+    "note": "Record checks do not authenticate evidence, authorize launch, or establish validity."
+  },
+  "source_change": {
+    "source_ids": [
+      "SEC"
+    ],
+    "tasks": [
+      "T2"
+    ],
+    "competencies": [
+      "C2"
+    ],
+    "domains": [
+      "S"
+    ],
+    "items": [
+      "S01",
+      "S02",
+      "S03"
+    ],
+    "forms": [
+      "PILOT1"
+    ],
+    "note": "Conservative dependency impact. Inspect semantic changes; no records were modified."
+  },
+  "source_change_form_check": {
+    "form_id": "PILOT1",
+    "checks_pass": false,
+    "scope": "development_record_checks",
+    "issues": [
+      "outdated_source:S01",
+      "outdated_source:S02"
+    ],
+    "note": "Record checks do not authenticate evidence, authorize launch, or establish validity."
+  },
+  "limits": [
+    "Synthetic fixtures and helper execution, not an unassisted model benchmark.",
+    "No real SMEs/candidates, psychometric validation, live provider, issued credential or owner acceptance."
+  ]
+}

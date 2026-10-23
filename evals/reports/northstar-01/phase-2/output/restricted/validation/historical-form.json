@@ -1,0 +1,7 @@
+{
+  "form_id": "PILOT1",
+  "checks_pass": true,
+  "scope": "development_record_checks",
+  "issues": [],
+  "note": "Record checks do not authenticate evidence, authorize launch, or establish validity."
+}

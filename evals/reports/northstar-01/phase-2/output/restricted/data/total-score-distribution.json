@@ -1,0 +1,100 @@
+{
+  "classification": "restricted",
+  "evidence_kind": "synthetic",
+  "form_id": "PILOT1",
+  "n": 23,
+  "totals": [
+    {
+      "candidate_id": "SYN_01",
+      "total": 19.0
+    },
+    {
+      "candidate_id": "SYN_02",
+      "total": 14.0
+    },
+    {
+      "candidate_id": "SYN_03",
+      "total": 16.0
+    },
+    {
+      "candidate_id": "SYN_04",
+      "total": 20.0
+    },
+    {
+      "candidate_id": "SYN_05",
+      "total": 23.0
+    },
+    {
+      "candidate_id": "SYN_06",
+      "total": 25.0
+    },
+    {
+      "candidate_id": "SYN_07",
+      "total": 21.0
+    },
+    {
+      "candidate_id": "SYN_08",
+      "total": 13.0
+    },
+    {
+      "candidate_id": "SYN_09",
+      "total": 19.0
+    },
+    {
+      "candidate_id": "SYN_10",
+      "total": 19.0
+    },
+    {
+      "candidate_id": "SYN_11",
+      "total": 15.0
+    },
+    {
+      "candidate_id": "SYN_12",
+      "total": 16.0
+    },
+    {
+      "candidate_id": "SYN_13",
+      "total": 21.0
+    },
+    {
+      "candidate_id": "SYN_14",
+      "total": 22.0
+    },
+    {
+      "candidate_id": "SYN_15",
+      "total": 26.0
+    },
+    {
+      "candidate_id": "SYN_16",
+      "total": 19.0
+    },
+    {
+      "candidate_id": "SYN_17",
+      "total": 14.0
+    },
+    {
+      "candidate_id": "SYN_18",
+      "total": 17.0
+    },
+    {
+      "candidate_id": "SYN_19",
+      "total": 19.0
+    },
+    {
+      "candidate_id": "SYN_20",
+      "total": 15.0
+    },
+    {
+      "candidate_id": "SYN_21",
+      "total": 16.0
+    },
+    {
+      "candidate_id": "SYN_22",
+      "total": 22.0
+    },
+    {
+      "candidate_id": "SYN_23",
+      "total": 22.0
+    }
+  ]
+}
