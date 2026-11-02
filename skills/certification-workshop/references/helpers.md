@@ -5,6 +5,9 @@ Requires Python 3.10+ standard library. No network, model API, credentials or da
 ```text
 python HELPER init --directory NEW_FOLDER --id PROGRAM_ID --title "Program title" [--mode demo]
 python HELPER validate --program PROGRAM
+python HELPER audit-evidence --program PROGRAM [--evidence-root PROJECT]
+python HELPER audit-public --program PROGRAM
+python HELPER score-weights --program PROGRAM [--form FORM_ID]
 python HELPER status --program PROGRAM
 python HELPER coverage --program PROGRAM [--live]
 python HELPER assemble --program PROGRAM --form NEW_FORM_ID [--live]
@@ -22,9 +25,11 @@ All commands except init accept `--out NEW_JSON_FILE` and otherwise print JSON. 
 
 Exit 0: successful calculation/structural validation. Exit 1: requested form/assembly/award checks failed, with structured reasons. Exit 2: invalid input, missing file, or refused output overwrite. Coverage and status return issues in JSON and are not launch exit gates.
 
+The unreleased 1.0.1-dev build adds local source/evidence digest gates, source-bound review/form fingerprints, raw-point weight reconciliation, and known restricted-text screening. See [integrity and scoring](integrity.md) for fields, migration, limits, and `--evidence-root`. `audit-evidence` and `audit-public` return exit 1 on failed checks. CLI `validate` preserves its structural exit meaning and includes a separate evidence audit; inspect that audit or use its dedicated exit gate.
+
 ## Form assembly
 
-Largest-remainder item-count targets, exact current accepted items, no shared enemy groups, and global form-level required method minimums. Per-domain method minimums are not enforced; review them explicitly if the specification requires them. Deterministic bounded search (100,000 nodes). `infeasible` means no form under the supported constraints; `search_limit` means the search did not establish an answer. Both return no form. Never silently relax constraints. On success, manually add the returned proposal to `forms` only after examining it. A proposed form is not approved or delivered.
+Largest-remainder item-count targets, exact current accepted items, no shared enemy groups, global method minimums, and optional `required_methods_by_domain` minimums. Optional raw-score targets also constrain selection. Deterministic bounded search (100,000 nodes). `infeasible` means no form under the supported constraints; `search_limit` means the search did not establish an answer. Both return no form. Never silently relax constraints. On success, manually add the returned proposal to `forms` only after examining it. A proposed form is not approved or delivered.
 
 ## Analysis files
 

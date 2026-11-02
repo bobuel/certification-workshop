@@ -1,5 +1,13 @@
 # Changes
 
+## 1.0.1 — 2026-11-02
+
+- Added bounded, offline SHA-256 evidence auditing with project-root path checks and fail-closed enforcement of declared digests; optional required policy exposes missing source/review/decision/release evidence. Structural validation remains distinct from filesystem evidence verification.
+- Bound hashed source dependencies to item reviews and assembled forms, including supporting task sources. Changing a source digest under an unchanged version no longer reuses the prior acceptance/form binding. Historical evidence needs explicit verification before repinning.
+- Added raw-point versus item-weight reconciliation, optional explicit raw-point domain targets, and per-domain method minima. No psychometric target or passing standard is selected automatically.
+- Blocked candidate exports containing normalized known restricted text or serialized key/rubric markers. This is not complete semantic disclosure or secret detection.
+- Verified with 87 unit tests, ten offline phases and thirteen CLI scenarios; isolated Codex CLI installation/readback and cached-helper execution are separate from model activation. Human review, PostgreSQL execution, and psychometric validity are not implied by these results. See [1.0.1 verification](docs/release-v1.0.1.md).
+
 ## 1.0.0 — 2026-10-22
 
 - Completed the owner-delegated AI design review and added a coherent final Northstar example, with a narrowed evidence-interpretation claim, explicit practical scoring, twelve item-review records and nine worked scoring responses.

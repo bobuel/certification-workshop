@@ -1,5 +1,7 @@
 # Installation and portability
 
+1.0.1 check on November 2, 2026: Codex CLI 0.166.0-alpha.1 installed the local package in a disposable Linux profile, reported version 1.0.1 installed and enabled, and its byte-matching cached helper passed the sample evidence audit on Python 3.12.14. No normal-profile configuration was changed. This confirms package installation/readback and helper execution, not fresh-model discovery/resume or desktop UI behavior. The v1 record below remains historical.
+
 Final 1.0.0 was installed and reported enabled by the native Codex CLI in a disposable profile; its copied helper initialized and validated a new program. All 28 runtime files match the candidate that passed native model discovery/create/resume. See the [final installation receipt](../evals/reports/native-codex-1.0.0.json). Verified scope: Windows/Python 3.11 and the recorded Codex CLI; other host/platform combinations are unverified.
 
 ## What has been implemented

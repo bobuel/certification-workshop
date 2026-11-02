@@ -2,6 +2,8 @@
 
 UTF-8 JSON, `schema_version: 1`. All record IDs are letter-led identifiers containing letters, digits, `_` or `-`, up to 64 characters. Revisions are positive integers. Version strings on sources/credentials are nonempty text. No comments, duplicate keys, NaN or Infinity. `init` creates an empty structurally valid record; `examples/harbor/program.json` in the complete package is a populated synthetic example.
 
+Optional 1.0.1-dev integrity fields: sources `sha256`; reviews/decisions `evidence_sha256`; reviews and forms `source_fingerprints`; forms `release_evidence_sha256`; top-level `validation_policy.evidence_integrity`; blueprint `score_weight_policy` and `required_methods_by_domain`. These extend schema 1 without inventing authority. Declared digests and source bindings may reject formerly accepted unsafe records. Read [integrity and scoring](integrity.md) before adding hashes to historical evidence; no automatic repinning or approval migration is permitted.
+
 ## Top-level objects
 
 | Object | Fields and meaning |
@@ -10,7 +12,7 @@ UTF-8 JSON, `schema_version: 1`. All record IDs are letter-led identifiers conta
 | `sources[]` | `id`, `version`, `location`, optional `title`, `evidence_kind` (`real`/`synthetic`), `current` boolean. Retain old versions; exactly one may be current per ID. |
 | `tasks[]` | `id`, `statement`, `source_refs[]`, optional KSA, conditions, outcome, study status and findings. Draft/inferred tasks are not validated tasks. |
 | `competencies[]` | `id`, `statement`, nonempty `task_ids[]`; optional proficiency anchors and evidence notes. |
-| `blueprint` | `id`, `revision`, `status`, `weight_basis: items`, `form_length`, `domains[]`, `required_methods` mapping type to a global form-level minimum count. Per-domain method minimums require separate review and are not enforced by this helper. |
+| `blueprint` | `id`, `revision`, `status`, `weight_basis: items`, `form_length`, `domains[]`, `required_methods` mapping type to a global form-level minimum count. Optional `required_methods_by_domain` maps domain IDs to method/minimum-count objects. |
 | `items[]` | See item contract below. Current revisions only; retain historical snapshots for old forms. |
 | `reviews[]` | `id`, `item_id`, exact `revision`, `reviewer`, `role`, `verdict` (`accept`/`revise`/`reject`), `evidence_kind`, `evidence_ref`, `item_fingerprint` from the review packet; optional `resolved`, `resolution`, `resolved_by`. A missing or changed fingerprint cannot support acceptance. |
 | `decisions[]` | `id`, `target_type` (`program`/`blueprint`/`form`/`award`), `target_id`, `revision`, `decision` (`approve`/`reject`), `actor`, `evidence_kind`, `evidence_ref`, `rationale`. Live program/blueprint/form approvals also need `target_fingerprint` from the review material. Conflicting decisions require reconciliation/new target revision. |
