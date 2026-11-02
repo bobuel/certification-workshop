@@ -1,5 +1,7 @@
 # Version and compatibility policy
 
+Current package: **1.0.1**, based on the published v1 snapshot below. The November 2 local integrity/scoring changes alter runtime content, so the earlier model discovery/create/resume observation does not validate this build. New checks observed Linux/Python 3.12.14 helper behavior and Codex CLI 0.166.0-alpha.1 installation/list readback in a disposable profile: installed/enabled, exact cached helper hash, and successful cached evidence audit. The profile was removed; no persistent installation, fresh model session, desktop UI check, or broader host claim is made. See the [new evidence/scoring contract](../skills/certification-workshop/references/integrity.md).
+
 Current version: **1.0.0**. The delegated AI design review is complete, and the bounded native Codex create/resume check passed against runtime files unchanged in final v1. Repeat that check if runtime content changes. Claude metadata is included but Claude activation is unverified; it is not a supported-host claim.
 
 The core is ten skills plus a standard-library Python helper. It uses existing local storage and assistant tools. Python 3.10+ is the intended minimum; **Windows/Python 3.11 is the verified v1 environment**. CI is configured for Python 3.10 and 3.13 on Windows, Linux and macOS; configuration is not a passing run. Other combinations are unverified until those checks run. This narrower support claim replaces the candidate's proposed all-platform release gate; see release-v1.md for the explicit scope decision.

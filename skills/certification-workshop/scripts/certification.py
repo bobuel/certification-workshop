@@ -16,6 +16,10 @@ COLLECTIONS = ('sources', 'tasks', 'competencies', 'items', 'reviews', 'decision
 KINDS = {'single_choice', 'practical'}
 STATUSES = {'draft', 'in_review', 'approved', 'retired'}
 BASE = Path(__file__).resolve().parents[1]
+SHA256 = re.compile(r'^[0-9a-fA-F]{64}$')
+MAX_EVIDENCE_BYTES = 10 * 1024 * 1024
+PUBLIC_FIELDS = ('overview', 'audience', 'eligibility', 'format', 'permitted_resources',
+                 'accommodations', 'retakes', 'appeals', 'renewal', 'support')
 
 
 def require(condition, message):
@@ -100,6 +104,9 @@ def validate(data):
     for key, value in data.get('public', {}).items():
         require(isinstance(value, str), 'Public fields must be text reviewed for their audience')
     require(isinstance(data.get('policies', {}), dict), 'policies must be an object')
+    policy = data.get('validation_policy', {})
+    require(isinstance(policy, dict) and policy.get('evidence_integrity', 'if_declared') in
+            {'if_declared', 'required'}, 'Invalid validation_policy.evidence_integrity')
     sources = {}
     current = set()
     for s in data['sources']:
@@ -143,10 +150,28 @@ def validate(data):
     if bp['domains']:
         require(math.isclose(sum(d['weight'] for d in bp['domains']), 100, abs_tol=1e-7), 'Blueprint weights must sum to 100')
         require(bp['form_length'] > 0, 'Populated blueprint needs positive form_length')
+    score_policy = bp.get('score_weight_policy')
+    if score_policy is not None:
+        require(isinstance(score_policy, dict) and score_policy.get('basis') == 'raw_points',
+                'score_weight_policy currently supports raw_points only; no automatic domain normalization')
+        tolerance = score_policy.get('tolerance_percentage_points', 0.01)
+        require(number(tolerance) and 0 <= tolerance <= 100, 'Invalid score-weight tolerance')
+        if 'target_percent' in score_policy:
+            target = score_policy['target_percent']
+            require(isinstance(target, dict) and set(target) == domain_ids and
+                    all(number(v) and 0 < v <= 100 for v in target.values()) and
+                    math.isclose(sum(target.values()), 100, abs_tol=1e-7),
+                    'Score-weight targets must cover every domain and sum to 100')
     methods = bp.get('required_methods', {})
     require(isinstance(methods, dict), 'required_methods must be an object')
     for k, v in methods.items():
         require(k in KINDS and isinstance(v, int) and not isinstance(v, bool) and v >= 0, 'Invalid required method count')
+    domain_methods = bp.get('required_methods_by_domain', {})
+    require(isinstance(domain_methods, dict) and set(domain_methods) <= domain_ids,
+            'Invalid per-domain method mapping')
+    for values in domain_methods.values():
+        require(isinstance(values, dict) and all(k in KINDS and isinstance(v, int) and not isinstance(v, bool)
+                and v >= 0 for k, v in values.items()), 'Invalid per-domain method count')
     for item in data['items']:
         require(integer(item.get('revision')), 'Item revision must be a positive integer')
         require(item.get('domain_id') in domains and item.get('type') in KINDS, 'Invalid item domain/type')
@@ -198,6 +223,144 @@ def validate(data):
     return {'valid_structure': True, 'program_id': p['id'], 'mode': p['mode'], 'items': len(data['items'])}
 
 
+def audit_evidence(data, root):
+    """Check declared local bytes, never authenticate authors or fetch external evidence."""
+    validate(data)
+    root = Path(root).resolve()
+    rows, issues = [], []
+
+    def inspect(label, location, expected):
+        row = {'record': label, 'location': location, 'sha256': expected, 'verified': False, 'issues': []}
+        def issue(code):
+            row['issues'].append(code)
+            issues.append(code + ':' + label)
+        if not isinstance(expected, str) or not SHA256.fullmatch(expected):
+            issue('missing_or_invalid_digest')
+        if not text(location):
+            issue('missing_evidence_location')
+        elif '://' in location or location.startswith(('mailto:', 'data:')):
+            issue('external_evidence_unverified')
+        else:
+            path = Path(location)
+            try:
+                # Neither a record nor a symlink may grant access outside the supplied project root.
+                require(not path.is_absolute() and '..' not in path.parts and '\\' not in location,
+                        'unsafe evidence path')
+                resolved = (root / path).resolve()
+                require(resolved.is_relative_to(root), 'unsafe evidence path')
+                if not resolved.is_file():
+                    issue('missing_evidence_file')
+                elif resolved.stat().st_size > MAX_EVIDENCE_BYTES:
+                    issue('evidence_file_too_large')
+                else:
+                    digest, size = hashlib.sha256(), 0
+                    with resolved.open('rb') as stream:
+                        while chunk := stream.read(64 * 1024):
+                            size += len(chunk)
+                            require(size <= MAX_EVIDENCE_BYTES, 'evidence file grew beyond limit')
+                            digest.update(chunk)
+                    row['actual_sha256'] = digest.hexdigest()
+                    row['size_bytes'] = size
+                    if isinstance(expected, str) and SHA256.fullmatch(expected) and digest.hexdigest() != expected.lower():
+                        issue('evidence_digest_mismatch')
+            except ValueError:
+                issue('unsafe_or_oversized_evidence_path')
+            except OSError:
+                issue('evidence_file_unreadable')
+        row['verified'] = not row['issues']
+        rows.append(row)
+
+    for source in data['sources']:
+        inspect('source:' + source['id'] + '@' + source['version'], source.get('location'), source.get('sha256'))
+    for review in data['reviews']:
+        inspect('review:' + review['id'], review.get('evidence_ref'), review.get('evidence_sha256'))
+    for decision in data['decisions']:
+        inspect('decision:' + decision['id'], decision.get('evidence_ref'), decision.get('evidence_sha256'))
+    for form in data['forms']:
+        evidence = form.get('release_evidence', {})
+        digests = form.get('release_evidence_sha256', {})
+        if isinstance(evidence, dict):
+            for key in sorted(set(evidence) | (set(digests) if isinstance(digests, dict) else set())):
+                inspect('release:' + form['id'] + ':' + key, evidence.get(key),
+                        digests.get(key) if isinstance(digests, dict) else None)
+    return {'checks_pass': not issues, 'scope': 'local_evidence_integrity', 'checks': rows,
+            'issues': sorted(set(issues)),
+            'note': 'Matching bytes prove consistency with a declared digest, not authorship, reviewer identity, truth, authority or validity. No network request was made.'}
+
+
+def evidence_gate(data, root=None):
+    required = data.get('validation_policy', {}).get('evidence_integrity') == 'required'
+    declared = {('source:' + s['id'] + '@' + s['version']) for s in data['sources'] if 'sha256' in s}
+    declared.update('review:' + r['id'] for r in data['reviews'] if 'evidence_sha256' in r)
+    declared.update('decision:' + d['id'] for d in data['decisions'] if 'evidence_sha256' in d)
+    declared.update('release:' + f['id'] + ':' + key for f in data['forms']
+                    if isinstance(f.get('release_evidence_sha256'), dict) for key in f['release_evidence_sha256'])
+    if not required and not declared:
+        return []
+    if root is None:
+        return ['evidence_root_required']
+    audit = audit_evidence(data, root)
+    return sorted({code + ':' + row['record'] for row in audit['checks']
+                   if required or row['record'] in declared for code in row['issues']})
+
+
+def score_weighting(data, items=None):
+    """Reconcile raw points; item allocation is not a score-weight policy."""
+    chosen = data['items'] if items is None else items
+    total = sum(i['max_score'] for i in chosen)
+    policy = data['blueprint'].get('score_weight_policy', {})
+    targets = policy.get('target_percent', {})
+    tolerance = policy.get('tolerance_percentage_points', 0.01)
+    rows, warnings, mismatches = [], [], []
+    for domain in data['blueprint']['domains']:
+        points = sum(i['max_score'] for i in chosen if i['domain_id'] == domain['id'])
+        percent = 100 * points / total if total else None
+        row = {'domain_id': domain['id'], 'item_weight_percent': domain['weight'],
+               'max_score': points, 'score_weight_percent': percent}
+        if percent is not None and not math.isclose(percent, domain['weight'], abs_tol=0.01):
+            warnings.append('item_and_raw_point_weights_differ:' + domain['id'])
+        if domain['id'] in targets:
+            row['target_score_weight_percent'] = targets[domain['id']]
+            if percent is None or abs(percent - targets[domain['id']]) > tolerance + 1e-9:
+                mismatches.append('score_weight_target_mismatch:' + domain['id'])
+        rows.append(row)
+    if not targets:
+        warnings.append('score_weight_targets_not_declared')
+    return {'scope': 'bank_diagnostic' if items is None else 'selected_form', 'basis': 'raw_points',
+            'max_score': total, 'domains': rows, 'warnings': warnings, 'target_issues': mismatches,
+            'note': 'This is raw-point arithmetic, not a passing standard or psychometric recommendation. Bank totals are not a proposed form.'}
+
+
+def public_export_issues(data):
+    """Conservative known-content check, not arbitrary secret detection or semantic review."""
+    def norm(value):
+        return ' '.join(value.casefold().split())
+    restricted = []
+    for item in data['items']:
+        for key in ('prompt', 'rationale', 'setup', 'deliverable'):
+            if text(item.get(key)):
+                restricted.append(('item.' + item['id'] + '.' + key, norm(item[key])))
+        for index, row in enumerate(item.get('rubric', [])):
+            restricted.append(('item.' + item['id'] + '.rubric.' + str(index), norm(row['anchor'])))
+        for label, option in item.get('options', {}).items():
+            restricted.append(('item.' + item['id'] + '.option.' + label, norm(option)))
+    for index, note in enumerate(data.get('notes', [])):
+        if text(note):
+            restricted.append(('note.' + str(index), norm(note)))
+    issues = []
+    exported = {field: data.get('public', {}).get(field, '') for field in PUBLIC_FIELDS}
+    exported['program_title'] = data['program']['title']
+    exported.update({'domain_title.' + d['id']: d['title'] for d in data['blueprint']['domains']})
+    for field, value in exported.items():
+        value = norm(value)
+        for label, phrase in restricted:
+            if len(phrase) >= 12 and phrase in value:
+                issues.append('known_restricted_text:' + field + ':' + label)
+        if re.search(r'["\'](?:answer_key|item_fingerprint|rubric)["\']\s*:', value):
+            issues.append('restricted_record_marker:' + field)
+    return sorted(set(issues))
+
+
 def index_items(data):
     return {i['id']: i for i in data['items']}
 
@@ -208,8 +371,11 @@ def content_fingerprint(obj):
 
 
 def program_approval_fingerprint(data):
-    return content_fingerprint({'program': {k: v for k, v in data['program'].items() if k != 'status'},
-                                'policies': data.get('policies', {}), 'public': data.get('public', {})})
+    payload = {'program': {k: v for k, v in data['program'].items() if k != 'status'},
+               'policies': data.get('policies', {}), 'public': data.get('public', {})}
+    if 'validation_policy' in data:
+        payload['validation_policy'] = data['validation_policy']
+    return content_fingerprint(payload)
 
 
 def blueprint_approval_fingerprint(data):
@@ -232,12 +398,25 @@ def decision_ok(data, target_type, target_id, revision, live=False, fingerprint=
                                  and (fingerprint is None or d.get('target_fingerprint') == fingerprint) for d in matches)
 
 
+def source_fingerprints(data, items):
+    """Digest declarations for direct and task-derived support; bytes are checked separately."""
+    sources = {(s['id'], s['version']): s for s in data['sources']}
+    comp_ids = {cid for item in items for cid in item['competency_ids']}
+    task_ids = {tid for comp in data['competencies'] if comp['id'] in comp_ids for tid in comp['task_ids']}
+    refs = [ref for item in items for ref in item['source_refs']]
+    refs += [ref for task in data['tasks'] if task['id'] in task_ids for ref in task.get('source_refs', [])]
+    return {ref['source_id'] + '@' + ref['version']: sources[ref['source_id'], ref['version']]['sha256'].lower()
+            for ref in refs if isinstance(sources[ref['source_id'], ref['version']].get('sha256'), str)}
+
+
 def item_issues(data, item, live=False):
     issues = []
     if item['status'] != 'approved':
         issues.append('item_not_approved')
     reviews = [r for r in data['reviews'] if r['item_id'] == item['id'] and r['revision'] == item['revision']]
+    support = source_fingerprints(data, [item])
     if not any(r['verdict'] == 'accept' and r['role'] == 'content' and r.get('item_fingerprint') == content_fingerprint(item)
+               and r.get('source_fingerprints', {}) == support
                and (not live or r['evidence_kind'] == 'real') for r in reviews):
         issues.append('missing_current_content_acceptance')
     if any(r['verdict'] in {'revise', 'reject'} and not r.get('resolved') for r in reviews):
@@ -284,9 +463,12 @@ def coverage(data, live=False):
             'note': 'Count coverage only; method/enemy-group feasibility is checked by assemble.'}
 
 
-def assemble(data, form_id, live=False, max_nodes=100000):
+def assemble(data, form_id, live=False, max_nodes=100000, evidence_root=None):
     validate(data)
     require(identifier(form_id) and form_id not in {f['id'] for f in data['forms']}, 'Use a new form ID')
+    evidence_issues = evidence_gate(data, evidence_root)
+    if evidence_issues:
+        return {'assembled': False, 'reason': 'evidence_integrity', 'issues': evidence_issues}
     targets = allocation(data)
     require(all(n > 0 for n in targets.values()), 'A domain rounds to zero; revise blueprint length/weights')
     eligible = sorted((i for i in data['items'] if not item_issues(data, i, live)), key=lambda i: i['id'])
@@ -304,8 +486,12 @@ def assemble(data, form_id, live=False, max_nodes=100000):
             return False
         if len(chosen) == length:
             if all(sum(i['type'] == k for i in chosen) >= n for k, n in data['blueprint'].get('required_methods', {}).items()):
-                answer = list(chosen)
-                return True
+                per_domain = data['blueprint'].get('required_methods_by_domain', {})
+                methods_ok = all(sum(i['type'] == kind and i['domain_id'] == domain for i in chosen) >= minimum
+                                 for domain, methods in per_domain.items() for kind, minimum in methods.items())
+                if methods_ok and not score_weighting(data, chosen)['target_issues']:
+                    answer = list(chosen)
+                    return True
             return False
         for domain, target in targets.items():
             available = sum(i['domain_id'] == domain and not (set(i.get('enemy_groups', [])) & groups) for i in eligible[start:])
@@ -330,7 +516,11 @@ def assemble(data, form_id, live=False, max_nodes=100000):
         return {'assembled': False, 'reason': 'search_limit' if hit_limit else 'infeasible', 'coverage': coverage(data, live), 'nodes': nodes}
     form = {'id': form_id, 'revision': 1, 'blueprint_revision': data['blueprint']['revision'], 'status': 'draft',
             'item_refs': [{'item_id': i['id'], 'revision': i['revision'], 'item_fingerprint': content_fingerprint(i)} for i in answer]}
+    support = source_fingerprints(data, answer)
+    if support:
+        form['source_fingerprints'] = support
     return {'assembled': True, 'form': form, 'target_counts': targets, 'max_score': sum(i['max_score'] for i in answer),
+            'score_weighting': score_weighting(data, answer),
             'note': 'Proposal only. Store in forms after review; no launch or approval occurred.'}
 
 
@@ -341,11 +531,11 @@ def get_form(data, form_id):
     return found[0]
 
 
-def check_form(data, form_id, live=False):
+def check_form(data, form_id, live=False, evidence_root=None):
     validate(data)
     f = get_form(data, form_id)
     items = index_items(data)
-    issues = []
+    issues = evidence_gate(data, evidence_root)
     targets = allocation(data)
     if f['blueprint_revision'] != data['blueprint']['revision']:
         issues.append('stale_blueprint_revision')
@@ -371,6 +561,15 @@ def check_form(data, form_id, live=False):
     for k, n in data['blueprint'].get('required_methods', {}).items():
         if sum(i['type'] == k for i in selected) < n:
             issues.append('method_coverage:' + k)
+    for domain, methods in data['blueprint'].get('required_methods_by_domain', {}).items():
+        for kind, minimum in methods.items():
+            if sum(i['domain_id'] == domain and i['type'] == kind for i in selected) < minimum:
+                issues.append('domain_method_coverage:' + domain + ':' + kind)
+    weights = score_weighting(data, selected)
+    issues.extend(weights['target_issues'])
+    support = source_fingerprints(data, selected)
+    if f.get('source_fingerprints', {}) != support:
+        issues.append('unpinned_or_changed_source_content')
     if live:
         if data['program']['mode'] != 'real':
             issues.append('synthetic_program')
@@ -394,6 +593,7 @@ def check_form(data, form_id, live=False):
             if not isinstance(evidence, dict) or not text(evidence.get(key)):
                 issues.append('missing_release_evidence:' + key)
     return {'form_id': form_id, 'checks_pass': not issues, 'scope': 'live_record_checks' if live else 'development_record_checks',
+            'score_weighting': weights,
             'issues': sorted(set(issues)), 'note': 'Record checks do not authenticate evidence, authorize launch, or establish validity.'}
 
 
@@ -403,6 +603,7 @@ def review_packet(data, ids=None):
     require(len(chosen) == len(set(chosen)) and set(chosen) <= set(index_items(data)), 'Unknown/duplicate review item')
     return {'classification': 'restricted', 'program_id': data['program']['id'], 'items': [copy.deepcopy(index_items(data)[k]) for k in chosen],
             'item_fingerprints': {k: content_fingerprint(index_items(data)[k]) for k in chosen},
+            'source_fingerprints': {k: source_fingerprints(data, [index_items(data)[k]]) for k in chosen},
             'review_questions': ['Does it assess the mapped work at the intended level?', 'Is the key/rubric supported and unambiguous?',
                                  'Are irrelevant language, accessibility or bias barriers present?', 'Accept, revise or reject this exact revision, with evidence.'],
             'note': 'Prepared packet; no reviewer was contacted and no human review occurred.'}
@@ -415,12 +616,17 @@ def pinned_items(data, form_id):
     require(all(items[r['item_id']]['revision'] == r['revision'] for r in f['item_refs']), 'Stale form: use the historical program snapshot for these data')
     require(all(r.get('item_fingerprint') == content_fingerprint(items[r['item_id']]) for r in f['item_refs']),
             'Unpinned or changed form content: recover the verified historical snapshot; do not attach old scores to current items')
+    support = source_fingerprints(data, [items[r['item_id']] for r in f['item_refs']])
+    require(f.get('source_fingerprints', {}) == support,
+            'Unpinned or changed source content: recover the verified historical snapshot')
     return f, [items[r['item_id']] for r in f['item_refs']]
 
 
 def form_fingerprint(form, items):
     payload = {'form': form['id'], 'revision': form['revision'], 'blueprint_revision': form['blueprint_revision'],
                'items': [{'id': i['id'], 'revision': i['revision'], 'content': content_fingerprint(i)} for i in items]}
+    if form.get('source_fingerprints'):
+        payload['source_fingerprints'] = form['source_fingerprints']
     return hashlib.sha256(json.dumps(payload, sort_keys=True, allow_nan=False).encode()).hexdigest()
 
 
@@ -467,7 +673,9 @@ def correlation(a, b):
     return numerator / denominator
 
 
-def analyze(data, form_id, path):
+def analyze(data, form_id, path, evidence_root=None):
+    validate(data)
+    require(not evidence_gate(data, evidence_root), 'Evidence integrity failed before analysis')
     form, items = pinned_items(data, form_id)
     matrix = score_matrix(path, items)
     totals = [sum(row) for row in matrix]
@@ -490,7 +698,9 @@ def analyze(data, form_id, path):
                             'For practical tasks these are recorded scores, not independent rater-agreement evidence.']}
 
 
-def panel_summary(data, form_id, path):
+def panel_summary(data, form_id, path, evidence_root=None):
+    validate(data)
+    require(not evidence_gate(data, evidence_root), 'Evidence integrity failed before panel summary')
     form, items = pinned_items(data, form_id)
     matrix = score_matrix(path, items, 'judge_id')
     totals = [sum(row) for row in matrix]
@@ -514,18 +724,19 @@ def impact(data, source_ids):
             'items': sorted(item_ids), 'forms': sorted(form_ids), 'note': 'Conservative dependency impact. Inspect semantic changes; no records were modified.'}
 
 
-def export(data, audience, form_id=None):
+def export(data, audience, form_id=None, evidence_root=None):
     validate(data)
     if audience == 'candidate-guide':
         # Explicit allowlist: never serialize items, prompts, keys, rubrics, reviews, notes or candidate records here.
-        allowed = ('overview', 'audience', 'eligibility', 'format', 'permitted_resources', 'accommodations', 'retakes', 'appeals', 'renewal', 'support')
+        issues = public_export_issues(data)
+        require(not issues, 'Candidate export blocked: ' + ', '.join(issues))
         return {'classification': 'public-draft', 'program_title': data['program']['title'],
-                'guide': {k: data.get('public', {}).get(k, '') for k in allowed},
+                'guide': {k: data.get('public', {}).get(k, '') for k in PUBLIC_FIELDS},
                 'domains': [{'title': d['title'], 'weight_percent_of_items': d['weight']} for d in data['blueprint']['domains']],
-                'note': 'Review public text before sharing; this is a guide, not an exam.'}
+                'note': 'Known restricted-text check passed, not semantic redaction or arbitrary secret detection. Review public text before sharing; this is a guide, not an exam.'}
     require(audience == 'delivery', 'Unknown export audience')
     require(form_id is not None, 'Delivery export requires --form')
-    result = check_form(data, form_id)
+    result = check_form(data, form_id, evidence_root=evidence_root)
     require(result['checks_pass'], 'Form checks failed: ' + ', '.join(result['issues']))
     form, items = pinned_items(data, form_id)
     return {'classification': 'restricted', 'schema': 'certification-workshop-neutral-form-v1',
@@ -567,7 +778,7 @@ def reconcile_awards(data):
             'note': 'Local reconciliation only; no provider queried, no credential issued, no retry authorized.'}
 
 
-def status(data):
+def status(data, evidence_root=None):
     validate(data)
     cov = coverage(data)
     issues = [{'item_id': i['id'], 'issues': item_issues(data, i)} for i in data['items'] if item_issues(data, i)]
@@ -581,6 +792,9 @@ def status(data):
         next_action = 'Propose a form, review its constraints, and prepare the pilot protocol.'
     else:
         next_action = 'Review form checks and study evidence, then prepare the next authorized pilot, release or maintenance action.'
+    gate_issues = evidence_gate(data, evidence_root)
+    if gate_issues:
+        next_action = 'Repair the local evidence-integrity gaps before assembly, restricted delivery or analysis; retain historical snapshots.'
     targets = {'program': program_approval_fingerprint(data), 'blueprint': blueprint_approval_fingerprint(data),
                'forms': {}, 'awards': {a['id']: award_fingerprint(a) for a in data['awards']}}
     for form in data['forms']:
@@ -590,8 +804,12 @@ def status(data):
         except ValueError:
             targets['forms'][form['id']] = None
     return {'program_id': data['program']['id'], 'mode': data['program']['mode'], 'coverage': cov, 'item_issues': issues,
+            'score_weighting': score_weighting(data),
+            'evidence_gate_issues': gate_issues,
+            'evidence_integrity': audit_evidence(data, evidence_root) if evidence_root is not None else
+                {'checks_pass': None, 'issues': ['evidence_root_not_supplied'], 'note': 'No filesystem evidence was verified.'},
             'decision_target_fingerprints': targets,
-            'forms': [check_form(data, f['id']) for f in data['forms']], 'next_action': next_action,
+            'forms': [check_form(data, f['id'], evidence_root=evidence_root) for f in data['forms']], 'next_action': next_action,
             'note': 'This summary is derived from records; read the decision register and owner context before acting.'}
 
 
@@ -603,12 +821,15 @@ def main():
     init.add_argument('--id', required=True)
     init.add_argument('--title', required=True)
     init.add_argument('--mode', choices=['real', 'demo'], default='real')
-    for cmd in ('validate', 'status', 'coverage', 'assemble', 'check-form', 'review-packet', 'analyze', 'panel-summary', 'impact', 'export', 'reconcile-awards'):
+    for cmd in ('validate', 'audit-evidence', 'audit-public', 'score-weights', 'status', 'coverage', 'assemble', 'check-form', 'review-packet', 'analyze', 'panel-summary', 'impact', 'export', 'reconcile-awards'):
         p = sub.add_parser(cmd)
         p.add_argument('--program', required=True)
         p.add_argument('--out', help='Write a new JSON output file; refuses overwrite')
+        p.add_argument('--evidence-root', help='Project root for local evidence; defaults to the program file directory. No network access.')
         if cmd in {'assemble', 'check-form', 'analyze', 'panel-summary'}:
             p.add_argument('--form', required=True)
+        elif cmd == 'score-weights':
+            p.add_argument('--form', help='Inspect this exact pinned form instead of the whole bank')
         if cmd in {'coverage', 'assemble', 'check-form'}:
             p.add_argument('--live', action='store_true')
         if cmd in {'analyze', 'panel-summary'}:
@@ -627,16 +848,28 @@ def main():
         else:
             d = load(args.program)
             c = args.command
-            if c == 'validate': result = validate(d)
-            elif c == 'status': result = status(d)
+            root = Path(args.evidence_root).resolve() if args.evidence_root else Path(args.program).resolve().parent
+            if c == 'validate':
+                result = validate(d)
+                result['evidence_integrity'] = audit_evidence(d, root)
+            elif c == 'audit-evidence': result = audit_evidence(d, root)
+            elif c == 'audit-public':
+                validate(d)
+                issues = public_export_issues(d)
+                result = {'checks_pass': not issues, 'issues': issues,
+                          'note': 'Known restricted content only; no complete semantic or secret-detection guarantee.'}
+            elif c == 'score-weights':
+                validate(d)
+                result = score_weighting(d, pinned_items(d, args.form)[1] if args.form else None)
+            elif c == 'status': result = status(d, evidence_root=root)
             elif c == 'coverage': result = coverage(d, args.live)
-            elif c == 'assemble': result = assemble(d, args.form, args.live)
-            elif c == 'check-form': result = check_form(d, args.form, args.live)
+            elif c == 'assemble': result = assemble(d, args.form, args.live, evidence_root=root)
+            elif c == 'check-form': result = check_form(d, args.form, args.live, evidence_root=root)
             elif c == 'review-packet': result = review_packet(d, args.item)
-            elif c == 'analyze': result = analyze(d, args.form, args.csv)
-            elif c == 'panel-summary': result = panel_summary(d, args.form, args.csv)
+            elif c == 'analyze': result = analyze(d, args.form, args.csv, evidence_root=root)
+            elif c == 'panel-summary': result = panel_summary(d, args.form, args.csv, evidence_root=root)
             elif c == 'impact': result = impact(d, args.source)
-            elif c == 'export': result = export(d, args.audience, args.form)
+            elif c == 'export': result = export(d, args.audience, args.form, evidence_root=root)
             elif c == 'reconcile-awards': result = reconcile_awards(d)
             if args.out:
                 save_new(args.out, result)
